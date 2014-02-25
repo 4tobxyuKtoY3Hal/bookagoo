@@ -104,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5242537" vertical-offset="8" max-vertical-offset="544">
+            <state line="17" column="27" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
               <folding>
                 <element signature="e#375#393#0" expanded="true" />
                 <element signature="e#539#557#0" expanded="true" />
@@ -116,11 +116,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StartActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="52" selection-start="155" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="272">
-              <folding />
+            <state line="11" column="32" selection-start="281" selection-end="281" vertical-scroll-proportion="0.3488806" vertical-offset="0" max-vertical-offset="536">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,17 +185,17 @@
         <option value="$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_start.xml" />
         <option value="$PROJECT_DIR$/res/layout/fragment_login.xml" />
         <option value="$PROJECT_DIR$/src/com/itech/bookagoo/LoginFragment.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="89" />
+    <option name="x" value="164" />
+    <option name="y" value="93" />
     <option name="width" value="1471" />
     <option name="height" value="1000" />
   </component>
@@ -498,7 +500,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="89" width="1471" height="1000" extended-state="0" />
+    <frame x="164" y="93" width="1471" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -587,7 +589,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="52" selection-start="155" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="272">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -733,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="155" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_login.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -747,6 +744,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="221">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <folding>
+            <element signature="e#375#393#0" expanded="true" />
+            <element signature="e#539#557#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -759,12 +766,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="587" selection-end="587" vertical-scroll-proportion="0.5242537" vertical-offset="8" max-vertical-offset="544">
+        <state line="11" column="32" selection-start="281" selection-end="281" vertical-scroll-proportion="0.3488806" vertical-offset="0" max-vertical-offset="536">
           <folding>
-            <element signature="e#375#393#0" expanded="true" />
-            <element signature="e#539#557#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
