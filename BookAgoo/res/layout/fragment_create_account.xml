@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                    android:text="@string/start_textview_title_enter_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/fragmntCreateAccount_EditText_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_edittext_hint_name"/>
+            <EditText
+                    android:id="@+id/fragmntCreateAccount_EditText_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_edittext_hint_email"/>
+            <EditText
+                    android:id="@+id/fragmntCreateAccount_EditText_enterYourDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_edittext_hint_pass"/>
+            <TextView
+                    android:text="@string/start_textview_title_enter_babys_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:text="@string/start_radiobutton_born"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:text="@string/start_radiobutton_expecting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/fragmntCreateAccount_EditText_dateOfBirt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_edittext_hint_date_of_birt"/>
+            <EditText
+                    android:id="@+id/fragmntCreateAccount_EditText_nameaby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_edittext_hint_name"/>
+            <TextView
+                    android:text="@string/start_textview_title_who_is_it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <CheckBox
+                    android:paddingTop="7dp"
+                    android:gravity="top"
+                    android:text="@string/start_checkBox_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:text="@string/start_buton_save_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
