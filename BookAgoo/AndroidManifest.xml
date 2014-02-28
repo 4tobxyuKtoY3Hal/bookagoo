@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.itech.bookagoo"
-    android:versionCode="19"
+    android:versionCode="24"
     android:versionName="1.0.1" >
 
     <uses-sdk
         android:minSdkVersion="8" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.itech.bookagoo.MainActivity"
-            android:label="@string/app_name" >
 
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".LoginActivity"/>
         <activity
-                    android:name="com.itech.bookagoo.StartActivity"
-                    android:label="@string/app_name" >
-                    <intent-filter>
-                        <action android:name="android.intent.action.MAIN" />
-
-                        <category android:name="android.intent.category.LAUNCHER" />
-                    </intent-filter>
-                </activity>
+                android:name="com.itech.bookagoo.CreateAccountActivity"
+                android:label="@string/action_bar_title_create_account"/>
     </application>
 
 </manifest>
