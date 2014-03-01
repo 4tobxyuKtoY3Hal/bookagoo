@@ -43,17 +43,7 @@ private NavigationDrawerFragment mNavigationDrawerFragment;
     }
 
     public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
-                mTitle = getString(R.string.title_section1);
-                break;
-            case 2:
-                mTitle = getString(R.string.title_section2);
-                break;
-            case 3:
-                mTitle = getString(R.string.title_section3);
-                break;
-        }
+        mTitle =  getResources().getStringArray(R.array.title_navigation_drawer)[number - 1];
     }
 
     public void restoreActionBar() {

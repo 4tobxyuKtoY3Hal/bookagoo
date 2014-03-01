@@ -6,5 +6,6 @@ package com.itech.bookagoo;
 public class Bild {
 
     public static final boolean IS_RELISE = false;
+    public static final String API_SERVER = "http://www.ya.ru/";
 
 }
