@@ -1,6 +1,5 @@
 package com.itech.bookagoo;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,15 +7,23 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.*;
-import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-private NavigationDrawerFragment mNavigationDrawerFragment;
-
+    private NavigationDrawerFragment mNavigationDrawerFragment;
 
     private CharSequence mTitle;
+
+    private final IContentFragment[] mContens = new IContentFragment[]{
+            new ProfileFragment(),
+            new WallFragment(),
+            new BookFragment(),
+            new SpecialContentFragment(),
+            new NotificationsFragment(),
+            new TutorialFragment(),
+            new AdoutFragment()
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +42,20 @@ private NavigationDrawerFragment mNavigationDrawerFragment;
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
+
+        IContentFragment contentFragment = mContens[position];
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, DummyFragment.newInstance(position + 1))
+                .replace(R.id.container, contentFragment.getFragment())
                 .commit();
+
+        mTitle = getString(contentFragment.getIdTitle());
+
     }
 
-    public void onSectionAttached(int number) {
-        mTitle =  getResources().getStringArray(R.array.title_navigation_drawer)[number - 1];
+    public IContentFragment[] getContentFragments() {
+        return mContens;
     }
 
     public void restoreActionBar() {
@@ -52,7 +64,6 @@ private NavigationDrawerFragment mNavigationDrawerFragment;
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,38 +90,13 @@ private NavigationDrawerFragment mNavigationDrawerFragment;
         return super.onOptionsItemSelected(item);
     }
 
-
-    public static class DummyFragment extends Fragment {
-
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-
-        public static DummyFragment newInstance(int sectionNumber) {
-            DummyFragment fragment = new DummyFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public DummyFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
-            dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
+    public interface IContentFragment {
+        public Fragment getFragment();
+        public int getIdTitle();
+        public String getName();
+        public String getEmail();
+        public int getIdIco();
+        public String getUrlIco();
     }
 
 }

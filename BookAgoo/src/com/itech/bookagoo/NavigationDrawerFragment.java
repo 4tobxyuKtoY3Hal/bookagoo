@@ -1,8 +1,10 @@
 package com.itech.bookagoo;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -12,10 +14,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.*;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
+
+import java.util.ArrayList;
 
 /**
  * Created by Dr. Pepper on 25.02.14.
@@ -33,7 +34,7 @@ public class NavigationDrawerFragment extends Fragment {
     private ListView mDrawerListView;
     private View mFragmentContainerView;
 
-    private int mCurrentSelectedPosition = 0;
+    private int mCurrentSelectedPosition = 1;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
@@ -54,7 +55,7 @@ public class NavigationDrawerFragment extends Fragment {
             mFromSavedInstanceState = true;
         }
 
-        // Select either the default item (0) or the last selected item.
+        // Select either the default item (1) or the last selected item.
         selectItem(mCurrentSelectedPosition);
 
         // Indicate that this fragment would like to influence the set of actions in the action bar.
@@ -64,20 +65,32 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mDrawerListView = (ListView) inflater.inflate(
-                R.layout.fragment_navigation_drawer, container, false);
+
+        mDrawerListView = (ListView) inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                getResources().getStringArray(R.array.title_navigation_drawer)));
+
+        MainActivity.IContentFragment[] contents = ((MainActivity) getActivity()).getContentFragments();
+
+        ArrayList<Item> arrItem = new ArrayList<Item>();
+
+        for (MainActivity.IContentFragment contentFragment : contents) {
+            Item item = new Item();
+            item.idIco = contentFragment.getIdIco();
+            item.urlIco = contentFragment.getUrlIco();
+            item.name = contentFragment.getName();
+            item.email = contentFragment.getEmail();
+            arrItem.add(item);
+        }
+
+        mDrawerListView.setAdapter(new Adapter(getActivity(), arrItem));
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+
         return mDrawerListView;
     }
 
@@ -92,6 +105,7 @@ public class NavigationDrawerFragment extends Fragment {
      * @param drawerLayout The DrawerLayout containing this fragment's UI.
      */
     public void setUp(int fragmentId, DrawerLayout drawerLayout) {
+
         mFragmentContainerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
 
@@ -251,4 +265,64 @@ public class NavigationDrawerFragment extends Fragment {
          */
         void onNavigationDrawerItemSelected(int position);
     }
+
+    public class Adapter extends BaseAdapter {
+
+        private ArrayList<Item> mArrItem;
+        private Context mContext;
+
+        public Adapter(Context context, ArrayList<Item> arrItem){
+            mArrItem = (arrItem != null)?arrItem:new ArrayList<Item>();
+            mContext = context;
+        }
+
+        @Override
+        public int getCount() {
+            return mArrItem.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return mArrItem.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater =
+                    (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            Item i = mArrItem.get(position);
+            View v = inflater.inflate(R.layout.item_navigation, null, true);
+            if(v != null) {
+                TextView txtName = (TextView) v.findViewById(R.id.itrmNavigation_TextView_name);
+                TextView txtEmail = (TextView) v.findViewById(R.id.itrmNavigation_TextView_email);
+                ImageView ico = (ImageView) v.findViewById(R.id.itrmNavigation_ImageView_ico);
+
+                txtName.setText(i.name);
+                if(i.idIco > 0){
+                    ico.setImageResource(i.idIco);
+                } else if(i.urlIco != null){
+                    ico.setImageURI(Uri.parse(i.urlIco));
+                }
+                if(i.email != null){
+                    txtEmail.setVisibility(View.VISIBLE);
+                    txtEmail.setText(i.email);
+                }
+            }
+            return v;
+        }
+    }
+
+    public class Item {
+        public String name = null;
+        public String email = null;
+        public String urlIco = null;
+        public int idIco = -1;
+    }
+
 }

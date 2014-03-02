@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidConfiguredLogFilters">
-    <filters>
-      <filter>
-        <option name="logLevel" value="verbose" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="log_test" />
-        <option name="name" value="log_test" />
-        <option name="packageNamePattern" value="" />
-        <option name="pid" value="" />
-      </filter>
-    </filters>
-  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
@@ -21,20 +9,9 @@
     <shared>
       <config />
     </shared>
-    <layouts>
-      <layout url="file://$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml">
-        <config>
-          <device>Nexus 7 2013</device>
-          <theme>@style/AppTheme</theme>
-        </config>
-      </layout>
-    </layouts>
-  </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="log_test" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff26cd24-bbab-4012-9c73-2f4e611e2dea" name="Default" comment="" />
+    <list default="true" id="639eaa63-f0fe-4dbc-a192-b8f972fdc2f7" name="Default" comment="" />
     <ignored path="BookAgoo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +21,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
-  <component name="Commander">
-    <leftPanel />
-    <rightPanel />
-    <splitter proportion="0.5" />
-  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -93,7 +65,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -106,129 +77,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="27" selection-start="167" selection-end="168" vertical-scroll-proportion="0.11333334" vertical-offset="0" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constant.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values-sw600dp/constant.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="12" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="66" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="57" selection-start="2263" selection-end="2263" vertical-scroll-proportion="13.115385" vertical-offset="1259" max-vertical-offset="1938">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="78" selection-start="3047" selection-end="3047" vertical-scroll-proportion="-51.0" vertical-offset="0" max-vertical-offset="4420">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2547#2765#0" expanded="true" />
-                <element signature="e#2754#2755#0" expanded="true" />
-                <element signature="e#4596#4627#0" expanded="true" />
-                <element signature="e#4696#4728#0" expanded="true" />
-                <element signature="e#6337#6474#0" expanded="true" />
-                <element signature="e#6463#6464#0" expanded="true" />
-                <element signature="e#9190#9207#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constant.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/constant.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_create_account.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="37" selection-start="4101" selection-end="4101" vertical-scroll-proportion="-5.98" vertical-offset="1095" max-vertical-offset="1564">
-              <folding>
-                <element signature="e#610#654#0" expanded="true" />
-                <element signature="e#1012#1046#0" expanded="true" />
-                <element signature="e#1292#1327#0" expanded="true" />
-                <element signature="e#1584#1618#0" expanded="true" />
-                <element signature="e#1676#1726#0" expanded="true" />
-                <element signature="e#1900#1932#0" expanded="true" />
-                <element signature="e#2106#2143#0" expanded="true" />
-                <element signature="e#2507#2549#0" expanded="true" />
-                <element signature="e#2797#2831#0" expanded="true" />
-                <element signature="e#2889#2929#0" expanded="true" />
-                <element signature="e#3704#3733#0" expanded="true" />
-                <element signature="e#3972#4007#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_create_account_tablet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="67" selection-start="4202" selection-end="4390" vertical-scroll-proportion="-1.8026316" vertical-offset="1223" max-vertical-offset="1887">
-              <folding>
-                <element signature="e#1114#1158#0" expanded="true" />
-                <element signature="e#1572#1606#0" expanded="true" />
-                <element signature="e#1892#1927#0" expanded="true" />
-                <element signature="e#2224#2258#0" expanded="true" />
-                <element signature="e#2621#2671#0" expanded="true" />
-                <element signature="e#2877#2909#0" expanded="true" />
-                <element signature="e#3115#3152#0" expanded="true" />
-                <element signature="e#3572#3614#0" expanded="true" />
-                <element signature="e#3902#3936#0" expanded="true" />
-                <element signature="e#4010#4050#0" expanded="true" />
-                <element signature="e#5014#5043#0" expanded="true" />
-                <element signature="e#5282#5317#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values-large/layout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="100" selection-start="151" selection-end="151" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bild.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/Bild.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="64" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="3" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.08199357" vertical-offset="0" max-vertical-offset="622">
               <folding />
             </state>
           </provider>
@@ -244,44 +93,39 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_login.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_create_account.xml" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/CreateAccountFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/LoginFragment.java" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/CreateAccountActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_start.xml" />
-        <option value="$PROJECT_DIR$/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/res/layout/fragment_main.xml" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/tool/Log.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/Bild.java" />
-        <option value="$PROJECT_DIR$/res/sw600dp/constant.xml" />
-        <option value="$PROJECT_DIR$/res/layout/layout.xml" />
-        <option value="$PROJECT_DIR$/res/values/layout.xml" />
-        <option value="$PROJECT_DIR$/res/values/constant.xml" />
-        <option value="$PROJECT_DIR$/res/values-large/constant.xml" />
-        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/App.java" />
-        <option value="$PROJECT_DIR$/res/values-sw600dp/constant.xml" />
-        <option value="$PROJECT_DIR$/res/values-large/layout.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml" />
-        <option value="$PROJECT_DIR$/res/layout/activity_create_account.xml" />
-        <option value="$PROJECT_DIR$/res/values/start.xml" />
+        <option value="$PROJECT_DIR$/res/values/wall.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_wall.xml" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/tool/WebFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/tool/BookFragment.java" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_book.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_special_content.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_notifications.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_tutorial.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_adout.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/fragment_profile.xml" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/Bitmsp.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/WallFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/NotificationsFragment.java" />
+        <option value="$PROJECT_DIR$/res/layout/item_navigation_double.xml" />
+        <option value="$PROJECT_DIR$/res/layout/item_navigation.xml" />
         <option value="$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/AdoutFragment.java" />
         <option value="$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/BookFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/ProfileFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/SpecialContentFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/itech/bookagoo/TutorialFragment.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="94" />
-    <option name="y" value="40" />
-    <option name="width" value="1471" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -309,6 +153,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,28 +203,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-sw600dp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-large" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -413,27 +236,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -444,36 +252,27 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../appcompat/appcompat.iml" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../itech/bookagoo/BookAgoo" />
-    <property name="SearchEverywhereHistory" value="L" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="AndroidTargetDevices" value="HT1BJTR01800" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="com.itech.bookagoo" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project\bookagoo\BookAgoo\res\values-sw600dp" />
-      <recent name="C:\project\bookagoo\BookAgoo\res\sw600dp" />
-      <recent name="C:\project\bookagoo\BookAgoo\res\values" />
-      <recent name="C:\project\bookagoo\BookAgoo\res\layout" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\project\bookagoo\BookAgoo\res\values-large" />
-      <recent name="C:\project\bookagoo\BookAgoo\res" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.itech.bookagoo" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.BookAgoo">
+  <component name="RunManager" selected="Android Application.BOOK aGoo">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -601,7 +400,7 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="false" name="BookAgoo" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="false" name="BOOK aGoo" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="BookAgoo" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
@@ -623,7 +422,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.BookAgoo" />
+      <item index="0" class="java.lang.String" itemvalue="Android Application.BOOK aGoo" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -633,91 +432,43 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ff26cd24-bbab-4012-9c73-2f4e611e2dea" name="Default" comment="" />
-      <created>1393273971427</created>
-      <updated>1393273971427</updated>
+      <changelist id="639eaa63-f0fe-4dbc-a192-b8f972fdc2f7" name="Default" comment="" />
+      <created>1393752533838</created>
+      <updated>1393752533838</updated>
     </task>
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="40" width="1471" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2473423" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42873564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36551723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.185836" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28450108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24813631" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18895966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295535" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32988507" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -740,422 +491,292 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="408">
-          <folding />
+        <state line="36" column="65" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="2210">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/WallFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
+        <state line="11" column="8" selection-start="243" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="340">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="629">
-          <folding />
+        <state line="21" column="8" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2210">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/WallFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="1649">
-          <folding />
+        <state line="11" column="8" selection-start="243" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="340">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#855#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_start.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_book.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
-          <folding />
+        <state line="10" column="12" selection-start="399" selection-end="399" vertical-scroll-proportion="0.30852994" vertical-offset="0" max-vertical-offset="551">
+          <folding>
+            <element signature="e#341#386#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/start.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="79" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="527">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/res/values/wall.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="408">
+        <state line="2" column="86" selection-start="137" selection-end="137" vertical-scroll-proportion="0.056951422" vertical-offset="0" max-vertical-offset="597">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="398" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="40" selection-start="2875" selection-end="2875" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="4709" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_special_content.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+        <state line="3" column="44" selection-start="157" selection-end="157" vertical-scroll-proportion="0.09622642" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="398" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="40" selection-start="2875" selection-end="2875" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="4709" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_notifications.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255">
+        <state line="7" column="48" selection-start="322" selection-end="322" vertical-scroll-proportion="0.2245283" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="26" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="40" selection-start="2875" selection-end="2875" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="4709" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_tutorial.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="255">
+        <state line="8" column="43" selection-start="322" selection-end="322" vertical-scroll-proportion="0.25660378" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="493" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="52" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="12" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="272">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://G:/android2/adt-bundle-windows-x86-20131030/sdk/sources/android-19/com/android/internal/os/ZygoteInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12835" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="37" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="935">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="82" selection-end="82" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_adout.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="27" selection-start="347" selection-end="347" vertical-scroll-proportion="-2.38" vertical-offset="0" max-vertical-offset="255">
+        <state line="8" column="40" selection-start="315" selection-end="315" vertical-scroll-proportion="0.24682395" vertical-offset="0" max-vertical-offset="551">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://C:/adt-bundle-windows-x86-20130911/sdk/sources/android-19/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="206" selection-end="206" vertical-scroll-proportion="-1.02" vertical-offset="0" max-vertical-offset="306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="52" selection-start="552" selection-end="552" vertical-scroll-proportion="-5.1" vertical-offset="0" max-vertical-offset="1037">
-          <folding>
-            <element signature="e#789#823#0" expanded="false" />
-            <element signature="e#1062#1097#0" expanded="false" />
-            <element signature="e#1219#1246#0" expanded="false" />
-            <element signature="e#1487#1523#0" expanded="false" />
-            <element signature="e#1766#1802#0" expanded="false" />
-            <element signature="e#2044#2079#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="718" column="25" selection-start="35205" selection-end="35205" vertical-scroll-proportion="0.33279744" vertical-offset="10605" max-vertical-offset="91001" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/CreateAccountActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="185" selection-end="206" vertical-scroll-proportion="0.21671388" vertical-offset="0" max-vertical-offset="706">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_start.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45" selection-start="208" selection-end="208" vertical-scroll-proportion="0.103658535" vertical-offset="0" max-vertical-offset="656">
+        <state line="9" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.19131833" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/tool/Log.java">
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="975" selection-end="975" vertical-scroll-proportion="1.3665595" vertical-offset="0" max-vertical-offset="1054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="37" selection-start="665" selection-end="665" vertical-scroll-proportion="0.48288974" vertical-offset="18" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/constant.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-large/constant.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="69" selection-end="69" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-large/layout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="100" selection-start="151" selection-end="151" vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="37" selection-start="4101" selection-end="4101" vertical-scroll-proportion="-5.98" vertical-offset="1095" max-vertical-offset="1564">
-          <folding>
-            <element signature="e#610#654#0" expanded="true" />
-            <element signature="e#1012#1046#0" expanded="true" />
-            <element signature="e#1292#1327#0" expanded="true" />
-            <element signature="e#1584#1618#0" expanded="true" />
-            <element signature="e#1676#1726#0" expanded="true" />
-            <element signature="e#1900#1932#0" expanded="true" />
-            <element signature="e#2106#2143#0" expanded="true" />
-            <element signature="e#2507#2549#0" expanded="true" />
-            <element signature="e#2797#2831#0" expanded="true" />
-            <element signature="e#2889#2929#0" expanded="true" />
-            <element signature="e#3704#3733#0" expanded="true" />
-            <element signature="e#3972#4007#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values-sw600dp/constant.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="149" selection-end="149" vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/Bild.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="64" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/start.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="163" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.6699029" vertical-offset="115" max-vertical-offset="527">
+        <state line="12" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="47" selection-start="840" selection-end="863" vertical-scroll-proportion="-10.88" vertical-offset="51" max-vertical-offset="612">
+        <state line="7" column="40" selection-start="246" selection-end="246" vertical-scroll-proportion="-4.76" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_profile.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="15" selection-start="425" selection-end="425" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="66" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+        <state line="10" column="13" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="646">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/adt-bundle-windows-x86-20130911/sdk/sources/android-19/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="354" column="0" selection-start="11759" selection-end="11759" vertical-scroll-proportion="0.3327787" vertical-offset="5325" max-vertical-offset="8364" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/StartActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="54" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/WallFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="63" selection-start="808" selection-end="856" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="986">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#808#855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NotificationsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="79" selection-start="868" selection-end="868" vertical-scroll-proportion="0.5174709" vertical-offset="250" max-vertical-offset="986">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#708#736#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#804#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_wall.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="468" selection-end="468" vertical-scroll-proportion="0.37023592" vertical-offset="0" max-vertical-offset="551">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/AdoutFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="103" selection-start="435" selection-end="435" vertical-scroll-proportion="0.27331188" vertical-offset="0" max-vertical-offset="833">
+          <folding>
+            <element signature="e#656#676#0" expanded="true" />
+            <element signature="e#744#792#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="57" selection-start="2263" selection-end="2263" vertical-scroll-proportion="13.115385" vertical-offset="1259" max-vertical-offset="1938">
+        <state line="16" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.093247585" vertical-offset="214" max-vertical-offset="1802">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/item_navigation.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="40" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.6533575" vertical-offset="99" max-vertical-offset="714">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="78" selection-start="3047" selection-end="3047" vertical-scroll-proportion="-51.0" vertical-offset="0" max-vertical-offset="4420">
+        <state line="20" column="0" selection-start="623" selection-end="623" vertical-scroll-proportion="0.33221477" vertical-offset="142" max-vertical-offset="5542">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2547#2765#0" expanded="true" />
-            <element signature="e#2754#2755#0" expanded="true" />
-            <element signature="e#4596#4627#0" expanded="true" />
-            <element signature="e#4696#4728#0" expanded="true" />
-            <element signature="e#6337#6474#0" expanded="true" />
-            <element signature="e#6463#6464#0" expanded="true" />
-            <element signature="e#9190#9207#0" expanded="true" />
+            <element signature="e#2884#2890#0" expanded="true" />
+            <element signature="e#4879#4910#0" expanded="true" />
+            <element signature="e#4979#5011#0" expanded="true" />
+            <element signature="e#9473#9490#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/BookFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="67" selection-start="4202" selection-end="4390" vertical-scroll-proportion="-1.8026316" vertical-offset="1223" max-vertical-offset="1887">
+        <state line="12" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.3279743" vertical-offset="0" max-vertical-offset="935">
           <folding>
-            <element signature="e#1114#1158#0" expanded="true" />
-            <element signature="e#1572#1606#0" expanded="true" />
-            <element signature="e#1892#1927#0" expanded="true" />
-            <element signature="e#2224#2258#0" expanded="true" />
-            <element signature="e#2621#2671#0" expanded="true" />
-            <element signature="e#2877#2909#0" expanded="true" />
-            <element signature="e#3115#3152#0" expanded="true" />
-            <element signature="e#3572#3614#0" expanded="true" />
-            <element signature="e#3902#3936#0" expanded="true" />
-            <element signature="e#4010#4050#0" expanded="true" />
-            <element signature="e#5014#5043#0" expanded="true" />
-            <element signature="e#5282#5317#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#654#673#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#741#788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/ProfileFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="103" selection-start="437" selection-end="437" vertical-scroll-proportion="0.27813506" vertical-offset="65" max-vertical-offset="935">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#660#682#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/SpecialContentFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="103" selection-start="445" selection-end="445" vertical-scroll-proportion="0.27813506" vertical-offset="82" max-vertical-offset="952">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#676#706#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#774#832#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/TutorialFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="539" selection-end="539" vertical-scroll-proportion="0.3874598" vertical-offset="82" max-vertical-offset="918">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#663#686#0" expanded="true" />
+            <element signature="e#754#805#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="167" selection-end="168" vertical-scroll-proportion="0.11333334" vertical-offset="0" max-vertical-offset="612">
+        <state line="3" column="28" selection-start="169" selection-end="169" vertical-scroll-proportion="0.08199357" vertical-offset="0" max-vertical-offset="622">
           <folding />
         </state>
       </provider>
@@ -1177,7 +798,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android (BookAgoo)|Android</last-edited>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1201,7 +822,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Android API 19 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1214,18 +835,6 @@
       <state key="ModuleStructureConfigurable.UI">
         <settings>
           <last-edited>appcompat</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
