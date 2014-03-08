@@ -20,9 +20,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         getSupportActionBar().hide();
 
         findViewById(R.id.activityLogin_Button_login).setOnClickListener(this);
-        findViewById(R.id.activityLogin_Button_createLogin).setOnClickListener(this);
-        findViewById(R.id.activityLogin_Button_loginFacebook).setOnClickListener(this);
-        findViewById(R.id.activityLogin_Button_loginTwitter).setOnClickListener(this);
+        findViewById(R.id.activityLogin_View_loginCreate).setOnClickListener(this);
+        findViewById(R.id.activityLogin_View_loginFacebook).setOnClickListener(this);
+        findViewById(R.id.activityLogin_View_loginTwitter).setOnClickListener(this);
 
     }
 
@@ -34,13 +34,13 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                    startActivity(new Intent(this, MainActivity.class));
                    finish();
                    break;
-               case R.id.activityLogin_Button_createLogin:
+               case R.id.activityLogin_View_loginCreate:
                    startActivity(new Intent(this, CreateAccountActivity.class));
                    break;
-               case R.id.activityLogin_Button_loginFacebook:
+               case R.id.activityLogin_View_loginFacebook:
 
                    break;
-               case R.id.activityLogin_Button_loginTwitter:
+               case R.id.activityLogin_View_loginTwitter:
 
                    break;
            }

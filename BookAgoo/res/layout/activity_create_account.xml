@@ -2,7 +2,8 @@
 <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
     <ScrollView
             android:layout_gravity="center_vertical"
@@ -13,53 +14,88 @@
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:paddingLeft="@dimen/padding_horizontal">
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_vertical"/>
             <TextView
                     android:text="@string/start_textview_title_enter_details"
+                    style="@style/Widget.TextView.BgTitleTextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"/>
             <EditText
                     android:id="@+id/activityCreateAccount_EditText_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_name"/>
+                    android:hint="@string/start_edittext_hint_name"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"/>
             <EditText
                     android:id="@+id/activityCreateAccount_EditText_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_email"/>
+                    android:hint="@string/start_edittext_hint_email"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"/>
             <EditText
                     android:id="@+id/activityCreateAccount_EditText_enterYourDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_pass"/>
+                    android:hint="@string/start_edittext_hint_pass"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"/>
             <TextView
                     android:text="@string/start_textview_title_enter_babys_details"
+                    style="@style/Widget.TextView.BgTitleTextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            <RadioButton
-                    android:text="@string/start_radiobutton_born"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            <RadioButton
-                    android:text="@string/start_radiobutton_expecting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingLeft="@dimen/padding_horizontal">
+                <RadioButton
+                        android:text="@string/start_radiobutton_born"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"/>
+                <RadioButton
+                        android:text="@string/start_radiobutton_expecting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
             <EditText
                     android:id="@+id/activityCreateAccount_EditText_dateOfBirt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_date_of_birt"/>
+                    android:hint="@string/start_edittext_hint_date_of_birt"
+                    android:layout_marginBottom="8dp"/>
             <EditText
                     android:id="@+id/activityCreateAccount_EditText_nameaby"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_name"/>
+                    android:hint="@string/start_edittext_hint_name"
+                    android:layout_marginBottom="16dp"/>
             <TextView
                     android:text="@string/start_textview_title_who_is_it"
+                    style="@style/Widget.TextView.BgTitleTextView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFF"/>
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:orientation="horizontal">
@@ -75,13 +111,17 @@
                     android:gravity="top"
                     android:text="@string/start_checkBox_text"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_horizontal"
+                    android:layout_marginRight="@dimen/padding_horizontal"/>
             <Button
                     android:id="@+id/activityCreateAccount_Button_ok"
                     android:text="@string/start_buton_save_continue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/padding_vertical"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

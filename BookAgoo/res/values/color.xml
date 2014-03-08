@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="facebook_textview">#5577a2</color>
+    <color name="twitter_textview">#00b4d1</color>
+    <color name="createaccount_textview">#ff6b86</color>
+    <color name="background">#f1f1f1</color>
+</resources>
