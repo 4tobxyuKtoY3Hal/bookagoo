@@ -45,6 +45,16 @@ public class NotificationsFragment extends Fragment implements MainActivity.ICon
     }
 
     @Override
+    public int getIdIcoActiv() {
+        return R.drawable.ic_menu4;
+    }
+
+    @Override
+    public int getIdIcoBar() {
+        return R.drawable.ic_menu4;
+    }
+
+    @Override
     public String getUrlIco() {
         return null;
     }

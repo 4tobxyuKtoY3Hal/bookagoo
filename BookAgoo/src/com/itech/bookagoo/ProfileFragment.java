@@ -42,6 +42,16 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
     }
 
     @Override
+    public int getIdIcoActiv() {
+        return 0;
+    }
+
+    @Override
+    public int getIdIcoBar() {
+        return 0;
+    }
+
+    @Override
     public String getUrlIco() {
         return null;
     }

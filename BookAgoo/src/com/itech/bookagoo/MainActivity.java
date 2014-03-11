@@ -96,6 +96,8 @@ public class MainActivity extends ActionBarActivity
         public String getName();
         public String getEmail();
         public int getIdIco();
+        public int getIdIcoActiv();
+        public int getIdIcoBar();
         public String getUrlIco();
     }
 

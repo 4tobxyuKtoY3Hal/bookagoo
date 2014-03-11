@@ -18,139 +18,172 @@
             <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/padding_vertical"/>
-            <TextView
-                    android:text="@string/start_textview_title_enter_details"
-                    style="@style/Widget.TextView.BgTitleTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"/>
-            <EditText
-                    android:id="@+id/activityCreateAccount_EditText_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_name"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"
-                    android:inputType="textPersonName"
-                    android:drawableRight="@drawable/ic_fields_manicon"/>
-            <EditText
-                    android:id="@+id/activityCreateAccount_EditText_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_email"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"
-                    android:inputType="textEmailAddress"
-                    android:drawableRight="@drawable/ic_mail"/>
-            <EditText
-                    android:id="@+id/activityCreateAccount_EditText_enterYourDetails"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_pass"
-                    android:layout_marginBottom="32dp"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"
-                    android:inputType="textPassword"
-                    android:drawableRight="@drawable/ic_fields_staricon"/>
-            <TextView
-                    android:text="@string/start_textview_title_enter_babys_details"
-                    style="@style/Widget.TextView.BgTitleTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"/>
-
-            <RadioGroup
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingRight="@dimen/padding_horizontal"
-                    android:paddingLeft="@dimen/padding_horizontal">
-
-                <RadioButton
-                        android:text="@string/start_radiobutton_born"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"/>
-
-                <RadioButton
-                        android:text="@string/start_radiobutton_expecting"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-            </RadioGroup>
 
             <LinearLayout
-                    style="@style/BgFieldGreen"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                <EditText
-                        android:id="@+id/activityCreateAccount_EditText_dateOfBirt"
+
+                <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/start_edittext_hint_date_of_birt"
-                        android:layout_marginBottom="8dp"
-                        style="@style/Widget.EditText.BgEditText.BgGreenEditText"
-                        android:inputType="date"
-                        android:drawableRight="@drawable/ic_calendaricon"/>
+                        android:layout_weight="1">
 
-                <EditText
-                        android:id="@+id/activityCreateAccount_EditText_nameaby"
+                    <TextView
+                            android:text="@string/start_textview_title_enter_details"
+                            style="@style/Widget.TextView.BgTitleTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="@dimen/padding_horizontal"
+                            android:layout_marginLeft="@dimen/padding_horizontal"/>
+                    <EditText
+                            android:id="@+id/activityCreateAccount_EditText_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/start_edittext_hint_name"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="@dimen/padding_horizontal"
+                            android:layout_marginLeft="@dimen/padding_horizontal"
+                            android:inputType="textPersonName"
+                            android:drawableRight="@drawable/ic_fields_manicon"/>
+                    <EditText
+                            android:id="@+id/activityCreateAccount_EditText_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/start_edittext_hint_email"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="@dimen/padding_horizontal"
+                            android:layout_marginLeft="@dimen/padding_horizontal"
+                            android:inputType="textEmailAddress"
+                            android:drawableRight="@drawable/ic_mail"/>
+                    <EditText
+                            android:id="@+id/activityCreateAccount_EditText_enterYourDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/start_edittext_hint_pass"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginRight="@dimen/padding_horizontal"
+                            android:layout_marginLeft="@dimen/padding_horizontal"
+                            android:inputType="textPassword"
+                            android:drawableRight="@drawable/ic_fields_staricon"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/start_edittext_hint_name"
-                        android:layout_marginBottom="16dp"
-                        style="@style/Widget.EditText.BgEditText.BgGreenEditText"
-                        android:inputType="textPersonName"
-                        android:drawableRight="@drawable/ic_fields_manicon"/>
+                        android:layout_weight="1">
 
-                <TextView
-                        android:text="@string/start_textview_title_who_is_it"
-                        style="@style/Widget.TextView.BgTitleTextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FFF"/>
-
-                <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                    <RadioButton
-                            android:button="@drawable/rb_boy"
+                    <TextView
+                            android:text="@string/start_textview_title_enter_babys_details"
+                            style="@style/Widget.TextView.BgTitleTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"/>
+                            android:layout_marginBottom="8dp"/>
 
-                    <RadioButton
-                            android:button="@drawable/rb_girl"
-                            android:layout_width="wrap_content"
+                    <RadioGroup
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="8dp"/>
+                            android:layout_marginBottom="8dp">
 
-                </RadioGroup>
+                        <RadioButton
+                                android:text="@string/start_radiobutton_born"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"/>
+
+                        <RadioButton
+                                android:text="@string/start_radiobutton_expecting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                            style="@style/BgFieldGreen"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <EditText
+                                android:id="@+id/activityCreateAccount_EditText_dateOfBirt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/start_edittext_hint_date_of_birt"
+                                android:layout_marginBottom="8dp"
+                                style="@style/Widget.EditText.BgEditText.BgGreenEditText"
+                                android:inputType="date"
+                                android:drawableRight="@drawable/ic_calendaricon"/>
+
+                        <EditText
+                                android:id="@+id/activityCreateAccount_EditText_nameaby"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/start_edittext_hint_name"
+                                android:layout_marginBottom="16dp"
+                                style="@style/Widget.EditText.BgEditText.BgGreenEditText"
+                                android:inputType="textPersonName"
+                                android:drawableRight="@drawable/ic_fields_manicon"/>
+
+                        <TextView
+                                android:text="@string/start_textview_title_who_is_it"
+                                style="@style/Widget.TextView.BgTitleTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FFF"/>
+
+                        <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                            <RadioButton
+                                    android:button="@drawable/rb_boy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"/>
+
+                            <RadioButton
+                                    android:button="@drawable/rb_girl"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp"/>
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+
+                </LinearLayout>
             </LinearLayout>
-            <CheckBox
-                    android:paddingTop="7dp"
-                    android:gravity="top"
-                    android:text="@string/start_checkBox_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/padding_horizontal"
-                    android:layout_marginRight="@dimen/padding_horizontal"/>
-            <Button
-                    android:id="@+id/activityCreateAccount_Button_ok"
-                    android:text="@string/start_buton_save_continue"
+
+            <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp">
+                <CheckBox
+                        android:id="@+id/activityCreateAccount_CheckBox_huinia"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/start_checkBox_text"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/padding_horizontal"
+                        android:layout_marginRight="@dimen/padding_horizontal"/>
+                <Button
+                        android:layout_below="@+id/activityCreateAccount_CheckBox_huinia"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/activityCreateAccount_Button_ok"
+                        android:text="@string/start_buton_save_continue"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawableStart="@drawable/arrow_zsolt"/>
+            </RelativeLayout>
             <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/padding_vertical"/>
