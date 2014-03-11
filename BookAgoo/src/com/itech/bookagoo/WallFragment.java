@@ -42,7 +42,7 @@ public class WallFragment extends Fragment implements MainActivity.IContentFragm
 
     @Override
     public int getIdIco() {
-        return 0;
+        return R.drawable.ic_menu1;
     }
 
     @Override

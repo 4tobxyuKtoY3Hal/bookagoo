@@ -4,16 +4,40 @@
 
     <style name="AppTheme" parent="AppBaseTheme">
 
-        <item name="android:buttonStyle">@style/Widget.Button.BgButton</item>
+        <!-- 2а раза стиль актионбар для старше и младше v11 -->
+        <item name="android:actionBarStyle">@style/BgActionBar</item>
+        <item name="actionBarStyle">@style/BgActionBar</item>
+
+        <item name="android:buttonStyle">@style/BgButton</item>
         <item name="android:editTextStyle">@style/Widget.EditText.BgEditText</item>
         <item name="android:textViewStyle">@style/Widget.TextView.BgFieldTextView</item>
+        <item name="android:radioButtonStyle">@style/Widget.CompoundButton.RadioButton.BgRadioButton</item>
+
+    </style>
+    <style name="BgActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- почемутио неработат -->
+        <item name="android:background">#00a388</item>
+        <!--item name="android:backgroundStacked">#000000</item>
+        <item name="android:backgroundSplit">#FFFFFF</item-->
+
     </style>
 
-    <style name="Widget.Button.BgButton" parent="@android:style/Widget.Button">
+    <style name="Widget.CompoundButton.RadioButton.BgRadioButton"
+           parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/rb</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#008f77</item>
+    </style>
+
+    <style name="BgButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/bt</item>
         <item name="android:minHeight">40dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="BgButton.Red" parent="@style/BgButton">
+        <item name="android:background">@drawable/bt_red</item>
     </style>
 
     <style name="BgFieldWhite">
@@ -23,6 +47,27 @@
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
     </style>
+
+    <style name="BgFieldGreen">
+        <item name="android:background">@drawable/field_green</item>
+        <item name="android:paddingRight">@dimen/padding_horizontal</item>
+        <item name="android:paddingLeft">@dimen/padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/padding_vertical</item>
+    </style>
+
+    <style name="Widget.TextView.BgNavigationItem" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#00a486</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.TextView.BgNavigationItem2" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#9b9b9b</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
     <style name="Widget.TextView.BgFieldTextView" parent="@android:style/Widget.TextView">
         <item name="android:textSize">16sp</item>
     </style>
@@ -41,6 +86,10 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">#008f77</item>
         <item name="android:textColorHint">#9a9a9a</item>
+    </style>
+
+    <style name="Widget.EditText.BgEditText.BgGreenEditText" parent="@style/Widget.EditText.BgEditText">
+        <item name="android:background">@drawable/et_green</item>
     </style>
 
 </resources>

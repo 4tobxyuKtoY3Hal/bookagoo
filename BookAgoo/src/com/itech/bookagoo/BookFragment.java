@@ -38,7 +38,7 @@ public class BookFragment extends Fragment implements MainActivity.IContentFragm
 
     @Override
     public int getIdIco() {
-        return 0;
+        return R.drawable.ic_menu2;
     }
 
     @Override
