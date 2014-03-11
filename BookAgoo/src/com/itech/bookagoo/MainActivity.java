@@ -15,7 +15,7 @@ public class MainActivity extends ActionBarActivity
 
     private CharSequence mTitle;
 
-    private final IContentFragment[] mContens = new IContentFragment[]{
+    private final IContentFragment[] mContensFragments = new IContentFragment[]{
             new ProfileFragment(),
             new WallFragment(),
             new BookFragment(),
@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-        IContentFragment contentFragment = mContens[position];
+        IContentFragment contentFragment = mContensFragments[position];
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
@@ -55,7 +55,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     public IContentFragment[] getContentFragments() {
-        return mContens;
+        return mContensFragments;
     }
 
     public void restoreActionBar() {
@@ -96,7 +96,7 @@ public class MainActivity extends ActionBarActivity
         public String getName();
         public String getEmail();
         public int getIdIco();
-        public int getIdIcoActiv();
+        public int getIdIcoTop();
         public int getIdIcoBar();
         public String getUrlIco();
     }

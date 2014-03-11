@@ -43,8 +43,8 @@ public class SpecialContentFragment extends Fragment implements MainActivity.ICo
     }
 
     @Override
-    public int getIdIcoActiv() {
-        return R.drawable.ic_menu3;
+    public int getIdIcoTop() {
+        return R.drawable.ic_menu3_tap;
     }
 
     @Override

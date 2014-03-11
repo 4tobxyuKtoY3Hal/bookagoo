@@ -42,8 +42,8 @@ public class AdoutFragment extends Fragment implements MainActivity.IContentFrag
     }
 
     @Override
-    public int getIdIcoActiv() {
-        return R.drawable.ic_menu6;
+    public int getIdIcoTop() {
+        return R.drawable.ic_menu6_tap;
     }
 
     @Override

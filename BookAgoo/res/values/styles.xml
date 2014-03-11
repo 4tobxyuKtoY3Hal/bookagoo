@@ -58,7 +58,7 @@
 
     <style name="Widget.TextView.BgNavigationItem" parent="@android:style/Widget.TextView">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">#00a486</item>
+        <item name="android:textColor">@color/navigation_draver_item_text_name</item>
         <item name="android:textStyle">bold</item>
     </style>
 

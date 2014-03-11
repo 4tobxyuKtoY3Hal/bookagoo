@@ -4,4 +4,6 @@
     <color name="twitter_textview">#00b4d1</color>
     <color name="createaccount_textview">#ff6b86</color>
     <color name="background">#f1f1f1</color>
+    <color name="navigation_draver_item_text_name_tap">#fc684e</color>
+    <color name="navigation_draver_item_text_name">#00a486</color>
 </resources>

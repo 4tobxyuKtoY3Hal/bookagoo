@@ -43,8 +43,8 @@ public class TutorialFragment extends Fragment implements MainActivity.IContentF
     }
 
     @Override
-    public int getIdIcoActiv() {
-        return R.drawable.ic_menu5;
+    public int getIdIcoTop() {
+        return R.drawable.ic_menu5_tap;
     }
 
     @Override

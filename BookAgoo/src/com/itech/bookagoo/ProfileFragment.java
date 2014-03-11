@@ -42,7 +42,7 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
     }
 
     @Override
-    public int getIdIcoActiv() {
+    public int getIdIcoTop() {
         return 0;
     }
 
