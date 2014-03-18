@@ -1,5 +1,7 @@
 package com.itech.bookagoo;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,7 +17,7 @@ public class MainActivity extends ActionBarActivity
 
     private CharSequence mTitle;
 
-    private final IContentFragment[] mContensFragments = new IContentFragment[]{
+    private final BaseContentFragment[] mContensFragments = new BaseContentFragment[]{
             new ProfileFragment(),
             new WallFragment(),
             new BookFragment(),
@@ -38,23 +40,29 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        //т.к. в стиле не цепается цвет, то назначаем его здесь
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.action_bar_background_color)));
+
     }
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-        IContentFragment contentFragment = mContensFragments[position];
+        BaseContentFragment contentFragment = mContensFragments[position];
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, contentFragment.getFragment())
+                .replace(R.id.container, contentFragment)
                 .commit();
 
         mTitle = getString(contentFragment.getIdTitle());
 
+
+
     }
 
-    public IContentFragment[] getContentFragments() {
+    public BaseContentFragment[] getContentFragments() {
         return mContensFragments;
     }
 
@@ -63,6 +71,8 @@ public class MainActivity extends ActionBarActivity
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
+         //ActionBar bar = getActionBar();
+
     }
 
     @Override
@@ -88,17 +98,6 @@ public class MainActivity extends ActionBarActivity
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public interface IContentFragment {
-        public Fragment getFragment();
-        public int getIdTitle();
-        public String getName();
-        public String getEmail();
-        public int getIdIco();
-        public int getIdIcoTop();
-        public int getIdIcoBar();
-        public String getUrlIco();
     }
 
 }

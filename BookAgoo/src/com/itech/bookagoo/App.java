@@ -11,17 +11,17 @@ import com.itech.bookagoo.tool.Log;
 public class App extends Application {
 
     private static App sInstance = null;
-    private static Context sContext = null;
-    private static boolean sIsTamlet = false;
+    private  Context mContext = null;
+    private  boolean mIsTamlet = false;
 
     @Override
     public void onCreate() {
 
         sInstance = this;
-        sContext = getApplicationContext();
-        sIsTamlet = sContext.getResources().getBoolean(R.bool.is_tablet);
+        mContext = getApplicationContext();
+        mIsTamlet = mContext.getResources().getBoolean(R.bool.is_tablet);
 
-        Log.i(">>>>> " + sContext.getString(R.string.res) + "<<<<<");
+        Log.i(">>>>> " + mContext.getString(R.string.res) + "<<<<<");
 
     }
 
@@ -30,9 +30,9 @@ public class App extends Application {
     }
 
     public static Context getContext() {
-        return sContext;
+        return sInstance.mContext;
     }
 
-    public static boolean isTablet() { return sIsTamlet; }
+    public static boolean isTablet() { return sInstance.mIsTamlet; }
 
 }

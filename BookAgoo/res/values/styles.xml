@@ -15,8 +15,8 @@
 
     </style>
     <style name="BgActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <!-- почемутио неработат -->
-        <item name="android:background">#00a388</item>
+        <!-- почемуто неработат -->
+        <item name="android:background">@drawable/ab_transparent_dark_holo</item>
         <!--item name="android:backgroundStacked">#000000</item>
         <item name="android:backgroundSplit">#FFFFFF</item-->
 

@@ -9,16 +9,11 @@ import android.view.ViewGroup;
 /**
  * Created by Artem on 02.03.14.
  */
-public class AdoutFragment extends Fragment implements MainActivity.IContentFragment {
+public class AdoutFragment extends BaseContentFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_adout, container, false);
-    }
-
-    @Override
-    public Fragment getFragment() {
-        return this;
     }
 
     @Override
@@ -27,7 +22,7 @@ public class AdoutFragment extends Fragment implements MainActivity.IContentFrag
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_adout);
     }
 
@@ -46,10 +41,10 @@ public class AdoutFragment extends Fragment implements MainActivity.IContentFrag
         return R.drawable.ic_menu6_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu6;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu6;
+//    }
 
     @Override
     public String getUrlIco() {

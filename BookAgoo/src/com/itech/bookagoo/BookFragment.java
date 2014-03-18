@@ -9,16 +9,11 @@ import android.view.ViewGroup;
 /**
  * Created by Artem on 02.03.14.
  */
-public class BookFragment extends Fragment implements MainActivity.IContentFragment {
+public class BookFragment extends BaseContentFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_book, container, false);
-    }
-
-    @Override
-    public Fragment getFragment() {
-        return this;
     }
 
     @Override
@@ -27,7 +22,7 @@ public class BookFragment extends Fragment implements MainActivity.IContentFragm
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_book);
     }
 
@@ -46,10 +41,10 @@ public class BookFragment extends Fragment implements MainActivity.IContentFragm
         return R.drawable.ic_menu2_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu2;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu2;
+//    }
 
     @Override
     public String getUrlIco() {

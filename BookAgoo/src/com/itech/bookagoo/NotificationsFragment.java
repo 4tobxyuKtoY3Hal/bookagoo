@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 /**
  * Created by Artem on 02.03.14.
  */
-public class NotificationsFragment extends Fragment implements MainActivity.IContentFragment {
+public class NotificationsFragment extends BaseContentFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -20,17 +20,12 @@ public class NotificationsFragment extends Fragment implements MainActivity.ICon
     }
 
     @Override
-    public Fragment getFragment() {
-        return this;
-    }
-
-    @Override
     public int getIdTitle() {
         return R.string.title_notifications;
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_notifications) + " (13)";
     }
 
@@ -49,10 +44,10 @@ public class NotificationsFragment extends Fragment implements MainActivity.ICon
         return R.drawable.ic_menu4_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu4;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu4;
+//    }
 
     @Override
     public String getUrlIco() {

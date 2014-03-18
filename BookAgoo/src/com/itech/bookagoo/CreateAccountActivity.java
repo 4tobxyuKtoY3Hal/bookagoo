@@ -1,5 +1,7 @@
 package com.itech.bookagoo;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -15,7 +17,8 @@ public class CreateAccountActivity extends ActionBarActivity implements View.OnC
         setContentView(R.layout.activity_create_account);
 
         findViewById(R.id.activityCreateAccount_Button_ok).setOnClickListener(this);
-
+        //т.к. в стиле не цепается цвет, то назначаем его здесь
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.action_bar_background_color)));
     }
 
     @Override

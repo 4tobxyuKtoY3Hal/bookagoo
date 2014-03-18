@@ -1,16 +1,17 @@
 package com.itech.bookagoo;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.view.*;
 
 /**
  * Created by Artem on 02.03.14.
  */
-public class WallFragment extends Fragment implements MainActivity.IContentFragment {
+public class WallFragment extends BaseContentFragment {
+
+    @Override
+       public void onCreate(Bundle savedInstanceState) {
+           super.onCreate(savedInstanceState);
+    }
 
    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,17 +22,12 @@ public class WallFragment extends Fragment implements MainActivity.IContentFragm
     }
 
     @Override
-    public Fragment getFragment() {
-        return this;
-    }
-
-    @Override
     public int getIdTitle() {
         return R.string.title_wall;
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_wall);
     }
 
@@ -50,10 +46,10 @@ public class WallFragment extends Fragment implements MainActivity.IContentFragm
         return R.drawable.ic_menu1_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu1;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu1;
+//    }
 
     @Override
     public String getUrlIco() {

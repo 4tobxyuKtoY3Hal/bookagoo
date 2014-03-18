@@ -10,16 +10,11 @@ import android.view.ViewGroup;
 /**
  * Created by Artem on 02.03.14.
  */
-public class TutorialFragment extends Fragment implements MainActivity.IContentFragment {
+public class TutorialFragment extends BaseContentFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_tutorial, container, false);
-    }
-
-    @Override
-    public Fragment getFragment() {
-        return this;
     }
 
     @Override
@@ -28,7 +23,7 @@ public class TutorialFragment extends Fragment implements MainActivity.IContentF
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_tutorial);
     }
 
@@ -47,10 +42,10 @@ public class TutorialFragment extends Fragment implements MainActivity.IContentF
         return R.drawable.ic_menu5_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu5;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu5;
+//    }
 
     @Override
     public String getUrlIco() {

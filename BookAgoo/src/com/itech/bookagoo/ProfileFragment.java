@@ -9,16 +9,11 @@ import android.view.ViewGroup;
 /**
  * Created by Artem on 02.03.14.
  */
-public class ProfileFragment extends Fragment implements MainActivity.IContentFragment {
+public class ProfileFragment extends BaseContentFragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_profile, container, false);
-    }
-
-    @Override
-    public Fragment getFragment() {
-        return this;
     }
 
     @Override
@@ -27,8 +22,8 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
     }
 
     @Override
-    public String getName() {
-        return "Name";
+    public String getNameTitle() {
+        return "Фансека";
     }
 
     @Override
@@ -46,10 +41,10 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
         return 0;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return 0;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return 0;
+//    }
 
     @Override
     public String getUrlIco() {

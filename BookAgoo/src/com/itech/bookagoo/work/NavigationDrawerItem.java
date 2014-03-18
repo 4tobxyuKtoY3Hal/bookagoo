@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.itech.bookagoo.App;
 import com.itech.bookagoo.R;
+import com.itech.bookagoo.tool.Log;
 
 /**
  * Created by Artem on 12.03.14.
@@ -94,21 +95,19 @@ public class NavigationDrawerItem {
 
     public NavigationDrawerItem setIdIco(int id) {
         mIdIco = id;
-//        if (!mIsProfil) {
-//            if (!mIsTap) {
-//                mIco.setImageResource(id);
-//            }
-//        }
+        if (mIco != null) {
+            if (mIdIco>0) {
+                if (!mIsTap) {
+                    mIco.setImageResource(mIdIco);
+                }
+            }
+        }
+
         return this;
     }
 
     public NavigationDrawerItem setIdIcoTap(int id) {
         mIdIcoTap = id;
-//        if (!mIsProfil) {
-//            if (mIsTap) {
-//                mIco.setImageResource(id);
-//            }
-//        }
         return this;
     }
 

@@ -13,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.*;
 import android.widget.*;
+import com.itech.bookagoo.tool.Log;
 import com.itech.bookagoo.work.NavigationDrawerItem;
 
 import java.util.ArrayList;
@@ -33,7 +34,9 @@ public class NavigationDrawerFragment extends Fragment {
     private ListView mDrawerListView;
     private View mFragmentContainerView;
 
+    //Начальная позиция 1
     private int mCurrentSelectedPosition = 1;
+
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
@@ -45,7 +48,6 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Read in the flag indicating whether or not the user has demonstrated awareness of the
         // drawer. See PREF_USER_LEARNED_DRAWER for details.
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -55,9 +57,6 @@ public class NavigationDrawerFragment extends Fragment {
             mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
             mFromSavedInstanceState = true;
         }
-
-        // Select either the default item (1) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
 
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
@@ -75,17 +74,17 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        MainActivity.IContentFragment[] contents = ((MainActivity) getActivity()).getContentFragments();
+        BaseContentFragment[] contents = ((MainActivity) getActivity()).getContentFragments();
 
         // ArrayList<Item> arrItem = new ArrayList<Item>();
         ArrayList<NavigationDrawerItem> arrItem = new ArrayList<NavigationDrawerItem>();
 
         Context context = getActivity().getApplicationContext();
 
-        for (MainActivity.IContentFragment contentFragment : contents) {
+        for (BaseContentFragment contentFragment : contents) {
 
             NavigationDrawerItem itemView = new NavigationDrawerItem();
-            itemView.setNameTitle(contentFragment.getName())
+            itemView.setNameTitle(contentFragment.getNameTitle())
                     .setEmail(contentFragment.getEmail())
                     .setUrlIco(contentFragment.getUrlIco())
                     .setIdIco(contentFragment.getIdIco())
@@ -99,7 +98,9 @@ public class NavigationDrawerFragment extends Fragment {
 
         mDrawerListView.setAdapter(mAdapter);
 
-        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+        //mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+
+
 
         return mDrawerListView;
     }
@@ -164,6 +165,8 @@ public class NavigationDrawerFragment extends Fragment {
 
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
+
+
         };
 
         // If the user hasn't 'learned' about the drawer, open it to introduce them to the drawer,
@@ -181,10 +184,14 @@ public class NavigationDrawerFragment extends Fragment {
         });
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+        selectItem(mCurrentSelectedPosition);
+
     }
 
     private void selectItem(int position) {
         mCurrentSelectedPosition = position;
+
         if (mDrawerListView != null) {
             mDrawerListView.setItemChecked(position, true);
         }
@@ -237,7 +244,7 @@ public class NavigationDrawerFragment extends Fragment {
         // If the drawer is open, show the global app actions in the action bar. See also
         // showGlobalContextActionBar, which controls the top-left area of the action bar.
         if (mDrawerLayout != null && isDrawerOpen()) {
-            inflater.inflate(R.menu.global, menu);
+            inflater.inflate(R.menu.wall, menu);
             showGlobalContextActionBar();
         }
         super.onCreateOptionsMenu(menu, inflater);
@@ -250,9 +257,10 @@ public class NavigationDrawerFragment extends Fragment {
         }
 
         switch (item.getItemId()) {
-            case R.id.action_example:
+            /*case R.id.action_example:
                 Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
                 return true;
+                */
         }
 
         return super.onOptionsItemSelected(item);

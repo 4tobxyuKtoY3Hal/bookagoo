@@ -10,16 +10,11 @@ import android.view.ViewGroup;
  * Created by Artem on 02.03.14.
  */
 
-public class SpecialContentFragment extends Fragment implements MainActivity.IContentFragment {
+public class SpecialContentFragment extends BaseContentFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_special_content, container, false);
-    }
-
-    @Override
-    public Fragment getFragment() {
-        return this;
     }
 
     @Override
@@ -28,7 +23,7 @@ public class SpecialContentFragment extends Fragment implements MainActivity.ICo
     }
 
     @Override
-    public String getName() {
+    public String getNameTitle() {
         return App.getContext().getString(R.string.title_special_content);
     }
 
@@ -47,10 +42,10 @@ public class SpecialContentFragment extends Fragment implements MainActivity.ICo
         return R.drawable.ic_menu3_tap;
     }
 
-    @Override
-    public int getIdIcoBar() {
-        return R.drawable.ic_menu3;
-    }
+//    @Override
+//    public int getIdIcoBar() {
+//        return R.drawable.ic_menu3;
+//    }
 
     @Override
     public String getUrlIco() {

@@ -8,6 +8,7 @@
 
     <ImageView
             android:id="@+id/viewItrmNavigationDrawer_ImageView_ico"
+            android:background="@drawable/abc_list_divider_holo_dark"
             android:layout_centerVertical="true"
             android:layout_width="28dp"
             android:layout_height="28dp"
@@ -25,7 +26,6 @@
                 style="@style/Widget.TextView.BgNavigationItem"
                 android:id="@+id/viewItrmNavigationDrawer_TextView_name"
                 android:gravity="center"
-                android:text="Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -34,7 +34,6 @@
                 android:id="@+id/viewItrmNavigationDrawer_TextView_email"
                 style="@style/Widget.TextView.BgNavigationItem2"
                 android:gravity="center"
-                android:text="e-mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
