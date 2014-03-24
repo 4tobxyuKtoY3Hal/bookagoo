@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BOOK aGoo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="title_profile">Profile</string>
+    <string name="title_wall">The Wall</string>
+    <string name="title_book">The Book</string>
+    <string name="title_special_content">Special content</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_tutorial">Tutorial</string>
+    <string name="title_adout">Adout</string>
+
+    <string name="action_example">Example action</string>
+    <string name="navigation_drawer_open">Открыть</string>
+    <string name="navigation_drawer_close">Закрыть</string>
+
+</resources>

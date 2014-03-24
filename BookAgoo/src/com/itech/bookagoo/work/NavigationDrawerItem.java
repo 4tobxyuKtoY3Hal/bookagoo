@@ -78,6 +78,8 @@ public class NavigationDrawerItem {
         return this;
     }
 
+
+
     public boolean isProfil() {
         return mIsProfil;
     }

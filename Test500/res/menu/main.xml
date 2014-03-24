@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:sabd="http://schemas.android.com/apk/res-auto" >
+
+    <!--item android:id="@+id/action_example"
+          android:title="@string/action_example"
+          sabd:showAsAction="withText|ifRoom" />
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:orderInCategory="100"
+          sabd:showAsAction="never" />
+
+
+    <item
+            android:id="@+id/action_settings"
+            android:title="@string/action_settings"
+            android:icon="@android:drawable/ic_menu_more"
+            sabd:showAsAction="always" />
+    <item
+            android:id="@+id/action_item_1"
+            android:title="@string/title_section1"
+            android:icon="@android:drawable/ic_menu_delete"
+            sabd:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/action_item_2"
+            android:title="@string/title_section2"
+            android:icon="@android:drawable/ic_menu_add"
+            sabd:showAsAction="ifRoom|withText" />
+    <item
+            android:id="@+id/action_item_3"
+            android:title="@string/title_section3"
+            android:icon="@android:drawable/ic_menu_add"
+            sabd:showAsAction="never" /-->
+</menu>
+<!--
+always — элемент всегда будет виден, если места не хватает, заголовок будет показан не полностью
+ifRoom — элемент будет виден, только если для него есть место
+never — элемент никогда не будет виден, для его показа нужно нажать кнопку Меню на устройстве или кнопку Overflow на ActionBar при отсутствии первой
+-->

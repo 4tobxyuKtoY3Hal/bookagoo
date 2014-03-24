@@ -1,12 +1,11 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>
+    <style name="AppBaseTheme" parent="Theme.Sherlock.Light"/>
 
     <style name="AppTheme" parent="AppBaseTheme">
 
-        <!-- 2а раза стиль актионбар для старше и младше v11 -->
-        <item name="android:actionBarStyle">@style/BgActionBar</item>
-        <item name="actionBarStyle">@style/BgActionBar</item>
+        <item name="actionBarStyle">@style/Widget.Styled.ActionBar</item>
+        <item name="android:actionBarStyle">@style/Widget.Styled.ActionBar</item>
 
         <item name="android:buttonStyle">@style/BgButton</item>
         <item name="android:editTextStyle">@style/Widget.EditText.BgEditText</item>
@@ -14,12 +13,12 @@
         <item name="android:radioButtonStyle">@style/Widget.CompoundButton.RadioButton.BgRadioButton</item>
 
     </style>
-    <style name="BgActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <!-- почемуто неработат -->
-        <item name="android:background">@drawable/ab_transparent_dark_holo</item>
-        <!--item name="android:backgroundStacked">#000000</item>
-        <item name="android:backgroundSplit">#FFFFFF</item-->
+    <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+            <item name="background">#00a388</item>
+            <item name="android:background">#00a388</item>
 
+            <!--item name="backgroundSplit">#f00</item>
+            <item name="android:backgroundSplit">#0f0</item-->
     </style>
 
     <style name="Widget.CompoundButton.RadioButton.BgRadioButton"

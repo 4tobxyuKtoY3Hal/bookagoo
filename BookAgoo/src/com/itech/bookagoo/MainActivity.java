@@ -1,16 +1,13 @@
 package com.itech.bookagoo;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.*;
+import com.actionbarsherlock.ActionBarSherlock;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends SherlockFragmentActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
@@ -41,8 +38,6 @@ public class MainActivity extends ActionBarActivity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-        //т.к. в стиле не цепается цвет, то назначаем его здесь
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.action_bar_background_color)));
 
     }
 
@@ -57,9 +52,6 @@ public class MainActivity extends ActionBarActivity
                 .commit();
 
         mTitle = getString(contentFragment.getIdTitle());
-
-
-
     }
 
     public BaseContentFragment[] getContentFragments() {
@@ -67,13 +59,15 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void restoreActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
+        ActionBarSherlock actionBar = getSherlock();
+        //actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+        //actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
          //ActionBar bar = getActionBar();
 
     }
+
+    /*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -99,5 +93,5 @@ public class MainActivity extends ActionBarActivity
         }
         return super.onOptionsItemSelected(item);
     }
-
+*/
 }
