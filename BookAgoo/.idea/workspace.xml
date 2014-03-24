@@ -103,7 +103,7 @@
       <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="0.33333334" vertical-offset="3622" max-vertical-offset="5338">
+            <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="5.8212123" vertical-offset="0" max-vertical-offset="5338">
               <folding />
             </state>
           </provider>
@@ -252,8 +252,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="95" />
-    <option name="y" value="32" />
+    <option name="x" value="-13" />
+    <option name="y" value="31" />
     <option name="width" value="1615" />
     <option name="height" value="837" />
   </component>
@@ -291,48 +291,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bookagoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BookAgoo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -347,7 +305,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="OverrideImplement.combined" value="true" />
@@ -572,7 +530,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="95" y="32" width="1615" height="837" extended-state="1" />
+    <frame x="-13" y="31" width="1615" height="837" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -592,7 +550,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2960822" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2960822" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -749,7 +707,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+        <state line="12" column="13" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/item_navigation.xml">
@@ -815,27 +775,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/AdoutFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="7" selection-start="954" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
+        <state line="46" column="7" selection-start="954" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NotificationsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="7" selection-start="1032" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="969" />
+        <state line="49" column="7" selection-start="1032" selection-end="1120" vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="969">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/ProfileFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="7" selection-start="891" selection-end="961" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="918" />
+        <state line="46" column="7" selection-start="891" selection-end="961" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="918">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/SpecialContentFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="7" selection-start="994" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+        <state line="47" column="7" selection-start="994" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/TutorialFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="6" selection-start="967" selection-end="1055" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867" />
+        <state line="44" column="6" selection-start="967" selection-end="1055" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../appcompat/libs/android-support-v4.jar!/android/support/v4/app/ActionBarDrawerToggle.class">
@@ -898,7 +870,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/CreateAccountActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="678" selection-end="678" vertical-scroll-proportion="0.46655232" vertical-offset="0" max-vertical-offset="595" />
+        <state line="20" column="8" selection-start="678" selection-end="678" vertical-scroll-proportion="0.46655232" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/BookFragment.java">
@@ -988,44 +962,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4345" column="5" selection-start="185246" selection-end="185246" vertical-scroll-proportion="0.0" vertical-offset="73239" max-vertical-offset="93041">
           <folding>
-            <element signature="e#0#229317#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#35358#35511#0" expanded="true" />
-            <element signature="e#35504#35505#0" expanded="true" />
-            <element signature="e#36004#36019#0" expanded="true" />
-            <element signature="e#36512#36539#0" expanded="true" />
-            <element signature="e#36779#36780#0" expanded="true" />
-            <element signature="e#36809#36810#0" expanded="true" />
-            <element signature="e#37205#37206#0" expanded="true" />
-            <element signature="e#37240#37241#0" expanded="true" />
-            <element signature="e#37348#37349#0" expanded="true" />
-            <element signature="e#37383#37384#0" expanded="true" />
-            <element signature="e#37642#37643#0" expanded="true" />
-            <element signature="e#37672#37673#0" expanded="true" />
-            <element signature="e#37786#37787#0" expanded="true" />
-            <element signature="e#37823#37824#0" expanded="true" />
-            <element signature="e#38172#38173#0" expanded="true" />
-            <element signature="e#38202#38203#0" expanded="true" />
-            <element signature="e#68422#68423#0" expanded="true" />
-            <element signature="e#68463#68464#0" expanded="true" />
-            <element signature="e#76450#76451#0" expanded="true" />
-            <element signature="e#76483#76484#0" expanded="true" />
-            <element signature="e#177699#177700#0" expanded="true" />
-            <element signature="e#177731#177732#0" expanded="true" />
-            <element signature="e#177910#177911#0" expanded="true" />
-            <element signature="e#177943#177944#0" expanded="true" />
-            <element signature="e#178508#178509#0" expanded="true" />
-            <element signature="e#178554#178555#0" expanded="true" />
-            <element signature="e#190999#191000#0" expanded="true" />
-            <element signature="e#191032#191033#0" expanded="true" />
-            <element signature="e#193480#193481#0" expanded="true" />
-            <element signature="e#193509#193510#0" expanded="true" />
-            <element signature="e#193549#193550#0" expanded="true" />
-            <element signature="e#193583#193584#0" expanded="true" />
-            <element signature="e#218982#218983#0" expanded="true" />
-            <element signature="e#219014#219015#0" expanded="true" />
-            <element signature="e#227478#227479#0" expanded="true" />
-            <element signature="e#227509#227510#0" expanded="true" />
+            <element signature="e#0#229317#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#35358#35511#0" expanded="false" />
+            <element signature="e#35504#35505#0" expanded="false" />
+            <element signature="e#36004#36019#0" expanded="false" />
+            <element signature="e#36512#36539#0" expanded="false" />
+            <element signature="e#36779#36780#0" expanded="false" />
+            <element signature="e#36809#36810#0" expanded="false" />
+            <element signature="e#37205#37206#0" expanded="false" />
+            <element signature="e#37240#37241#0" expanded="false" />
+            <element signature="e#37348#37349#0" expanded="false" />
+            <element signature="e#37383#37384#0" expanded="false" />
+            <element signature="e#37642#37643#0" expanded="false" />
+            <element signature="e#37672#37673#0" expanded="false" />
+            <element signature="e#37786#37787#0" expanded="false" />
+            <element signature="e#37823#37824#0" expanded="false" />
+            <element signature="e#38172#38173#0" expanded="false" />
+            <element signature="e#38202#38203#0" expanded="false" />
+            <element signature="e#68422#68423#0" expanded="false" />
+            <element signature="e#68463#68464#0" expanded="false" />
+            <element signature="e#76450#76451#0" expanded="false" />
+            <element signature="e#76483#76484#0" expanded="false" />
+            <element signature="e#177699#177700#0" expanded="false" />
+            <element signature="e#177731#177732#0" expanded="false" />
+            <element signature="e#177910#177911#0" expanded="false" />
+            <element signature="e#177943#177944#0" expanded="false" />
+            <element signature="e#178508#178509#0" expanded="false" />
+            <element signature="e#178554#178555#0" expanded="false" />
+            <element signature="e#190999#191000#0" expanded="false" />
+            <element signature="e#191032#191033#0" expanded="false" />
+            <element signature="e#193480#193481#0" expanded="false" />
+            <element signature="e#193509#193510#0" expanded="false" />
+            <element signature="e#193549#193550#0" expanded="false" />
+            <element signature="e#193583#193584#0" expanded="false" />
+            <element signature="e#218982#218983#0" expanded="false" />
+            <element signature="e#219014#219015#0" expanded="false" />
+            <element signature="e#227478#227479#0" expanded="false" />
+            <element signature="e#227509#227510#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1056,7 +1030,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="0.33333334" vertical-offset="3622" max-vertical-offset="5338">
+        <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="5.8212123" vertical-offset="0" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>
