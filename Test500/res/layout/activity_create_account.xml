@@ -74,6 +74,7 @@
                     android:paddingLeft="@dimen/padding_horizontal">
 
                 <RadioButton
+                        android:id="@+id/activityCreateAccount_RadioButton_born"
                         android:text="@string/start_radiobutton_born"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -125,6 +126,7 @@
                         android:orientation="horizontal">
 
                     <RadioButton
+                            android:id="@+id/activityCreateAccount_RadioButton_boy"
                             android:button="@drawable/rb_boy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

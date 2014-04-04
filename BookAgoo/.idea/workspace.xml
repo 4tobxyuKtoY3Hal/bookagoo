@@ -103,7 +103,7 @@
       <file leaf-file-name="NavigationDrawerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="5.8212123" vertical-offset="0" max-vertical-offset="5338">
+            <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="-0.5924242" vertical-offset="4233" max-vertical-offset="5338">
               <folding />
             </state>
           </provider>
@@ -148,11 +148,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="37" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1666">
-              <folding>
-                <element signature="e#1859#1860#0" expanded="true" />
-                <element signature="e#1899#1900#0" expanded="true" />
-              </folding>
+            <state line="36" column="37" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1751">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,7 +157,7 @@
       <file leaf-file-name="Bild.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/Bild.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="5" column="13" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -168,13 +165,13 @@
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="44" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="442">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -304,7 +301,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test500" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -373,6 +370,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -398,19 +408,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -531,7 +528,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="31" width="1615" height="837" extended-state="1" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -550,7 +547,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2960822" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29543996" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -588,10 +585,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/bg_navigation_drawer.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -608,29 +605,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_adout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_book.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_book.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login_tablet.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login_tablet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="53" selection-start="3817" selection-end="3891" vertical-scroll-proportion="0.63702357" vertical-offset="992" max-vertical-offset="3009">
           <folding>
@@ -647,21 +641,21 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_notifications.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_notifications.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="50" selection-start="422" selection-end="422" vertical-scroll-proportion="0.27919707" vertical-offset="0" max-vertical-offset="548">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_create_account_tablet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="64" selection-start="662" selection-end="662" vertical-scroll-proportion="0.48850575" vertical-offset="0" max-vertical-offset="3349">
           <folding>
@@ -694,15 +688,18 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="24" selection-start="2479" selection-end="2524" vertical-scroll-proportion="0.73989457" vertical-offset="548" max-vertical-offset="2584">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/LoginActivity.java">
@@ -713,13 +710,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/item_navigation.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="17" selection-start="40" selection-end="1835" vertical-scroll-proportion="0.8880351" vertical-offset="41" max-vertical-offset="952">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://C:/adt-bundle-windows-x86-20130911/sdk/sources/android-19/android/app/Application.java">
@@ -728,23 +725,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/view_item_navigation_drawer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="76" selection-start="281" selection-end="281" vertical-scroll-proportion="0.1827957" vertical-offset="0" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/fragment_wall.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/fragment_wall.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/global.xml">
@@ -831,10 +828,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../appcompat/res/drawable-hdpi/abc_list_divider_holo_dark.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -854,10 +851,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../appcompat/res/drawable-hdpi/abc_ab_solid_dark_holo.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -883,13 +880,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/fragment_navigation_drawer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/App.java">
@@ -907,13 +904,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="44" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="442">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/WallFragment.java">
@@ -932,9 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/BaseContentFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.027113238" vertical-offset="0" max-vertical-offset="627">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="0.027113238" vertical-offset="0" max-vertical-offset="627" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
@@ -962,44 +957,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="4345" column="5" selection-start="185246" selection-end="185246" vertical-scroll-proportion="0.0" vertical-offset="73239" max-vertical-offset="93041">
           <folding>
-            <element signature="e#0#229317#0" expanded="false" />
             <element signature="imports" expanded="false" />
-            <element signature="e#35358#35511#0" expanded="false" />
-            <element signature="e#35504#35505#0" expanded="false" />
-            <element signature="e#36004#36019#0" expanded="false" />
-            <element signature="e#36512#36539#0" expanded="false" />
-            <element signature="e#36779#36780#0" expanded="false" />
-            <element signature="e#36809#36810#0" expanded="false" />
-            <element signature="e#37205#37206#0" expanded="false" />
-            <element signature="e#37240#37241#0" expanded="false" />
-            <element signature="e#37348#37349#0" expanded="false" />
-            <element signature="e#37383#37384#0" expanded="false" />
-            <element signature="e#37642#37643#0" expanded="false" />
-            <element signature="e#37672#37673#0" expanded="false" />
-            <element signature="e#37786#37787#0" expanded="false" />
             <element signature="e#37823#37824#0" expanded="false" />
-            <element signature="e#38172#38173#0" expanded="false" />
-            <element signature="e#38202#38203#0" expanded="false" />
-            <element signature="e#68422#68423#0" expanded="false" />
-            <element signature="e#68463#68464#0" expanded="false" />
-            <element signature="e#76450#76451#0" expanded="false" />
-            <element signature="e#76483#76484#0" expanded="false" />
-            <element signature="e#177699#177700#0" expanded="false" />
-            <element signature="e#177731#177732#0" expanded="false" />
-            <element signature="e#177910#177911#0" expanded="false" />
-            <element signature="e#177943#177944#0" expanded="false" />
-            <element signature="e#178508#178509#0" expanded="false" />
-            <element signature="e#178554#178555#0" expanded="false" />
-            <element signature="e#190999#191000#0" expanded="false" />
             <element signature="e#191032#191033#0" expanded="false" />
-            <element signature="e#193480#193481#0" expanded="false" />
-            <element signature="e#193509#193510#0" expanded="false" />
             <element signature="e#193549#193550#0" expanded="false" />
-            <element signature="e#193583#193584#0" expanded="false" />
-            <element signature="e#218982#218983#0" expanded="false" />
             <element signature="e#219014#219015#0" expanded="false" />
-            <element signature="e#227478#227479#0" expanded="false" />
-            <element signature="e#227509#227510#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1007,10 +969,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="37" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1666">
-          <folding>
-            <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="e#1899#1900#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,14 +982,12 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../ActionBarSherlock-v4.4/actionbarsherlock/libs/android-support-v4.jar!/android/support/v4/app/Fragment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="16" selection-start="7586" selection-end="7586" vertical-scroll-proportion="0.34565917" vertical-offset="2998" max-vertical-offset="4607">
-          <folding />
-        </state>
+        <state line="190" column="16" selection-start="7586" selection-end="7586" vertical-scroll-proportion="0.34565917" vertical-offset="2998" max-vertical-offset="4607" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itech/bookagoo/NavigationDrawerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="5.8212123" vertical-offset="0" max-vertical-offset="5338">
+        <state line="249" column="24" selection-start="9002" selection-end="9002" vertical-scroll-proportion="-0.5924242" vertical-offset="4233" max-vertical-offset="5338">
           <folding />
         </state>
       </provider>

@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Test500.iml" filepath="$PROJECT_DIR$/Test500.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock-v4.4/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock-v4.4/actionbarsherlock/actionbarsherlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../appcompat/appcompat.iml" filepath="$PROJECT_DIR$/../appcompat/appcompat.iml" />
     </modules>
   </component>
 </project>
