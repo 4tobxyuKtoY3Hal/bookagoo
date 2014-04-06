@@ -62,10 +62,18 @@ public class BaseApi {
 
             if (method == METHOD.POST) {
                 response = Network.post(strUri, headers, strQuery);
-            } else {
+            } else if(method == METHOD.GET) {
                 if (strQuery != null && strQuery.length() > 0)
                     strUri += "?" + strQuery;
                 response = Network.get(strUri, headers);
+            } else if(method == METHOD.PUT){
+                //TODO дописать put запрос
+                response = Network.put();
+            } else if(method == METHOD.DELETE){
+                //TODO дописать delete запрос
+                response = Network.delete();
+            } else {
+                return null;
             }
 
             if (response == null) return null;
@@ -145,7 +153,9 @@ public class BaseApi {
 
     protected static enum METHOD {
         GET,
-        POST
+        POST,
+        PUT,
+        DELETE
     }
 
 }

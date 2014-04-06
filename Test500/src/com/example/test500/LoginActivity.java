@@ -36,8 +36,9 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.activityLogin_Button_login:
-                //startActivity(new Intent(this, MainActivity.class));
-                //finish();
+                startActivity(new Intent(this, MainActivity.class));
+//                startActivity(new Intent(this, AddContent.class));
+                finish();
                 BookAgooApi api = BookAgooApi.getInstance();
                 api.login("1", "1", new BookAgooApi.OnQueryListener() {
                     @Override

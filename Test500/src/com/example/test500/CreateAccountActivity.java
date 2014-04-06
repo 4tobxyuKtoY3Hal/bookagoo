@@ -17,13 +17,6 @@ import org.json.JSONObject;
  */
 public class CreateAccountActivity extends SherlockActivity implements View.OnClickListener {
 
-    private String mUserName;
-    private String mBabyDate;
-    private String mBabyName;
-
-    private boolean mIsBorn;
-    private boolean mIsBoy;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +35,11 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
                 BookAgooApi api = BookAgooApi.getInstance();
                 String userEmail = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_email);
                 String userPass = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_enterYourDetails);
-
-                mUserName = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_name);
-                mBabyDate = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_dateOfBirt);
-                mBabyName = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_nameaby);
-                mIsBorn = Utils.radioButtonToBoolean(this, R.id.activityCreateAccount_RadioButton_born);
-                mIsBoy = Utils.radioButtonToBoolean(this, R.id.activityCreateAccount_RadioButton_boy);
+                String userName = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_name);
+                String babyDate = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_dateOfBirt);
+                String babyName = Utils.editTextToString(this, R.id.activityCreateAccount_EditText_nameaby);
+                boolean isBorn = Utils.radioButtonToBoolean(this, R.id.activityCreateAccount_RadioButton_born);
+                boolean isBoy = Utils.radioButtonToBoolean(this, R.id.activityCreateAccount_RadioButton_boy);
 
                 if(true){
                     api.registration(userEmail, userPass, mOnRegistration);

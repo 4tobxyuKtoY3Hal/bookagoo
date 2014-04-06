@@ -12,6 +12,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_tutorial">Tutorial</string>
     <string name="title_adout">Adout</string>
+    <string name="title_add_content">Add content</string>
 
     <string name="action_example">Example action</string>
     <string name="navigation_drawer_open">Открыть</string>

@@ -47,6 +47,14 @@ public class Network {
             new ThreadPoolExecutor(1, 1, 500, TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<Runnable>());
 
+    public static HttpResponse put(){
+        return null;
+    }
+
+    public static HttpResponse delete(){
+        return null;
+    }
+
     public static HttpResponse get(String strUri, Map<String, String> headers)
             throws URISyntaxException, IOException {
         HttpParams httpParameters = new BasicHttpParams();
@@ -60,7 +68,7 @@ public class Network {
         //get.setHeader("User-Agent", USER_AGENT);
 
         if (com.example.test500.Build.LOG_TEST) {
-            Log.i(">>>>> START QUERTY <<<<<");
+            Log.i(">>>>> QUERTY <<<<<");
             Log.i("// URI: " + strUri);
             Log.i("// METOD: GET");
             Log.i("// HEADER:");
@@ -102,7 +110,7 @@ public class Network {
         // post.setHeader("User-Agent", USER_AGENT);
 
         if (com.example.test500.Build.LOG_TEST) {
-            Log.i(">>>>> START QUERTY <<<<<");
+            Log.i(">>>>> QUERTY <<<<<");
             Log.i("// URI: " + strUri);
             Log.i("// METOD: POST");
             Log.i("// QUERT: " + query);
