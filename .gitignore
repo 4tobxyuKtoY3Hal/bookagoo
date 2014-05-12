@@ -4,7 +4,8 @@
 
 #
 
-Test500/out
+Test500/out/
+Test500/.idea/
 
 # Built application files
 *.apk
