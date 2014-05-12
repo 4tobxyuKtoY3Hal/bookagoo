@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/hider"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/header">
+        <TextView
+                android:layout_marginLeft="16dp"
+                android:text="Free storege: "
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:text="15 mb"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_below="@+id/hider"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            />
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_below="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    <include
+            layout="@layout/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"/>
+    <include
+            android:layout_below="@+id/indicator"
+            layout="@layout/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"/>
+
+
+</RelativeLayout>

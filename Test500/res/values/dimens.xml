@@ -4,5 +4,10 @@
 
     <dimen name="padding_horizontal">16dp</dimen>
     <dimen name="padding_vertical">16dp</dimen>
+    <dimen name="shadow_height">3dp</dimen>
+
+
+    <dimen name="sliding_menu_shadow_width">10dp</dimen>
+    <dimen name="slidingmenu_offset">40dp</dimen>
 
 </resources>

@@ -3,8 +3,6 @@ package com.example.test500;
 import android.app.Application;
 import android.content.Context;
 
-import java.io.File;
-
 /**
  * Created by Artem on 18.03.14.
  */
@@ -17,6 +15,7 @@ public class App extends Application {
     public void onCreate() {
         sInstance = this;
         mContext = getApplicationContext();
+
     }
 
     public static App getInstance() {

@@ -27,11 +27,6 @@ public class AdoutFragment extends Fragment implements MainActivity.IContentFrag
     }
 
     @Override
-    public String getEmail() {
-        return null;
-    }
-
-    @Override
     public int getIdIco() {
         return R.drawable.ic_menu6;
     }

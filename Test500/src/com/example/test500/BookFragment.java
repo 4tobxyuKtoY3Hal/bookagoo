@@ -5,9 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.test500.App;
-import com.example.test500.MainActivity;
-import com.example.test500.R;
 
 /**
  * Created by Artem on 02.03.14.
@@ -27,11 +24,6 @@ public class BookFragment extends Fragment implements MainActivity.IContentFragm
     @Override
     public String getNameTitle() {
         return App.getContext().getString(R.string.title_book);
-    }
-
-    @Override
-    public String getEmail() {
-        return null;
     }
 
     @Override

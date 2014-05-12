@@ -1,13 +1,11 @@
 package com.example.test500;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.MenuItem;
 import com.example.test500.tool.Utils;
 import com.example.test500.work.BookAgooApi;
 import org.json.JSONObject;
@@ -22,9 +20,11 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         findViewById(R.id.activityCreateAccount_Button_ok).setOnClickListener(this);
-        //т.к. в стиле не цепается цвет, то назначаем его здесь
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.action_bar_background_color)));
+
+
     }
 
     @Override
@@ -69,6 +69,16 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             Toast.makeText(App.getContext(), "Error " + errorCode + ": " + mess, Toast.LENGTH_SHORT).show();
         }
     };
+
+    @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            switch (item.getItemId()) {
+                case android.R.id.home:
+                    finish();
+                    return true;
+            }
+            return super.onOptionsItemSelected(item);
+        }
 
 
 }

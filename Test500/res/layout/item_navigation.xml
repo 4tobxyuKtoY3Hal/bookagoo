@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/itemNavigation_View_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+        <ImageView
+                android:id="@+id/itemNavigation_ImageView_ico"
+                android:layout_centerVertical="true"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"/>
+
+
+        <TextView
+                style="@style/Widget.TextView.BgNavigationItem"
+                android:id="@+id/itemNavigation_TextView_title"
+                android:layout_toRightOf="@+id/itemNavigation_ImageView_ico"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/itemNavigation_View_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <ImageView
+                android:id="@+id/itemNavigation_ImageView_ava"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+
+        <ImageView
+                android:src="@drawable/mask_ava"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"/>
+
+        <TextView
+                style="@style/Widget.TextView.BgNavigationItem"
+                android:id="@+id/itemNavigation_TextView_name"
+                android:layout_below="@+id/itemNavigation_ImageView_ava"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <TextView
+                style="@style/Widget.TextView.BgNavigationItem2"
+                android:text="Личный кабинет"
+                android:id="@+id/itemNavigation_TextView_dop"
+                android:layout_below="@+id/itemNavigation_TextView_name"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <View
+                android:layout_below="@+id/itemNavigation_TextView_dop"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

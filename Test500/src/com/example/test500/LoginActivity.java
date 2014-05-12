@@ -5,10 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import com.actionbarsherlock.app.SherlockActivity;
-import com.example.test500.tool.errors.NetworkDisabledException;
 import com.example.test500.work.BookAgooApi;
-import org.apache.http.HttpException;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -37,7 +34,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.activityLogin_Button_login:
                 startActivity(new Intent(this, MainActivity.class));
-//                startActivity(new Intent(this, AddContent.class));
+//                startActivity(new Intent(this, AddContentActivity.class));
+//                startActivity(new Intent(this, TestActivity.class));
                 finish();
                 BookAgooApi api = BookAgooApi.getInstance();
                 api.login("1", "1", new BookAgooApi.OnQueryListener() {

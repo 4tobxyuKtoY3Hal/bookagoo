@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.test500.MainActivity;
 
 /**
  * Created by Artem on 02.03.14.
@@ -26,11 +25,6 @@ public class TutorialFragment extends Fragment implements MainActivity.IContentF
     @Override
     public String getNameTitle() {
         return App.getContext().getString(R.string.title_tutorial);
-    }
-
-    @Override
-    public String getEmail() {
-        return null;
     }
 
     @Override

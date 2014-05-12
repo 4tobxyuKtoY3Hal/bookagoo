@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.test500"
-          android:versionCode="20"
-          android:versionName="1.2.QA">
+          android:versionCode="27"
+          android:versionName="1.2">
 
     <uses-sdk
             android:minSdkVersion="8"
@@ -31,8 +31,10 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".CreateAccountActivity"/>
         <activity
-                android:name=".AddContent"
+                android:name=".AddContentActivity"
                 android:label="@string/title_add_content"/>
+        <activity
+                android:name=".TestActivity"/>
     </application>
 
 </manifest>

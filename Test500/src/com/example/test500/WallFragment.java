@@ -3,7 +3,6 @@ package com.example.test500;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.*;
-import com.example.test500.MainActivity;
 
 /**
  * Created by Artem on 02.03.14.
@@ -31,11 +30,6 @@ public class WallFragment extends Fragment implements MainActivity.IContentFragm
     @Override
     public String getNameTitle() {
         return App.getContext().getString(R.string.title_wall);
-    }
-
-    @Override
-    public String getEmail() {
-        return null;
     }
 
     @Override

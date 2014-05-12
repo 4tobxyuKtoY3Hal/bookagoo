@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.example.test500.MainActivity;
 
 /**
  * Created by Artem on 02.03.14.
@@ -28,11 +27,6 @@ public class NotificationsFragment extends Fragment implements MainActivity.ICon
     @Override
     public String getNameTitle() {
         return App.getContext().getString(R.string.title_notifications) + " (13)";
-    }
-
-    @Override
-    public String getEmail() {
-        return null;
     }
 
     @Override

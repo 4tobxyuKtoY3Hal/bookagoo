@@ -18,4 +18,15 @@
     <string name="navigation_drawer_open">Открыть</string>
     <string name="navigation_drawer_close">Закрыть</string>
 
+    <string name="add_content_tab_itle_media">Photo/Video</string>
+    <string name="add_content_tab_itle_sound">Sound</string>
+    <string name="add_content_tab_itle_text">Text note</string>
+
+    <string name="profile_content_tab_itle_general">General</string>
+    <string name="profile_content_tab_itle_baby">Baby</string>
+    <string name="profile_content_tab_itle_family">Family</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
 </resources>

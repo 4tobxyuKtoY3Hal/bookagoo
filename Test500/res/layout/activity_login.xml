@@ -54,7 +54,6 @@
 
                 <Button
                         android:id="@+id/activityLogin_Button_login"
-                        android:gravity="center"
                         android:drawableStart="@drawable/arrow_zsolt"
                         android:text="@string/start_buton_login"
                         android:layout_width="match_parent"

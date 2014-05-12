@@ -1,6 +1,8 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="Theme.Sherlock.Light"/>
+    <style name="AppBaseTheme" parent="Theme.Sherlock.Light">
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
 
     <style name="AppTheme" parent="AppBaseTheme">
 
@@ -11,6 +13,7 @@
         <item name="android:editTextStyle">@style/Widget.EditText.BgEditText</item>
         <item name="android:textViewStyle">@style/Widget.TextView.BgFieldTextView</item>
         <item name="android:radioButtonStyle">@style/Widget.CompoundButton.RadioButton.BgRadioButton</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator.BgTab</item>
 
     </style>
 
@@ -22,6 +25,20 @@
         <item name="android:backgroundSplit">#0f0</item-->
     </style>
 
+    <style name="Widget.TabPageIndicator.BgTab"
+           parent="@style/Widget.TabPageIndicator">
+        <item name="android:textAppearance">@style/TextAppearance.TabPageIndicator.BgTabText</item>
+        <item name="android:background">@drawable/tab_indicator</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="TextAppearance.TabPageIndicator.BgTabText" parent="@style/TextAppearance.TabPageIndicator">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#009373</item>
+    </style>
+
     <style name="Widget.CompoundButton.RadioButton.BgRadioButton"
            parent="@android:style/Widget.CompoundButton.RadioButton">
         <item name="android:button">@drawable/rb</item>
@@ -29,16 +46,28 @@
         <item name="android:textColor">#008f77</item>
     </style>
 
+    <style name="Widget.TextView.BgRadioButton" parent="@android:style/Widget.TextView">
+            <item name="android:textColor">#008f77</item>
+            <item name="android:textStyle">bold</item>
+        </style>
+
     <style name="BgButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/bt</item>
         <item name="android:minHeight">40dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">#FFF</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
     </style>
 
     <style name="BgButton.Red" parent="@style/BgButton">
         <item name="android:background">@drawable/bt_red</item>
     </style>
+
+    <style name="BgButton.White" parent="@style/BgButton">
+            <item name="android:background">@drawable/bt_white</item>
+        <item name="android:textColor">#000</item>
+        </style>
 
     <style name="BgFieldWhite">
         <item name="android:background">@drawable/field_white</item>
@@ -62,6 +91,16 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="Widget.TextView.BgHeader" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="Widget.TextView.BgHeaderSvktly" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/header_svktly</item>
+        <item name="android:textStyle">normal</item>
+    </style>
     <style name="Widget.TextView.BgNavigationItem2" parent="@android:style/Widget.TextView">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">#9b9b9b</item>
