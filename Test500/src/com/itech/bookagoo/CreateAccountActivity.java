@@ -1,14 +1,16 @@
 package com.itech.bookagoo;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.itech.bookagoo.tool.Utils;
+import com.itech.bookagoo.tool.errors.ApiException;
+import com.itech.bookagoo.tool.errors.NetworkDisabledException;
 import com.itech.bookagoo.work.BookAgooApi;
-import org.json.JSONObject;
+import org.json.JSONException;
+
+import java.net.URISyntaxException;
 
 /**
  * Created by Artem on 28.02.14.
@@ -42,7 +44,17 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
                 boolean isBoy = Utils.radioButtonToBoolean(this, R.id.activityCreateAccount_RadioButton_boy);
 
                 if(true){
-                    api.registration(userEmail, userPass, mOnRegistration);
+                    try {
+                        api.registration(userEmail, userPass);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    } catch (NetworkDisabledException e) {
+                        e.printStackTrace();
+                    } catch (URISyntaxException e) {
+                        e.printStackTrace();
+                    } catch (ApiException e) {
+                        e.printStackTrace();
+                    }
                 } else {
 
                 }
@@ -52,23 +64,7 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
         }
     }
 
-    private BookAgooApi.OnQueryListener mOnRegistration = new BookAgooApi.OnQueryListener(){
 
-        @Override
-        public void onCompletion(JSONObject e) {
-            Log.v("log_test", e.toString());
-        }
-
-        @Override
-        public void onError(String error) {
-            Log.e("log_test", error);
-        }
-
-        @Override
-        public void onApiError(int errorCode, String mess) {
-            Toast.makeText(App.getContext(), "Error " + errorCode + ": " + mess, Toast.LENGTH_SHORT).show();
-        }
-    };
 
     @Override
         public boolean onOptionsItemSelected(MenuItem item) {
