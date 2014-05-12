@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="activity_create_account" type="layout">@layout/activity_create_account_tablet</item>
-    <item name="activity_login" type="layout">@layout/activity_login_tablet</item>
-</resources>
