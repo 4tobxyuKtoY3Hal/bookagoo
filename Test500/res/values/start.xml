@@ -26,6 +26,11 @@
     <string name="profile_general_radiobutton_mommy">Mommy</string>
     <string name="profile_general_radiobutton_other">Other</string>
 
+    <string name="invalid_parameters">Invalid parameters</string>
+    <string name="email_in_use">E-mail already in use</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="unknown_error">Unknown error</string>
+
     <string name="start_checkBox_text">By clicking Save and continue, you agree to BookAgoo Terms of Service end Privacy Policy, including Use of Cookies.</string>
     
 </resources>

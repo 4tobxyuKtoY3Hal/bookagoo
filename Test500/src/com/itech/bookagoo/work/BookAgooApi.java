@@ -1,6 +1,5 @@
 package com.itech.bookagoo.work;
 
-import android.os.Handler;
 import com.itech.bookagoo.Build;
 import com.itech.bookagoo.tool.errors.ApiException;
 import com.itech.bookagoo.tool.errors.NetworkDisabledException;
@@ -18,12 +17,10 @@ public class BookAgooApi extends BaseApi {
 
     private static final int WALL_LIMIT = 25;
     private static BookAgooApi sBookAgooApi = null;
-    private static String mAuthorization = null;
-    private static Handler mHandler = null;
+    private static String mAutoToken = null;
 
     private BookAgooApi() {
-        mAuthorization = Profile.getInstance().getAuthorization();
-        mHandler = new Handler();
+        mAutoToken = Profile.getInstance().getAutoToken();
     }
 
     static public BookAgooApi getInstance() {
@@ -33,14 +30,24 @@ public class BookAgooApi extends BaseApi {
         return sBookAgooApi;
     }
 
-    public JSONObject registration(String email, String password) throws JSONException, NetworkDisabledException,
-                URISyntaxException, ApiException {
+    public void getAutoToken(String autoToken){
+        mAutoToken = autoToken;
+    }
 
-        String url = Build.BUUK_AGOO_API_SERVER + COMMAND.USERS_SIGN_IN.command;
+    public JSONObject registration(String email, String password, String firstName, boolean babyBorn,
+                                   String babyFirstName, String babySex, long babyBirthDateUnix)
+            throws JSONException, NetworkDisabledException, URISyntaxException, ApiException {
+
+        String url = Build.BUUK_AGOO_API_SERVER + COMMAND.USERS.command;
 
         HashMap<String, String> query = new HashMap<String, String>();
         query.put(PARAM.USER_EMAIL, email);
         query.put(PARAM.USER_PASSWORD, password);
+        query.put(PARAM.USER_BABY_BIRTH_DATE_UNIX, Long.toString(babyBirthDateUnix));
+        query.put(PARAM.USER_BABY_BORN, Boolean.toString(babyBorn));
+        if(firstName != null) query.put(PARAM.USER_FIRST_NAME, firstName);
+        if(babyFirstName != null) query.put(PARAM.USER_BABY_FIRST_NAME, babyFirstName);
+        if(babySex != null) query.put(PARAM.USER_BABY_SEX, babySex);
 
         return sendCommand(url, COMMAND.USERS.method, query, null);
     }
@@ -65,9 +72,10 @@ public class BookAgooApi extends BaseApi {
                 + String.format(COMMAND.GET_API_USERS_ID.command, id);
 
         Map<String, String> headers = new HashMap<String, String>();
-        headers.put(HEADER.AUTHORIZATION, mAuthorization);
-
-        return sendCommand(url, COMMAND.USERS.method, null, null);
+        if(mAutoToken != null) {
+                headers.put(HEADER.AUTHORIZATION, mAutoToken);
+        }
+        return sendCommand(url, COMMAND.GET_API_USERS_ID.method, null, headers);
     }
 
     public void getTariff() {
@@ -145,7 +153,14 @@ public class BookAgooApi extends BaseApi {
         public static final String AUDIO = "audio";
     }
 
+    public static interface SEX {
+        public static final String MALE = "male";
+        public static final String FEMALE = "female";
+    }
+
     public static interface JSON {
+        public static final String USER_ID = "user_id";
+        public static final String AUTH_TOKEN = "auth_token";
         public static final String ADDRESS = "address";
         public static final String BABY = "baby";
         public static final String AVTAR = "avatar";
@@ -171,8 +186,15 @@ public class BookAgooApi extends BaseApi {
     }
 
     public static interface PARAM {
-        public static final String USER_EMAIL = "user[email];";
-        public static final String USER_PASSWORD = "user&[password]";
+        public static final String USER_EMAIL = "user[email]";
+        public static final String USER_PASSWORD = "user[password]";
+        public static final String USER_FIRST_NAME = "user[first_name]";
+        public static final String USER_BABY_BORN = "user[baby][born]";
+        public static final String USER_BABY_FIRST_NAME = "user[baby][first_name]";
+        public static final String USER_BABY_SEX = "user[baby][sex]";
+        public static final String USER_BABY_BIRTH_DATE_UNIX = "user[baby][birth_date_unix]";
+
+
         public static final String EMAIL = "email";
         public static final String PASSWORD = "password";
         public static final String OFFSET = "offset";
@@ -184,7 +206,7 @@ public class BookAgooApi extends BaseApi {
     }
 
     public static interface HEADER {
-        public static final String AUTHORIZATION = "authorization";
+        public static final String AUTHORIZATION = "Authorization";
     }
 
     public static interface SERVER {

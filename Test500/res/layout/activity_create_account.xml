@@ -141,6 +141,7 @@
                 </RadioGroup>
             </LinearLayout>
             <CheckBox
+                    android:id="@+id/activityCreateAccount_CheckBox_ok"
                     android:paddingTop="7dp"
                     android:gravity="top"
                     android:text="@string/start_checkBox_text"

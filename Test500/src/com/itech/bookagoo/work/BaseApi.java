@@ -55,6 +55,8 @@ public class BaseApi {
                 query = new HashMap<String, String>();
             }
 
+
+
             String strQuery = queryListToString(query);
 
             HttpResponse response = null;
@@ -79,13 +81,31 @@ public class BaseApi {
 
             int statusCode = response.getStatusLine().getStatusCode();
 
-            if (statusCode != 200) {
-                throw new ApiException(response.getStatusLine().getReasonPhrase(), statusCode);
-            }
+
 
             Log.i(">>>>> END QUERTY <<<<<");
             Log.i("// STATUS: " + statusCode);
             Log.i("// MESS: " + response.getStatusLine().getReasonPhrase());
+
+
+            if (statusCode != 200 && statusCode != 201) {
+
+                entity = response.getEntity();
+                if(entity != null){
+                    is = entity.getContent();
+                    if(is != null){
+                        try {
+                            JSONObject jsObj = toJSONObject(is);
+                            Log.e("// CONTENT: " + jsObj.toString());
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+
+                           throw new ApiException(response.getStatusLine().getReasonPhrase(), statusCode);
+                       }
 
             entity = response.getEntity();
 

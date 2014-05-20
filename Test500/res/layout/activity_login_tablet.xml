@@ -40,7 +40,7 @@
                         android:layout_height="110dp"/>
 
                 <EditText
-                        android:id="@+id/activityLogin_EditText_name"
+                        android:id="@+id/activityLogin_EditText_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/start_edittext_hint_email"
@@ -49,7 +49,7 @@
                         android:drawableRight="@drawable/ic_mail"/>
 
                 <EditText
-                        android:id="@+id/activityLogin_EditText_email"
+                        android:id="@+id/activityLogin_EditText_pass"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/start_edittext_hint_pass"
