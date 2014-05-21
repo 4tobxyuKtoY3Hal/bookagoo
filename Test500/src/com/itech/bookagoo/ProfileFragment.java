@@ -33,6 +33,12 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
     }
 
     @Override
+    public void onStart(){
+        super.onStart();
+        ((MainActivity) getActivity()).visibleButLogaut();
+    }
+
+    @Override
     public int getIdTitle() {
         return R.string.title_profile;
     }

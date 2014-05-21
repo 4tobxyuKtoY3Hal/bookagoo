@@ -23,6 +23,12 @@ public class WallFragment extends Fragment implements MainActivity.IContentFragm
     }
 
     @Override
+    public void onStart(){
+        super.onStart();
+        ((MainActivity)getActivity()).visibleIcoAdd();
+    }
+
+    @Override
     public int getIdTitle() {
         return R.string.title_wall;
     }

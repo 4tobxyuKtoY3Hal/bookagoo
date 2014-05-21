@@ -47,9 +47,16 @@
     </style>
 
     <style name="Widget.TextView.BgRadioButton" parent="@android:style/Widget.TextView">
-            <item name="android:textColor">#008f77</item>
-            <item name="android:textStyle">bold</item>
-        </style>
+        <item name="android:textColor">#008f77</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.TextView.BgAbsTitleTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
     <style name="BgButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/bt</item>
@@ -65,9 +72,9 @@
     </style>
 
     <style name="BgButton.White" parent="@style/BgButton">
-            <item name="android:background">@drawable/bt_white</item>
+        <item name="android:background">@drawable/bt_white</item>
         <item name="android:textColor">#000</item>
-        </style>
+    </style>
 
     <style name="BgFieldWhite">
         <item name="android:background">@drawable/field_white</item>

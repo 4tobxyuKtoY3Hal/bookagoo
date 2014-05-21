@@ -13,7 +13,6 @@ import com.viewpagerindicator.TabPageIndicator;
  */
 public class AddContentActivity extends SherlockFragmentActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,12 +1,13 @@
 package com.itech.bookagoo;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.*;
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.MenuItem;
 import com.itech.bookagoo.tool.Log;
 import com.itech.bookagoo.tool.Toast;
 import com.itech.bookagoo.tool.Utils;
@@ -27,13 +28,19 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
     private static final String LOG_TEST = "CreateAccountActivity";
     private Button mBtnOk;
     private Handler mHandler = new Handler();
+    ProgressDialog mProgressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setIcon(R.drawable.abc_ic_ab_back);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM );
+        actionBar.setCustomView(R.layout.ab_create_account_activity);
+        actionBar.getCustomView().findViewById(R.id.absCreateAccountActivity_ImageView_back).setOnClickListener(this);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mBtnOk = (Button) findViewById(R.id.activityCreateAccount_Button_ok);
         mBtnOk.setOnClickListener(this);
@@ -77,17 +84,10 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
                 new RegistrationAsyncTask(mHandler).execute(p);
 
                 break;
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
+            case R.id.absCreateAccountActivity_ImageView_back:
                 finish();
-                return true;
+                break;
         }
-        return super.onOptionsItemSelected(item);
     }
 
     class RegistrationAsyncTask extends AsyncTask<RegistrationParams, Void, Void> {
@@ -96,6 +96,17 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
 
         public RegistrationAsyncTask(Handler h) {
             mHandler = h;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            if (mProgressDialog != null) {
+                mProgressDialog.dismiss();
+            }
+            mProgressDialog = new ProgressDialog(CreateAccountActivity.this);
+            mProgressDialog.setMessage(getString(R.string.mess_registration));
+            mProgressDialog.show();
         }
 
         @Override
@@ -187,7 +198,12 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (NetworkDisabledException e) {
-                e.printStackTrace();
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.show(R.string.no_internet_connection);
+                    }
+                });
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (ApiException e) {
@@ -221,6 +237,16 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             }
             return null;
         }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            if (mProgressDialog != null) {
+                mProgressDialog.dismiss();
+                mProgressDialog = null;
+            }
+        }
+
     }
 
     class RegistrationParams {

@@ -24,6 +24,12 @@ public class Profile {
         return sProfile;
     }
 
+    public void logaut(){
+        SharedPreferences.Editor ed = mPref.edit();
+        ed.clear();
+        ed.commit();
+    }
+
     public void setEmail(String value) {
         SharedPreferences.Editor ed = mPref.edit();
         ed.putString(KEY.EMAIL, value);

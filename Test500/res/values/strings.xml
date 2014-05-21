@@ -29,4 +29,43 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
+    <string name="action_bar_title_create_account">Create your account</string>
+
+    <string name="start_buton_login">Log in</string>
+    <string name="start_buton_login_twitter">Log in with Twitter</string>
+    <string name="start_buton_login_facebook">Log in with Facebook</string>
+    <string name="start_buton_create_account">Create your account</string>
+    <string name="start_buton_save_continue">Save and continue</string>
+
+    <string name="start_edittext_hint_pass">Password</string>
+    <string name="start_edittext_hint_name">Name</string>
+    <string name="start_edittext_hint_email">E-mail</string>
+    <string name="start_edittext_hint_date_of_birt">Date of birt</string>
+
+    <string name="start_textview_title_enter_details">Enter your details:</string>
+    <string name="start_textview_title_enter_babys_details">Enter your Baby\'s details:</string>
+    <string name="start_textview_title_who_is_it">Who is it</string>
+
+    <string name="start_radiobutton_born">Born</string>
+    <string name="start_radiobutton_expecting">Expecting</string>
+
+    <string name="profile_general_im">I\'m</string>
+    <string name="profile_general_radiobutton_daddy">Daddy</string>
+    <string name="profile_general_radiobutton_mommy">Mommy</string>
+    <string name="profile_general_radiobutton_other">Other</string>
+
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="invalid_parameters">Invalid parameters</string>
+    <string name="invalid_parameters">Invalid parameters</string>
+    <string name="email_in_use">E-mail already in use</string>
+    <string name="invalid_credentials">Invalid credentials</string>
+    <string name="unknown_error">Unknown error</string>
+
+    <string name="text_start_checkbox">By clicking Save and continue, you agree to BookAgoo Terms of Service end Privacy Policy, including Use of Cookies.</string>
+
+    <string name="mess_registration">Registration</string>
+    <string name="mess_log_in">Log in</string>
+    
+    <string name="abs_title_create_account_activity">Create your account</string>
+
 </resources>

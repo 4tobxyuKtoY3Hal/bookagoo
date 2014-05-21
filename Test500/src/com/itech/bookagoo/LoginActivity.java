@@ -1,5 +1,6 @@
 package com.itech.bookagoo;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 
     private final String LOG_TEST = "LoginActivity";
     private Handler mHandler = new Handler();
+    ProgressDialog mProgressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         findViewById(R.id.activityLogin_View_loginFacebook).setOnClickListener(this);
         findViewById(R.id.activityLogin_View_loginTwitter).setOnClickListener(this);
 
+        
+
     }
 
     @Override
@@ -50,12 +54,13 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
 //                startActivity(new Intent(this, MainActivity.class));
 //                startActivity(new Intent(this, AddContentActivity.class));
 //                startActivity(new Intent(this, TestActivity.class));
+
                 LoginParams p = new LoginParams();
                 p.email = ((EditText) findViewById(R.id.activityLogin_EditText_email)).getText().toString();
                 p.password = ((EditText) findViewById(R.id.activityLogin_EditText_pass)).getText().toString();
 
                 new LoginAsyncTask(mHandler).execute(p);
-//                finish();
+
                 break;
             case R.id.activityLogin_View_loginCreate:
                 startActivity(new Intent(this, CreateAccountActivity.class));
@@ -69,12 +74,24 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         }
     }
 
+
     class LoginAsyncTask extends AsyncTask<LoginParams, Void, Void> {
 
         private Handler mHandler;
 
         public LoginAsyncTask(Handler h) {
             mHandler = h;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            if(mProgressDialog != null) {
+                mProgressDialog.dismiss();
+            }
+            mProgressDialog = new ProgressDialog(LoginActivity.this);
+            mProgressDialog.setMessage(getString(R.string.mess_log_in));
+            mProgressDialog.show();
         }
 
         @Override
@@ -185,7 +202,12 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (NetworkDisabledException e) {
-                e.printStackTrace();
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.show(R.string.no_internet_connection);
+                    }
+                });
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (ApiException e) {
@@ -227,6 +249,16 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             }
             return null;
         }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            if(mProgressDialog != null) {
+                           mProgressDialog.dismiss();
+                mProgressDialog = null;
+            }
+        }
+
     }
 
     class LoginParams {

@@ -1,5 +1,6 @@
 package com.itech.bookagoo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,20 +8,24 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.MenuItem;
 import com.itech.bookagoo.tool.Utils;
 import com.itech.bookagoo.view.NavigationItem;
+import com.itech.bookagoo.work.Profile;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 import java.util.ArrayList;
 
-public class MainActivity extends SherlockFragmentActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends SherlockFragmentActivity implements AdapterView.OnItemClickListener,
+        View.OnClickListener {
 
     private NavigationAdapter mNavigationAdapter;
     private SlidingMenu mNavigationBox;
-   // private View mContent;
+    private ImageView mIcoAdd;
+    private Button mButLogaut;
     private ArrayList<NavigationItem> mArrNavigationItem = new ArrayList<NavigationItem>();
+    private TextView mTitle;
 
     private final IContentFragment[] mContensFragments = new IContentFragment[]{
             new ProfileFragment(),
@@ -36,10 +41,15 @@ public class MainActivity extends SherlockFragmentActivity implements AdapterVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setUp();
-    }
-
-    private void setUp() {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setCustomView(R.layout.ab_main_activity);
+        actionBar.getCustomView().findViewById(R.id.absMainActivity_ImageView_menu).setOnClickListener(this);
+        mIcoAdd = (ImageView) actionBar.getCustomView().findViewById(R.id.absMainActivity_ImageView_add);
+        mIcoAdd.setOnClickListener(this);
+        mButLogaut = (Button) actionBar.getCustomView().findViewById(R.id.absMainActivity_Button_logaut);
+        mButLogaut.setOnClickListener(this);
+        mTitle = (TextView) actionBar.getCustomView().findViewById(R.id.absMainActivity_TextView_title);
 
         setContentView(R.layout.activity_main);
 
@@ -76,17 +86,19 @@ public class MainActivity extends SherlockFragmentActivity implements AdapterVie
         ListView listView = (ListView) mNavigationBox.findViewById(R.id.slidimgMenu_ListView_menu);
         listView.setAdapter(mNavigationAdapter);
         listView.setOnItemClickListener(this);
+
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {  // узнаем ID нажатой кнопки
-            case android.R.id.home: // если это кнопка-иконка ActionBar,
-                mNavigationBox.toggle(true);        // открываем меню (или закрываем)
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {  // узнаем ID нажатой кнопки
+//            case android.R.id.home: // если это кнопка-иконка ActionBar,
+//                mNavigationBox.toggle(true);        // открываем меню (или закрываем)
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) { // если нажата кнопка "Назад"
@@ -103,7 +115,10 @@ public class MainActivity extends SherlockFragmentActivity implements AdapterVie
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
         //Если уже активная вкладка
-        if(mArrNavigationItem.get(position).isTap()) return;
+        if (mArrNavigationItem.get(position).isTap()) return;
+
+        if(mIcoAdd.getVisibility() != View.GONE) mIcoAdd.setVisibility(View.GONE);
+        if(mButLogaut.getVisibility() != View.GONE) mButLogaut.setVisibility(View.GONE);
 
         MainActivity.IContentFragment contentFragment = mContensFragments[position];
 
@@ -111,20 +126,49 @@ public class MainActivity extends SherlockFragmentActivity implements AdapterVie
                 .replace(R.id.activityMain_FrameLayout_container, (Fragment) contentFragment)
                 .commit();
 
-        getSherlock().setTitle(getString(contentFragment.getIdTitle()));
+        mTitle.setText(getString(contentFragment.getIdTitle()));
 
         if (mNavigationBox.isMenuShowing()) { // и если SlidingMenu открыто
             mNavigationBox.toggle(true); // закрываем его
 
         }
 
-        for(NavigationItem navigationItem : mArrNavigationItem){
+        for (NavigationItem navigationItem : mArrNavigationItem) {
             navigationItem.isTap(false);
         }
 
         mArrNavigationItem.get(position).isTap(true);
 
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.absMainActivity_ImageView_menu:
+                mNavigationBox.toggle(true);
+                break;
+            case R.id.absMainActivity_Button_logaut:
+                Profile.getInstance().logaut();
+                startActivity(new Intent(this, StartActivity.class));
+                finish();
+                break;
+            case R.id.absMainActivity_ImageView_add:
+                startActivity(new Intent(this, AddContentActivity.class));
+                break;
+        }
+    }
+
+    public void visibleIcoAdd(){
+        if(mIcoAdd != null && mIcoAdd.getVisibility() != View.VISIBLE){
+            mIcoAdd.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void visibleButLogaut(){
+            if(mButLogaut != null && mButLogaut.getVisibility() != View.VISIBLE){
+                mButLogaut.setVisibility(View.VISIBLE);
+            }
+        }
 
     private class NavigationAdapter extends BaseAdapter {
 

@@ -15,6 +15,7 @@ public class ApiService extends IntentService {
     public static interface COMMANDS {
         public static final int GET_WALL = 0;
         public static final int PUT_USER_DATA = 1;
+        public static final int POST_WALL = 2;
     }
 
     public ApiService() {
@@ -38,6 +39,9 @@ public class ApiService extends IntentService {
             break;
             case COMMANDS.PUT_USER_DATA:
                 Log.i(LOG_TAG, "COMMAND -> PUT_USER_DATA");
+            break;
+            case COMMANDS.POST_WALL:
+                Log.i(LOG_TAG, "COMMAND -> POST_WALL");
             break;
 
         }

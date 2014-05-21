@@ -10,4 +10,10 @@
     <dimen name="sliding_menu_shadow_width">10dp</dimen>
     <dimen name="slidingmenu_offset">40dp</dimen>
 
+    <dimen name="abs_height">48dp</dimen>
+    <dimen name="abs_ico_padding">8dp</dimen>
+    <dimen name="abs_ico_horizontal_vertical">48dp</dimen>
+
+    <dimen name="corners_radius">10dp</dimen>
+
 </resources>
