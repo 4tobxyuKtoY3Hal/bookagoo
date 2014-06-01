@@ -7,9 +7,15 @@ import com.itech.bookagoo.work.BookAgooApi;
  */
 public class Build {
 
-    public static final boolean RELISE = false;
-    public static final boolean LOG_TEST = true;
+    public static final boolean RELEASE = false;
+    public static final boolean SEND_REPORT = true;
 
-    public static final String BUUK_AGOO_API_SERVER = RELISE ? BookAgooApi.SERVER.RELISE : BookAgooApi.SERVER.TEST;
+    public static final String BUUK_AGOO_API_SERVER = RELEASE ?
+            BookAgooApi.SERVER.RELISE
+            : BookAgooApi.SERVER.TEST;
+
+    public static final String[] ARR_REPORT_EMAIL = RELEASE ?
+            new String[] {""}
+            : new String[] {"art7384@gmail.com"};
 
 }

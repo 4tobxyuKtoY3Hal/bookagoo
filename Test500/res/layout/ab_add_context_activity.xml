@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/abs_height">
+
+    <ImageView
+            android:id="@+id/absAddContentActivity_ImageView_back"
+            android:src="@drawable/abc_ic_ab_back"
+            android:background="@drawable/abs_ico"
+            android:padding="@dimen/abs_ico_padding"
+            android:layout_width="@dimen/abs_ico_horizontal_vertical"
+            android:layout_height="@dimen/abs_ico_horizontal_vertical"/>
+    <TextView
+            style="@style/Widget.TextView.BgAbsTitleTextView"
+            android:text="@string/abs_title_add_content_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="56dp"/>
+
+</LinearLayout>

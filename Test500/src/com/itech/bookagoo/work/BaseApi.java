@@ -21,6 +21,8 @@ import java.util.*;
  */
 public class BaseApi {
 
+    private static final String LOG_TAG = BaseApi.class.getName();
+
     protected synchronized JSONObject sendCommand(
             String command,
             METHOD method,
@@ -31,7 +33,7 @@ public class BaseApi {
         InputStream is = sendCommandForStream(command, method, query, headers);
         if (is == null) return null;
 
-        return toJSONObject(is);
+        return inputStreamToJSONObject(is);
     }
 
     private synchronized InputStream sendCommandForStream(
@@ -83,9 +85,9 @@ public class BaseApi {
 
 
 
-            Log.i(">>>>> END QUERTY <<<<<");
-            Log.i("// STATUS: " + statusCode);
-            Log.i("// MESS: " + response.getStatusLine().getReasonPhrase());
+            Log.i(LOG_TAG, ">>>>> END QUERTY <<<<<");
+            Log.i(LOG_TAG, "// STATUS: " + statusCode);
+            Log.i(LOG_TAG, "// MESS: " + response.getStatusLine().getReasonPhrase());
 
 
             if (statusCode != 200 && statusCode != 201) {
@@ -95,8 +97,8 @@ public class BaseApi {
                     is = entity.getContent();
                     if(is != null){
                         try {
-                            JSONObject jsObj = toJSONObject(is);
-                            Log.e("// CONTENT: " + jsObj.toString());
+                            JSONObject jsObj = inputStreamToJSONObject(is);
+                            Log.e(LOG_TAG, "// CONTENT: " + jsObj.toString());
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -121,7 +123,7 @@ public class BaseApi {
 
     }
 
-    private JSONObject toJSONObject(InputStream is) throws JSONException {
+    private JSONObject inputStreamToJSONObject(InputStream is) throws JSONException {
         String strIs = null;
         try {
             strIs = new java.util.Scanner(is).useDelimiter("\\A").next();

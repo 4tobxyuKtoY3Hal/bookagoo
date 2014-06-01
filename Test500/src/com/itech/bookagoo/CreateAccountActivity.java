@@ -192,7 +192,7 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
                 profile.setBabyBorn(jsObjBaby.getBoolean(BookAgooApi.JSON.BORN));
                 profile.setBabyFirstName(jsObjBaby.getString(BookAgooApi.JSON.FIRST_NAME));
                 profile.setBabySex(jsObjBaby.getString(BookAgooApi.JSON.SEX));
-                profile.setBabyBirthDateUnix(jsObjBaby.getLong(BookAgooApi.JSON.BIRT_DATE_UNIX));
+                profile.setBabyBirthDateUnix(jsObjBaby.getLong(BookAgooApi.JSON.BIRTH_DATE_UNIX));
 
                 finish();
             } catch (JSONException e) {

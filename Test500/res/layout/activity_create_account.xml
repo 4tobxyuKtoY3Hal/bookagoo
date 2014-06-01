@@ -97,7 +97,7 @@
                         android:id="@+id/activityCreateAccount_EditText_dateOfBirt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/start_edittext_hint_date_of_birt"
+                        android:hint="@string/profile_edittext_hint_date_of_birth"
                         android:layout_marginBottom="8dp"
                         style="@style/Widget.EditText.BgEditText.BgGreenEditText"
                         android:inputType="date"

@@ -11,4 +11,8 @@
     <color name="header">#7f5674</color>
     <color name="header_svktly">#a97f9e</color>
     <color name="header_focus">#edde6b</color>
+
+    <color name="txt_passive">#999</color>
+    <color name="txt_active">#00a388</color>
+
 </resources>

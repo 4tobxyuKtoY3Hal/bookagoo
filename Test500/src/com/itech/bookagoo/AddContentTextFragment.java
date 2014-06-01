@@ -11,13 +11,25 @@ import android.view.ViewGroup;
  */
 public class AddContentTextFragment extends Fragment implements ITabContentFragment {
 
+    private View mV = null;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_add_content_text, container, false);
+
+        mV = inflater.inflate(R.layout.fragment_add_content_text, container, false);
+
+        return mV;
     }
 
     @Override
     public int getIdTitle() {
         return R.string.add_content_tab_itle_text;
     }
+
+    @Override
+    public View getView() {
+        return mV;
+
+
+   }
 }

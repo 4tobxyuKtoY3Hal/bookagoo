@@ -5,13 +5,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.viewpagerindicator.TabPageIndicator;
 
 /**
  * Created by Artem on 05.04.14.
  */
-public class AddContentActivity extends SherlockFragmentActivity {
+public class AddContentActivity extends SherlockFragmentActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +22,26 @@ public class AddContentActivity extends SherlockFragmentActivity {
 
         FragmentPagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
 
-        ViewPager pager = (ViewPager)findViewById(R.id.pager);
+        ViewPager pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(adapter);
 
-        TabPageIndicator indicator = (TabPageIndicator)findViewById(R.id.indicator);
-                indicator.setViewPager(pager);
+        TabPageIndicator indicator = (TabPageIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(pager);
 
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        actionBar.setCustomView(R.layout.ab_add_context_activity);
+//        actionBar.getCustomView().findViewById(R.id.absAddContentActivity_ImageView_back).setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.absAddContentActivity_ImageView_back:
+                finish();
+                break;
+        }
     }
 
 
@@ -57,5 +73,6 @@ public class AddContentActivity extends SherlockFragmentActivity {
         }
 
     }
+
 
 }

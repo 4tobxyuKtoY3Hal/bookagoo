@@ -1,11 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+        <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</LinearLayout>
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_vertical">
+            <ImageView
+                    android:src="@drawable/ing_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/padding_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pl_txt"
+                    android:hint="@string/add_content_your_notes"
+                    android:alpha=".9"
+                    android:lines="3"/>
+        </FrameLayout>
+
+        <LinearLayout
+
+                android:paddingLeft="@dimen/padding_horizontal"
+                android:paddingRight="@dimen/padding_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <!--include
+
+                    layout="@layout/include_add_content"/-->
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

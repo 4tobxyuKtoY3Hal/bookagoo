@@ -29,6 +29,7 @@ import java.util.concurrent.*;
  */
 public class Network {
 
+    private static final String LOG_TAG = Network.class.getName();
     public static final String WIFI = "WIFI";
     public static final String MOBILE = "MOBILE";
     public static final int CONNECTION_TIMEOUT = 60000;
@@ -51,6 +52,7 @@ public class Network {
 
     public static HttpResponse get(String strUri, Map<String, String> headers)
             throws URISyntaxException, IOException {
+
         HttpParams httpParameters = new BasicHttpParams();
         HttpConnectionParams.setConnectionTimeout(httpParameters, CONNECTION_TIMEOUT);
         HttpConnectionParams.setSoTimeout(httpParameters, SOCKET_TIMEOUT);
@@ -61,14 +63,14 @@ public class Network {
         addHeaders(get, headers);
         //get.setHeader("User-Agent", USER_AGENT);
 
-        if (com.itech.bookagoo.Build.LOG_TEST) {
-            Log.i(">>>>> QUERTY <<<<<");
-            Log.i("// URI: " + strUri);
-            Log.i("// METOD: GET");
-            Log.i("// HEADER:");
+        if (com.itech.bookagoo.Build.SEND_REPORT) {
+            Log.i(LOG_TAG, ">>>>> QUERTY <<<<<");
+            Log.i(LOG_TAG, "// URI: " + strUri);
+            Log.i(LOG_TAG, "// METOD: GET");
+            Log.i(LOG_TAG, "// HEADER:");
             Set<String> keys = headers.keySet();
             for (String key : keys) {
-                Log.i("//     " + key + "=" + headers.get(key));
+                Log.i(LOG_TAG, "//     " + key + "=" + headers.get(key));
             }
         }
 
@@ -81,7 +83,7 @@ public class Network {
             throws URISyntaxException, UnsupportedEncodingException {
 
 
-        Log.d(query);
+        Log.d(LOG_TAG, query);
 
         StringEntity postEntity = null;
         if (query != null) {
@@ -103,15 +105,15 @@ public class Network {
         final HttpResponse[] _response = new HttpResponse[]{null};
         // post.setHeader("User-Agent", USER_AGENT);
 
-        if (com.itech.bookagoo.Build.LOG_TEST) {
-            Log.i(">>>>> QUERTY <<<<<");
-            Log.i("// URI: " + strUri);
-            Log.i("// METOD: POST");
-            Log.i("// QUERT: " + query);
-            Log.i("// HEADER:");
+        if (com.itech.bookagoo.Build.SEND_REPORT) {
+            Log.i(LOG_TAG, ">>>>> QUERTY <<<<<");
+            Log.i(LOG_TAG, "// URI: " + strUri);
+            Log.i(LOG_TAG, "// METOD: POST");
+            Log.i(LOG_TAG, "// QUERT: " + query);
+            Log.i(LOG_TAG, "// HEADER:");
             Set<String> keys = headers.keySet();
             for (String key : keys) {
-                Log.i("//     " + key + "=" + headers.get(key));
+                Log.i(LOG_TAG, "//     " + key + "=" + headers.get(key));
             }
         }
 

@@ -19,7 +19,7 @@ public class StartActivity extends SherlockActivity {
 
         getSupportActionBar().hide();
 
-        if(Profile.getInstance().getAutoToken() == null){
+        if(Profile.getInstance().getAuthToken() == null){
             startActivity(new Intent(this, LoginActivity.class));
         } else {
             startActivity(new Intent(this, MainActivity.class));

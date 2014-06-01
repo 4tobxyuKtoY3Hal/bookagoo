@@ -20,7 +20,7 @@ public class BookAgooApi extends BaseApi {
     private static String mAutoToken = null;
 
     private BookAgooApi() {
-        mAutoToken = Profile.getInstance().getAutoToken();
+        mAutoToken = Profile.getInstance().getAuthToken();
     }
 
     static public BookAgooApi getInstance() {
@@ -30,7 +30,7 @@ public class BookAgooApi extends BaseApi {
         return sBookAgooApi;
     }
 
-    public void getAutoToken(String autoToken){
+    public void setAutoToken(String autoToken){
         mAutoToken = autoToken;
     }
 
@@ -65,11 +65,24 @@ public class BookAgooApi extends BaseApi {
 
     }
 
+    public void putUserData(String id, String im, String firstName, String email, String pass, String newPass){
+
+        String url = Build.BUUK_AGOO_API_SERVER
+                                        + String.format(
+                COMMAND.GET_API_USERS_ID.command,
+                id);
+
+//        user[first_name]=”new name”
+//        user[baby][first_name]=”son”
+//        user[baby][birth_date_unix]=1387749600
+
+    }
+
     public JSONObject userData(String id) throws JSONException, NetworkDisabledException,
                     URISyntaxException, ApiException  {
 
         String url = Build.BUUK_AGOO_API_SERVER
-                + String.format(COMMAND.GET_API_USERS_ID.command, id);
+                                + String.format(COMMAND.GET_API_USERS_ID.command, id);
 
         Map<String, String> headers = new HashMap<String, String>();
         if(mAutoToken != null) {
@@ -147,6 +160,12 @@ public class BookAgooApi extends BaseApi {
 
     }
 
+    public static interface FAMILY_STATUS {
+            public static final String MAMMY = "mammy";
+            public static final String DADDY = "daddy";
+            public static final String OTHER = "other";
+        }
+
     public static interface TYPE {
         public static final String IMAGE = "image";
         public static final String VIDEO = "video";
@@ -164,10 +183,10 @@ public class BookAgooApi extends BaseApi {
         public static final String ADDRESS = "address";
         public static final String BABY = "baby";
         public static final String AVTAR = "avatar";
-        public static final String BIRT_DATE_UNIX = "birth_date_unix";
+        public static final String BIRTH_DATE_UNIX = "birth_date_unix";
         public static final String BORN = "born";
         public static final String FIRST_NAME = "first_name";
-        public static final String LIST_NAME = "last_name";
+        public static final String LAST_NAME = "last_name";
         public static final String MIDDLE_NAME = "middle_name";
         public static final String SEX = "sex";
         public static final String COUNTRY = "country";

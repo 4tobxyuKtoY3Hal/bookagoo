@@ -14,6 +14,31 @@
                 android:layout_height="match_parent"
                 android:paddingLeft="@dimen/padding_horizontal"
                 android:paddingRight="@dimen/padding_horizontal">
+            <LinearLayout
+                    android:layout_marginTop="@dimen/padding_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    style="@style/BgFieldWhite"
+                    android:layout_marginBottom="4dp">
+                <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ico_treble_clef"
+                        android:layout_width="18dp"
+                        android:layout_height="30dp"/>
+
+                <TextView
+
+                        android:lines="1"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:text="Select a tag group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
 
             <EditText
                     android:layout_marginTop="@dimen/padding_vertical"

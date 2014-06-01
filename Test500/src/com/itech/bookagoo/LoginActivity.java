@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import com.actionbarsherlock.app.SherlockActivity;
+import com.itech.bookagoo.service.ApiService;
 import com.itech.bookagoo.tool.Log;
 import com.itech.bookagoo.tool.Toast;
 import com.itech.bookagoo.tool.errors.ApiException;
@@ -25,7 +26,7 @@ import java.net.URISyntaxException;
 
 public class LoginActivity extends SherlockActivity implements View.OnClickListener {
 
-    private final String LOG_TEST = "LoginActivity";
+    private final String LOG_TAG = LoginActivity.class.getName();
     private Handler mHandler = new Handler();
     ProgressDialog mProgressDialog = null;
 
@@ -42,7 +43,6 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         findViewById(R.id.activityLogin_View_loginFacebook).setOnClickListener(this);
         findViewById(R.id.activityLogin_View_loginTwitter).setOnClickListener(this);
 
-        
 
     }
 
@@ -86,7 +86,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            if(mProgressDialog != null) {
+            if (mProgressDialog != null) {
                 mProgressDialog.dismiss();
             }
             mProgressDialog = new ProgressDialog(LoginActivity.this);
@@ -106,92 +106,15 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
                         "user_id":"537a73586b733130f9460100"
                     }
                     */
-                Log.v(LOG_TEST, jsObj.toString());
+                Log.v(LOG_TAG, jsObj.toString());
 
                 Profile profile = Profile.getInstance();
                 profile.setAuthToken(jsObj.getString(BookAgooApi.JSON.AUTH_TOKEN));
                 String userId = jsObj.getString(BookAgooApi.JSON.USER_ID);
                 profile.setUserId(userId);
-                    /*
-                    {
-                        "subscription_plan":{
-                            "active":true,
-                            "customized":false,
-                            "space":"1073741824.0",
-                            "valid_til_unix":1400187600,
-                            "type":"basic",
-                            "valid_til":"2014-05-16"
-                        },
-                        "newsletter":true,
-                        "social_data":{
-                            "twitter":null,
-                            "facebook":null
-                        },
-                        "pdf_status":"not_requested",
-                        "father":{
-                            "last_name":null,
-                            "first_name":null,
-                            "avatar":{
-                                "original":null,
-                                "profile":null
-                            },
-                            "birth_date":null,
-                            "birth_date_unix":null
-                        },
-                        "country":null,
-                        "total_space":0,
-                        "id":"537a73586b733130f9460100",
-                        "first_name":"Артём",
-                        "mother":{
-                            "last_name":null,
-                            "first_name":null,
-                            "avatar":{
-                                "original":null,
-                                "profile":null
-                            },
-                            "birth_date":null,
-                            "birth_date_unix":null
-                        },
-                        "address":null,
-                        "email":"art7384@gmail.com",
-                        "pdf_link":null,
-                        "payments":[],
-                        "last_name":null,
-                        "created_at":"2014-05-19T22:10:48.630+01:00",
-                        "email_notifications":true,
-                        "baby":{
-                            "born":true,
-                            "first_name":"Анна",
-                            "sex":"female",
-                            "birth_date":"1970-01-01T00:00:00.000+00:00",
-                            "middle_name":null,
-                            "last_name":null,
-                            "avatar":{
-                                "original":null,
-                                "profile":null
-                            },
-                            "birth_date_unix":0,
-                            "place_of_birth":null
-                        },
-                        "family_status":null,
-                        "created_at_unix":1400533848,
-                        "site_notifications":true
-                    }
-                    */
-                jsObj = api.userData(userId);
 
-                profile.setEmail(jsObj.getString(BookAgooApi.JSON.EMAIL));
-                profile.setFirstName(jsObj.getString(BookAgooApi.JSON.FIRST_NAME));
+                ApiService.queryGetUserData();
 
-                JSONObject jsObjBaby = jsObj.getJSONObject(BookAgooApi.JSON.BABY);
-                profile.setBabyBorn(jsObjBaby.getBoolean(BookAgooApi.JSON.BORN));
-                profile.setBabyFirstName(jsObjBaby.getString(BookAgooApi.JSON.FIRST_NAME));
-                profile.setBabySex(jsObjBaby.getString(BookAgooApi.JSON.SEX));
-                profile.setBabyBirthDateUnix(jsObjBaby.getLong(BookAgooApi.JSON.BIRT_DATE_UNIX));
-
-                // TODO надо больше данных дергать
-
-                Log.v(LOG_TEST, jsObj.toString());
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
@@ -211,7 +134,7 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (ApiException e) {
-                Log.e(LOG_TEST, "ApiException key=" + e.getCode() + "   mess: " + e.getMessage());
+                Log.e(LOG_TAG, "ApiException key=" + e.getCode() + "   mess: " + e.getMessage());
                 switch (e.getCode()) {
                     case 400:
                         mHandler.post(new Runnable() {
@@ -253,8 +176,8 @@ public class LoginActivity extends SherlockActivity implements View.OnClickListe
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            if(mProgressDialog != null) {
-                           mProgressDialog.dismiss();
+            if (mProgressDialog != null) {
+                mProgressDialog.dismiss();
                 mProgressDialog = null;
             }
         }
