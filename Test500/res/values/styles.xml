@@ -44,7 +44,11 @@
         <item name="android:button">@drawable/rb</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#008f77</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:lines">1</item>
     </style>
+
+
 
     <style name="Widget.TextView.BgRadioButton" parent="@android:style/Widget.TextView">
         <item name="android:textColor">#008f77</item>
@@ -93,9 +97,11 @@
     </style>
 
     <style name="Widget.TextView.BgNavigationItem" parent="@android:style/Widget.TextView">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/navigation_draver_item_text_name</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
     </style>
 
     <style name="Widget.TextView.BgHeader" parent="@android:style/Widget.TextView">
@@ -124,12 +130,54 @@
     </style>
     <style name="Widget.TextView.BgAddContentRbTextView" parent="@android:style/Widget.TextView">
         <item name="android:textSize">14sp</item>
-        <item name="android:background">@drawable/bt_normal</item>
+        <item name="android:background">@drawable/bt_blocked</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">#FFF</item>
         <item name="android:lines">1</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Widget.TextView.TutorialHeaderTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:shadowColor">#FF5A90B9</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="Widget.TextView.TutorialNumTextView" parent="@style/Widget.TextView.TutorialHeaderTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Widget.TextView.TutorialNumOpisTextView" parent="@style/Widget.TextView.TutorialHeaderTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.TextView.TutorialTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#1A1A1A</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="Widget.TextView.TutorialBgTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">25sp</item>
+        <item name="android:paddingLeft">10sp</item>
+        <item name="android:paddingRight">10sp</item>
+        <item name="android:paddingTop">4sp</item>
+        <item name="android:paddingBottom">6sp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:background">@drawable/bg_tutorial_txt</item>
     </style>
 
     <style name="Widget.EditText.BgEditText" parent="@android:style/Widget.EditText">

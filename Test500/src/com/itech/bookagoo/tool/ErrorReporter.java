@@ -30,7 +30,7 @@ public class ErrorReporter implements Thread.UncaughtExceptionHandler {
     static String APP_NAME = "";
     static final int N_MAX_LOG_FILES_COUNT = 10;
     static final int N_MAX_CRASH_FILES_COUNT = 3;
-    static final String ASDEVEL_BUG_REPORTER_URI = null;
+    static final String ASDEVEL_BUG_REPORTER_URI = "http://wp.isdev.ru/mail.php";
     static final String ASDEVEL_BUG_REPORTER_SEND_SUCCEDED_STATUS = "Message sent";
 
     File mInternalDir = null;

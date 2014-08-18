@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9000"/>
+    <ScrollView
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+            <TextView
+                    style="@style/Widget.TextView.TutorialHeaderTextView"
+                    android:text="@string/tutorial_handler_login_to_your"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    style="@style/Widget.TextView.TutorialHeaderTextView"
+                    android:text="@string/tutorial_txt_login_to_your"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+
+            <ImageView
+                    android:scaleType="matrix"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/tutorial_img_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

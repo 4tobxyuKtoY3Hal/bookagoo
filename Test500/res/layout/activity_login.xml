@@ -3,24 +3,27 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_login">
+        android:background="#9cbedf">
+
+    <FrameLayout
+            android:id="@+id/activityLogin_FrameLayout_cotextTuga"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     <ScrollView
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingRight="@dimen/padding_horizontal"
-                android:paddingLeft="@dimen/padding_horizontal">
+                android:paddingRight="21dp"
+                android:paddingLeft="21dp">
 
             <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/padding_vertical"/>
+                    android:layout_height="40dp"/>
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -30,10 +33,11 @@
                     android:layout_marginBottom="8dp">
 
                 <ImageView
+                        android:layout_gravity="center_horizontal"
                         android:layout_margin="16dp"
                         android:src="@drawable/login_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="110dp"/>
+                        android:layout_width="152dp"
+                        android:layout_height="94dp"/>
 
                 <EditText
                         android:id="@+id/activityLogin_EditText_email"
@@ -44,21 +48,78 @@
                         android:inputType="textEmailAddress"
                         android:drawableRight="@drawable/ic_mail"/>
 
-                <EditText
-                        android:id="@+id/activityLogin_EditText_pass"
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/start_edittext_hint_pass"
+                        android:orientation="horizontal"
+                        android:padding="0dp"
                         android:layout_marginBottom="16dp"
-                        android:inputType="textPassword"/>
+                        android:background="@drawable/et">
+                    <EditText
+                            android:id="@+id/activityLogin_EditText_pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/start_edittext_hint_pass"
+                            android:inputType="textPassword"
+                            android:background="#00000000"/>
 
+                        <TextView
+                                android:id="@+id/activityLogin_TextView_forgot"
+                                android:gravity="center"
+                                android:paddingRight="8dp"
+                                android:paddingLeft="8dp"
+                                android:layout_margin="6dp"
+                                android:text="@string/start_buton_forgot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:textColor="#FFF"
+                                android:background="@drawable/bt_text_gray"/>
+                </LinearLayout>
+
+                <FrameLayout
+                        android:id="@+id/activityLogin_Button_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bt"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:minHeight="35dp">
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                        <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/arrow_zsolt"
+                                android:layout_width="16sp"
+                                android:layout_height="16sp"
+                                android:layout_marginRight="8dp"/>
+                        <TextView
+                                android:layout_gravity="center"
+                                android:text="@string/start_buton_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="#FFF"
+                                android:textStyle="bold"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+                <!--item name="android:background">@drawable/bt</item>
+                       <item name="android:minHeight">40dp</item>
+                       <item name="android:textSize">16sp</item>
+                       <item name="android:textColor">#FFF</item>
+                       <item name="android:paddingRight">16dp</item>
+                       <item name="android:paddingLeft">16dp</item>
                 <Button
                         android:id="@+id/activityLogin_Button_login"
                         android:drawableStart="@drawable/arrow_zsolt"
                         android:text="@string/start_buton_login"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"/>
+                        android:layout_marginBottom="4dp"/-->
 
             </LinearLayout>
 
@@ -68,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     style="@style/BgFieldWhite"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="20dp">
                 <ImageView
                         android:src="@drawable/ic_createaccount"
                         android:layout_width="15dp"
@@ -139,7 +200,7 @@
 
             <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/padding_vertical"/>
+                    android:layout_height="40dp"/>
 
         </LinearLayout>
     </ScrollView>

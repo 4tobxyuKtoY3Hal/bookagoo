@@ -26,7 +26,7 @@ public class NotificationsFragment extends Fragment implements MainActivity.ICon
 
     @Override
     public String getNameTitle() {
-        return App.getContext().getString(R.string.title_notifications) + " (13)";
+        return App.getContext().getString(R.string.title_notifications);
     }
 
     @Override

@@ -4,27 +4,19 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.itech.bookagoo.service.ApiService;
 import com.itech.bookagoo.tool.Log;
-import com.itech.bookagoo.tool.errors.ApiException;
-import com.itech.bookagoo.tool.errors.NetworkDisabledException;
-import com.itech.bookagoo.work.BookAgooApi;
 import com.itech.bookagoo.work.Profile;
 import com.viewpagerindicator.TabPageIndicator;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.net.URISyntaxException;
 
 /**
  * Created by Artem on 02.03.14.
@@ -36,19 +28,24 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
     private BroadcastReceiver mQueryReceiver = null;
     private FragmentPagerAdapter mAdapter = null;
     private ViewPager mPager = null;
+    private FragmentTransaction mFragmentTransaction;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        mAdapter = new PagerAdapter(getActivity().getSupportFragmentManager());
+        if (!App.getInstance().isTablet()) {
 
-        mPager = (ViewPager) view.findViewById(R.id.pager);
-        mPager.setAdapter(mAdapter);
+            mAdapter = new PagerAdapter(getActivity().getSupportFragmentManager());
 
-        TabPageIndicator indicator = (TabPageIndicator) view.findViewById(R.id.indicator);
-        indicator.setViewPager(mPager);
+            mPager = (ViewPager) view.findViewById(R.id.pager);
+            mPager.setAdapter(mAdapter);
+
+            TabPageIndicator indicator = (TabPageIndicator) view.findViewById(R.id.indicator);
+            indicator.setViewPager(mPager);
+        }
 
         return view;
     }
@@ -61,11 +58,13 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
             App.getContext().unregisterReceiver(mQueryReceiver);
             mQueryReceiver = null;
         }
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
+
 
         ((MainActivity) getActivity()).visibleButLogaut();
 
@@ -87,6 +86,7 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
 
         ApiService.queryGetUserData();
 
+
     }
 
     @Override
@@ -96,22 +96,23 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
 
     @Override
     public String getNameTitle() {
-        return "Arsen Pogosian";
+//        return Profile.getInstance().getFirstName();
+        return App.getContext().getString(R.string.title_profile);
     }
 
     @Override
     public int getIdIco() {
-        return 0;
+        return R.drawable.ic_menu0;
     }
 
     @Override
     public int getIdIcoTop() {
-        return 0;
+        return R.drawable.ic_menu0_tap;
     }
 
     @Override
     public String getUrlIco() {
-        return "http://yastatic.net/www/1.859/yaru/i/logo.png";
+        return null;
     }
 
     private class PagerAdapter extends FragmentPagerAdapter {
@@ -142,11 +143,12 @@ public class ProfileFragment extends Fragment implements MainActivity.IContentFr
         }
     }
 
-
-
-    public interface  ITabProfileContentFragment extends ITabContentFragment {
+    public interface ITabProfileContentFragment {
 
         public void updateUi();
+
+        public int getIdTitle();
+
     }
 
 

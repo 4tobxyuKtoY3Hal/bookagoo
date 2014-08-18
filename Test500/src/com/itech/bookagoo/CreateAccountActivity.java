@@ -1,9 +1,14 @@
 package com.itech.bookagoo;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.*;
 import com.actionbarsherlock.app.ActionBar;
@@ -19,16 +24,46 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URISyntaxException;
+import java.util.Date;
 
 /**
  * Created by Artem on 28.02.14.
  */
-public class CreateAccountActivity extends SherlockActivity implements View.OnClickListener {
+public class CreateAccountActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String LOG_TEST = "CreateAccountActivity";
-    private Button mBtnOk;
+    private View mBtnOk;
     private Handler mHandler = new Handler();
-    ProgressDialog mProgressDialog = null;
+    private ProgressDialog mProgressDialog = null;
+
+    private int mYear = 2010;
+    private int mMonth = 11;
+    private int mDay = 1;
+    private static final int DATE_DIALOG = 1;
+    private long mDateTime = 0;
+
+    private DatePickerDialog.OnDateSetListener mOnDateSet = new DatePickerDialog.OnDateSetListener() {
+
+        public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+
+            Date d = new Date(0);
+            d.setYear(year - 1900);
+            d.setMonth(monthOfYear - 1);
+            d.setDate(dayOfMonth);
+            mDateTime = d.getTime();
+
+            TextView txt = (TextView) findViewById(R.id.activityCreateAccount_TextView_dateOfBirt);
+
+            txt.setText(
+                    "" + dayOfMonth
+                            + "/" + ((monthOfYear < 10) ? "0" + monthOfYear : "" + monthOfYear)
+                            + "/" + year);
+
+            txt.setTextColor(0xFF008f77);
+            ((ImageView) findViewById(R.id.activityCreateAccount_ImageView_dateOfBirt))
+                    .setImageResource(R.drawable.ic_calendaricon_green);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +72,11 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setIcon(R.drawable.abc_ic_ab_back);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM );
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         actionBar.setCustomView(R.layout.ab_create_account_activity);
         actionBar.getCustomView().findViewById(R.id.absCreateAccountActivity_ImageView_back).setOnClickListener(this);
 
-
-        mBtnOk = (Button) findViewById(R.id.activityCreateAccount_Button_ok);
+        mBtnOk = findViewById(R.id.activityCreateAccount_btView_ok);
         mBtnOk.setOnClickListener(this);
         mBtnOk.setEnabled(false);
 
@@ -54,12 +88,97 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             }
         });
 
+        findViewById(R.id.activityCreateAccount_View_dateOfBirt).setOnClickListener(this);
+
+
+        final EditText etName = (EditText) findViewById(R.id.activityCreateAccount_EditText_name);
+        final EditText etEmail = (EditText) findViewById(R.id.activityCreateAccount_EditText_email);
+        final EditText etPass = (EditText) findViewById(R.id.activityCreateAccount_EditText_enterYourDetails);
+        final EditText etByName = (EditText) findViewById(R.id.activityCreateAccount_EditText_nameaby);
+
+        etName.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (etName.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_manicon);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_manicon_green);
+                        }
+                        etName.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
+
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+        etEmail.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (etEmail.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_mail);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_mail_green);
+                        }
+                        etEmail.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
+
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+        etPass.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (etPass.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon_green);
+                        }
+                        etPass.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
+
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+        etByName.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (etByName.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_manicon);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_manicon_green);
+                        }
+                        etByName.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
+
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.activityCreateAccount_Button_ok:
+            case R.id.activityCreateAccount_btView_ok:
 
                 RegistrationParams p = new RegistrationParams();
                 p.userEmail = ((EditText) findViewById(R.id.activityCreateAccount_EditText_email)).getText().toString();
@@ -70,13 +189,12 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
                 if (p.userBabyFirstName.equals("")) p.userBabyFirstName = null;
                 p.userBabyBorn = ((RadioButton) findViewById(R.id.activityCreateAccount_RadioButton_born)).isChecked();
                 boolean isBabyMale = ((RadioButton) findViewById(R.id.activityCreateAccount_RadioButton_boy)).isChecked();
-                String babyBirthDate = ((EditText) findViewById(R.id.activityCreateAccount_EditText_dateOfBirt)).getText().toString();
                 p.userBabySex = isBabyMale ? BookAgooApi.SEX.MALE : BookAgooApi.SEX.FEMALE;
-                p.userBabyBirthDateUnix = Utils.dateStringToLong(babyBirthDate);
+                p.userBabyBirthDateUnix = (long) Math.ceil(mDateTime / 1000);
 
                 int userPasswordLength = p.userPassword.length();
                 if (p.userEmail.equals("") || p.userPassword.equals("")
-                        || userPasswordLength < 8 || userPasswordLength > 128) {
+                        || userPasswordLength < 8 || userPasswordLength > 128 || p.userBabyBirthDateUnix == 0) {
                     Toast.show(R.string.invalid_parameters);
                     return;
                 }
@@ -87,8 +205,29 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             case R.id.absCreateAccountActivity_ImageView_back:
                 finish();
                 break;
+            case R.id.activityCreateAccount_View_dateOfBirt:
+
+                Date d = (mDateTime != 0) ? new Date(mDateTime) : new Date();
+
+                mYear = d.getYear() + 1900;
+                mMonth = d.getMonth() + 1;
+                mDay = d.getDate();
+
+                showDialog(DATE_DIALOG);
+                break;
         }
     }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {                       //Overriding onCreateDialog()
+        switch (id) {
+            case DATE_DIALOG:
+                return new DatePickerDialog(this, mOnDateSet, mYear, mMonth, mDay);
+
+        }
+        return null;
+    }
+
 
     class RegistrationAsyncTask extends AsyncTask<RegistrationParams, Void, Void> {
 
@@ -106,6 +245,7 @@ public class CreateAccountActivity extends SherlockActivity implements View.OnCl
             }
             mProgressDialog = new ProgressDialog(CreateAccountActivity.this);
             mProgressDialog.setMessage(getString(R.string.mess_registration));
+            mProgressDialog.setCancelable(false);
             mProgressDialog.show();
         }
 

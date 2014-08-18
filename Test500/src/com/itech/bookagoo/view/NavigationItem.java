@@ -14,9 +14,10 @@ import com.itech.bookagoo.R;
 public class NavigationItem {
 
     private ImageView mIco;
-    private ImageView mAva;
-    private TextView mTextName;
+//    private ImageView mAva;
+//    private TextView mTextName;
     private TextView mTextTitle;
+    private View mViewExid;
 
     private boolean mIsProfile = false;
 
@@ -29,8 +30,6 @@ public class NavigationItem {
     private Context mContext;
 
     public NavigationItem(Context context) {
-
-
         setupUi(context);
     }
 
@@ -43,9 +42,14 @@ public class NavigationItem {
         mItemView = inflater.inflate(R.layout.item_navigation, null, true);
 
         mIco = (ImageView) mItemView.findViewById(R.id.itemNavigation_ImageView_ico);
-        mAva = (ImageView) mItemView.findViewById(R.id.itemNavigation_ImageView_ava);
+//        mAva = (ImageView) mItemView.findViewById(R.id.itemNavigation_ImageView_ava);
         mTextTitle = (TextView) mItemView.findViewById(R.id.itemNavigation_TextView_title);
-        mTextName = (TextView) mItemView.findViewById(R.id.itemNavigation_TextView_name);
+//        mTextName = (TextView) mItemView.findViewById(R.id.itemNavigation_TextView_name);
+    }
+
+    public void visibleExid(){
+        mItemView.findViewById(R.id.itemNavigation_LinearLayout_exit).setVisibility(View.VISIBLE);
+        mItemView.findViewById(R.id.itemNavigation_View_lineBottom).setVisibility(View.VISIBLE);
     }
 
     public NavigationItem setTitle(String title) {
@@ -53,10 +57,10 @@ public class NavigationItem {
         return this;
     }
 
-    public NavigationItem setName(String name) {
-        mTextName.setText(name);
-        return this;
-    }
+//    public NavigationItem setName(String name) {
+//        mTextName.setText(name);
+//        return this;
+//    }
 
     public NavigationItem setIdIco(int id) {
         mIdIco = id;
@@ -77,7 +81,7 @@ public class NavigationItem {
         mUrlIco = url;
         if (mUrlIco != null) {
             isProfile(true);
-            mAva.setImageURI(Uri.parse(url));
+//            mAva.setImageURI(Uri.parse(url));
         }
         return this;
     }
@@ -90,13 +94,13 @@ public class NavigationItem {
         if (isTop != mIsTap) {
             mIsTap = isTop;
             if (mIsTap) {
-                mTextName.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name_tap));
+//                mTextName.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name_tap));
                 mTextTitle.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name_tap));
                 if (mIdIcoTap > 0) {
                     mIco.setImageResource(mIdIcoTap);
                 }
             } else {
-                mTextName.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name));
+//                mTextName.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name));
                 mTextTitle.setTextColor(mContext.getResources().getColor(R.color.navigation_draver_item_text_name));
                 if (mIdIco > 0) {
                     mIco.setImageResource(mIdIco);
@@ -115,14 +119,14 @@ public class NavigationItem {
         mIsProfile = profile;
 
         View vi = mItemView.findViewById(R.id.itemNavigation_View_item);
-        View vp = mItemView.findViewById(R.id.itemNavigation_View_profile);
+//        View vp = mItemView.findViewById(R.id.itemNavigation_View_profile);
 
         if (mIsProfile) {
             if (vi.getVisibility() != View.GONE) vi.setVisibility(View.GONE);
-            if (vp.getVisibility() != View.VISIBLE) vp.setVisibility(View.VISIBLE);
+//            if (vp.getVisibility() != View.VISIBLE) vp.setVisibility(View.VISIBLE);
         } else {
             if (vi.getVisibility() != View.VISIBLE) vi.setVisibility(View.VISIBLE);
-            if (vp.getVisibility() != View.GONE) vp.setVisibility(View.GONE);
+//            if (vp.getVisibility() != View.GONE) vp.setVisibility(View.GONE);
         }
     }
 }

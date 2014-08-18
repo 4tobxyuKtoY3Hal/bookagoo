@@ -15,6 +15,7 @@
                 android:paddingLeft="@dimen/padding_horizontal"
                 android:paddingRight="@dimen/padding_horizontal">
             <LinearLayout
+                    android:id="@+id/fragmentAddContent_View_loadSound"
                     android:layout_marginTop="@dimen/padding_vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -22,13 +23,15 @@
                     style="@style/BgFieldWhite"
                     android:layout_marginBottom="4dp">
                 <ImageView
+                        android:id="@+id/fragmentAddContent_ImageView_loadSound"
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ico_treble_clef"
                         android:layout_width="18dp"
                         android:layout_height="30dp"/>
 
                 <TextView
-
+                        android:id="@+id/fragmentAddContent_TextView_loadSound"
+                        android:textColor="@color/txt_passive"
                         android:lines="1"
                         android:singleLine="true"
                         android:ellipsize="end"
@@ -41,6 +44,7 @@
             </LinearLayout>
 
             <EditText
+                    android:id="@+id/fragmentAddContent_EditText_loadSound"
                     android:layout_marginTop="@dimen/padding_vertical"
                     android:layout_marginBottom="@dimen/padding_vertical"
                     android:layout_width="match_parent"
@@ -49,6 +53,38 @@
                     android:hint="@string/add_content_your_notes"/>
 
             <include layout="@layout/include_add_content"/>
+
+            <FrameLayout
+                    android:id="@+id/includeAddContent_Button_ok"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:minHeight="35dp">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                    <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_zsolt"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginRight="8dp"/>
+                    <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/start_buton_publish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#FFF"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="16dp"/>
 
         </LinearLayout>
     </ScrollView>

@@ -30,7 +30,7 @@ public class Profile {
         SharedPreferences.Editor ed = mPref.edit();
         ed.clear();
         ed.commit();
-        App.getErrorReporter().processReports(ErrorReporter.PRCESS.DELETE);
+        //App.getErrorReporter().processReports(ErrorReporter.PRCESS.DELETE);
     }
 
     public void setEmail(String value) {

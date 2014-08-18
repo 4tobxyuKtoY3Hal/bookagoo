@@ -1,0 +1,12 @@
+<resources>
+    <item name="activity_login" type="layout">@layout/activity_login_tablet</item>
+    <item name="activity_create_account" type="layout">@layout/activity_create_account_tablet</item>
+    <item name="fragment_add_content_media" type="layout">@layout/fragment_add_content_media_tablet</item>
+    <item name="fragment_add_content_sound" type="layout">@layout/fragment_add_content_sound_tablet</item>
+    <item name="fragment_add_content_text" type="layout">@layout/fragment_add_content_text_tablet</item>
+    <item name="fragment_adout" type="layout">@layout/fragment_adout_tablet</item>
+    <item name="fragment_profile" type="layout">@layout/fragment_profile_tablet</item>
+    <item name="fragment_profile_content_general" type="layout">@layout/fragment_profile_content_general_tablet</item>
+    <item name="fragment_profile_content_baby" type="layout">@layout/fragment_profile_content_baby_tablet</item>
+    <item name="fragment_profile_content_family" type="layout">@layout/fragment_profile_content_family_tablet</item>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tutorial_bg_1">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+        <TextView
+                style="@style/Widget.TextView.TutorialHeaderTextView"
+                android:text="@string/tutorial_handler_welcome_to_bookagoo"
+                android:textSize="30sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:gravity="center"
+                style="@style/Widget.TextView.TutorialTextView"
+                android:text="@string/tutorial_txt1_welcome_to_bookagoo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                style="@style/Widget.TextView.TutorialHeaderTextView"
+                android:text="@string/tutorial_txt2_welcome_to_bookagoo"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"/>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BOOK aGoo</string>
+    <string name="action_settings">Настройки </string>
+
+    <string name="free_storage">Свободно: </string>
+
+    <string name="button_recover_pass">Отправить</string>
+    <string name="text_recover_pass">Введите адрес электронной почты и мы вышлем вам пароль</string>
+    <string name="title_recover_pass">Восстановление пароля</string>
+
+    <string name="title_profile">Профиль</string>
+    <string name="title_wall">Стена</string>
+    <string name="title_book">Книга</string>
+    <string name="title_special_content">Специальный раздел</string>
+    <string name="title_notifications">Уведомления</string>
+    <string name="title_tutorial">Помощь</string>
+    <string name="title_adout">Информация</string>
+    <string name="title_add_content">Добавить</string>
+    <string name="private_office">Личный кабинет</string>
+
+    <string name="navigation_drawer_open">Открыть</string>
+    <string name="navigation_drawer_close">Закрыть</string>
+
+    <string name="add_content_tab_itle_media">Фото/Видео</string>
+    <string name="add_content_tab_itle_sound">Звук</string>
+    <string name="add_content_tab_itle_text">Текст</string>
+    <string name="add_content_select_tag_group">Выберите тег группу</string>
+    <string name="add_content_before_me">Передо мной</string>
+
+
+    <string name="drawer_open">Открыть</string>
+    <string name="drawer_close">Закрыть</string>
+
+    <string name="action_bar_title_create_account">Создать аккаунт</string>
+
+    <string name="profile_content_tab_itle_general">Основные</string>
+    <string name="profile_content_tab_itle_baby">Ребенок</string>
+    <string name="profile_content_tab_itle_family">Семья</string>
+    <string name="profile_buton_save">Сохранить и продолжить</string>
+
+    <string name="start_buton_login">Войти</string>
+    <string name="start_buton_publish">Опубликовать</string>
+    <string name="start_buton_logaut">Выйти</string>
+    <string name="start_buton_upgrade">Обновить</string>
+    <string name="start_buton_forgot">забыли?</string>
+    <string name="start_buton_login_twitter">Войти через Twitter</string>
+    <string name="start_buton_login_facebook">Войти через Facebook</string>
+    <string name="start_buton_create_account">Создать аккаунт</string>
+    <string name="start_buton_save_continue">Сохранить и продолжить</string>
+
+    <string name="start_edittext_hint_pass">Пароль</string>
+    <string name="start_edittext_hint_name">Имя</string>
+    <string name="start_edittext_hint_email">Эл. почта</string>
+
+    <string name="profile_edittext_hint_expected_birth_date">Ожидаемая дата рождения</string>
+    <string name="profile_edittext_hint_middle_name">Отчество</string>
+    <string name="profile_edittext_hint_last_name">Фамилия</string>
+    <string name="profile_edittext_hint_date_of_birth">Дата рождения</string>
+    <string name="profile_edittext_hint_new_pass">Новый пароль</string>
+    <string name="profile_edittext_hint_con_pass">Повторите пароль</string>
+    <string name="profile_edittext_hint_pass">Текущий пароль</string>
+
+    <string name="start_textview_title_enter_details">Введите свои данные:</string>
+    <string name="start_textview_title_enter_babys_details">Введите данные ребенка:</string>
+    <string name="start_textview_title_who_is_it">Мальчик или девочка:</string>
+    <string name="start_edittext_hint_date_of_birt">Дата рождения</string>
+    <string name="start_radiobutton_born">Родился</string>
+    <string name="start_radiobutton_expecting">Ожидается</string>
+
+    <string name="profile_general_buy_pro">Купить Pro аккаунт $4,99</string>
+    <string name="profile_general_handler">Информация об аккаунте:</string>
+    <string name="profile_general_im">Я</string>
+    <string name="profile_general_radiobutton_daddy">Папа</string>
+    <string name="profile_general_radiobutton_mommy">Мама</string>
+    <string name="profile_general_radiobutton_im_daddy">Я папа</string>
+    <string name="profile_general_radiobutton_im_mommy">Я мама</string>
+    <string name="profile_general_radiobutton_other">Другое</string>
+    <string name="profile_general_tablet_title">Основные:</string>
+    <string name="profile_baby_tablet_title">Ребенок:</string>
+    <string name="profile_family_tablet_title">Семья:</string>
+    <string name="profile_buton_buy_pro_account">Купить pro аккаунт $4,9</string>
+    <string name="profile_baby_photo_baby">Нажмите, чтобы добавить фото ребенка</string>
+    <string name="profile_baby_photo_mommy">Нажмите, чтобы добавить фото мамы</string>
+    <string name="profile_baby_photo_daddy">Нажмите, чтобы добавить фото папы</string>
+
+    <string name="profile_buton_twitter_account">Авторизовать Twitter аккаунт</string>
+    <string name="profile_buton_facebook_account">Авторизовать Facebook аккаунт</string>
+
+    <string name="book_text">Ваша книга еще не опубликована!\n\ nПожалуйста войти в свой аккаунт BookAgoo через компьютер / ноутбук для редактирования и безопасно публиковать книги в Интернете.\n\nNjust начал бесплатную учетную запись? Оставить свой первый контент, чтобы начать BookAgoo путешествие!</string>
+
+    <string name="no_internet_connection">Нет подключения к Интернету</string>
+    <string name="invalid_parameters">Неверные параметры</string>
+    <string name="email_in_use">Эл. почта уже используется</string>
+    <string name="invalid_credentials">Неверные данные</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+
+    <string name="text_start_checkbox">Нажав сохранить и продолжить, Вы соглашаетесь с BookAgoo условия политики конфиденциальности, в том числе использования сookies.</string>
+
+    <string name="mess_registration">Регистрация</string>
+    <string name="mess_log_in">Вход</string>
+    <string name="mess_post_wall">Сообщение на стене</string>
+    <string name="mess_input_error_pass">Неверный пароль</string>
+    <string name="abs_title_create_account_activity">Создание аккаунта</string>
+    <string name="abs_title_add_content_activity">Добавить</string>
+
+    <string name="add_content_your_notes">Ваши заметки</string>
+
+
+    <string name="tutorial_handler_overview">Overview</string>
+    <string name="tutorial_txt_overview">BookAgoo App will help you to create your baby’s first year Digital Book in the easiest and the most comfortable way.</string>
+    <string name="tutorial_handler_how_it_works">How it works</string>
+    <string name="tutorial_txt_how_it_works">Sign up for Free account and fill the profile
+        \n\nStart capturing photos, videos, sounds and notes on the go!
+        \n\nMark each piece of content with appropriate tag from available list of tags. This will help to keep your content properly organized in the Book from the very beginning
+        \n\nSend it all to the Wall, home of all captured things
+        \n\nFollow our notifications to track all your moments
+        \n\nLogin to your BookAgoo.com via desk/laptop to try, preview or edit your Book template. Publish your Book securely online or store it locally.
+        \n\nAccess your published Book directly from the App or from any other device!</string>
+    <string name="tutorial_handler_log_in">Log in</string>
+    <string name="tutorial_txt1_log_in">Log in to your BookAgoo account with your email and password.
+        \nYou can also use your Facebook or Twitter credentials for quick login.</string>
+    <string name="tutorial_txt2_log_in">Forgot your password? Tap the “Forgot?” button and we’ll reset your password in a few seconds!</string>
+    <string name="tutorial_handler_create_your_account">Create your account</string>
+    <string name="tutorial_txt_create_your_account">Enter your email and password, your baby’s details, even if it’s not born yet and tap “Save and continue”. Now your Free BookAgoo account is created. You can edit your profile details anytime accessing it from the menu at the top left corner.
+        \nYour account data is kept securely on our server and never shared with any application, network or person.</string>
+    <string name="tutorial_handler_profile">Profile</string>
+    <string name="tutorial_text_profile">Your profile allows you to view and edit your account status, login details, password, connected social networks, your baby and other family members’ info.</string>
+    <string name="tutorial_handler_the_wall">The Wall</string>
+    <string name="tutorial_txt1_the_wall">You may already have collected some precious moments on your device: images, videos or even sounds. Post’em on the Wall – the base of your baby’s Digital Book. Or start creating your moments and send them to the Wall on the go.
+        \nTap the Wall to start filling it with your content.
+        \nThe Wall is a home of all your posts shown as you publish them in calendar order.</string>
+    <string name="tutorial_txt2_the_wall">After having published your first post you can already start creating your Digital Book.
+        \nPlease login to your BookAgoo account via desk/laptop for further steps.</string>
+    <string name="tutorial_handler_add_content">Add content</string>
+    <string name="tutorial_txt1_add_content">Line at the top indicates available storage space on your Free account. You can always upgrade to Pro 2 GB account from your free account.</string>
+    <string name="tutorial_txt2_add_content">Choose type of content you wish to post on your Wall: photo/video, sound or text note.</string>
+    <string name="tutorial_txt3_add_content">Select media file on your device or enter a text note. You can share this post via Facebook or Twitter. Please mark each piece of content with appropriate tag from available tags below. This will help to keep your content properly organized in the Book from the very beginning. Tap Add to publish your first post.</string>
+    <string name="tutorial_handler_special_content">Special content</string>
+    <string name="tutorial_txt_special_content">Special content does not appear directly on the Wall. It is a part of your Digital Book that keeps record of your baby’s growth and its teeth. Don’t forget to update records!</string>
+    <string name="tutorial_handler_notifications">Notifications</string>
+    <string name="tutorial_txt_notifications">Notifications help you to keep track of things that happen with and around your baby and family even before the baby is born. You will not forget or miss any exciting moment and an important milestone of your new life.</string>
+    <string name="tutorial_handler_the_book">The Book</string>
+    <string name="tutorial_txt_the_book">Your baby’s BookAgoo Digital Book is built upon a pre-created stylish template. Its color scheme depends on your baby’s gender. When you post your captured moments to the Wall, they appear also inside your Book under certain sections according to tags you mark those posts. Tags allow your Book to grow and create itself almost automatically with the least effort from your side. Edit your Book, play with it, preview and publish it online via your desktop/laptop.</string>
+    <string name="tutorial_handler_free_vs_pro">Free Vs. Pro</string>
+    <string name="tutorial_free">FREE</string>
+    <string name="tutorial_pro">PRO</string>
+    <string name="tutorial_photos">PHOTOS</string>
+    <string name="tutorial_videos">VIDEOS</string>
+    <string name="tutorial_audio_clips">AUDIO\nCLIPS</string>
+    <string name="tutorial_txt1_free_vs_pro">200 MB of storage space</string>
+    <string name="tutorial_txt2_free_vs_pro">Start using BookAgoo and taste its full features and ops!</string>
+    <string name="tutorial_txt3_free_vs_pro">2 GB of storage space</string>
+    <string name="tutorial_txt4_free_vs_pro">The Pro account is a subscription-based service and it operates on annual subscription mode. Annual fee of the Pro account is $.</string>
+    <string name="tutorial_txt5_free_vs_pro">At the end of your subscription period we will notify you to renew your account.
+        \n\nPro members are never upgraded or moved to a different paid service / pricing plan automatically without their permission</string>
+    <string name="tutorial_txt6_free_vs_pro">Start using BookAgoo with Free account, explore all the features and upgrade to the Pro account. </string>
+
+    <string name="tutorial_handler_welcome_to_bookagoo">Welcome\nto BookAgoo!</string>
+    <string name="tutorial_txt1_welcome_to_bookagoo">The first year digital book that grows with your child.</string>
+    <string name="tutorial_txt2_welcome_to_bookagoo">Swipe to find out how it works</string>
+    <string name="tutorial_handler_sign_up">Sign up\nfor FREE account</string>
+    <string name="tutorial_txt_sign_up">Compare accounts:\nFree vs. Pro</string>
+    <string name="tutorial_handler_start_capturing">Start capturing photos, videos, sounds and notes on the go!</string>
+    <string name="tutorial_handler_mark_each_piece">Mark each piece\nof content with appropriate tag.</string>
+    <string name="tutorial_txt_mark_each_piece">This will help to keep your content organized in the Book from the very beginning.</string>
+    <string name="tutorial_handler_send_it_all">Send it all to the Wall, home of all captured things</string>
+    <string name="tutorial_handler_follow_our_notifications">Follow our notifications to track all your moments</string>
+    <string name="tutorial_handler_login_to_your">Login to your BookAgoo.com via desk/laptop</string>
+    <string name="tutorial_txt_login_to_your">to try, preview or edit your Book template. Publish your Book securely online or store it locally.</string>
+    <string name="tutorial_handler_access_your_published">Access your published Book directly from the App or from any other device!</string>
+    <string name="tutorial_txt1_end">BookAgoo App will help you to create your baby’s first year Digital Book in the easiest and the most comfortable way.</string>
+    <string name="tutorial_txt2_end">Version: 1.0</string>
+    <string name="tutorial_txt3_end">For more information visit our website:</string>
+    <string name="tutorial_txt4_end">www.bookagoo.com</string>
+    <string name="tutorial_txt5_end">Copyright © 2013-2014 BookAgoo LLC. All rights reserved.</string>
+    <string name="tutorial_txt6_end">Made by ITECH.mobile</string>
+    <string name="tutorial_txt7_end">itech-mobile.ru</string>
+
+    <string name="start_buton_got_it">Got It</string>
+    <string name="start_buton_rate_us">Rate Us</string>
+    <string name="start_buton_send_feedback">Send Feedback</string>
+    <string name="start_buton_skip">Skip</string>
+
+    <string name="wall_text">Нажмите, чтобы\nдобавить свое\n​​первое фото\nили видео</string>
+
+    <string name="add_content_text_add">Нажмите для добавления видио</string>
+
+
+</resources>
+
+
+

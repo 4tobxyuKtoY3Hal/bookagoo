@@ -11,21 +11,60 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-            <CheckBox
-                    android:id="@+id/fragmentProfileContentBaby_CheckBox_expecting"
+            <RadioGroup
                     android:layout_gravity="center"
-                    android:text="Expecting"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            <ImageView
-                    android:id="@+id/fragmentProfileContentBaby_ImageView_ava"
+                    android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:layout_gravity="center"
-                    android:layout_width="135dp"
-                    android:layout_height="135dp"
-                    android:background="#eee"/>
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:paddingLeft="@dimen/padding_horizontal">
+
+                <RadioButton
+                        android:id="@+id/fragmentProfileContentBaby_RadioButton_born"
+                        android:text="@string/start_radiobutton_born"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"/>
+
+                <RadioButton
+                        android:text="@string/start_radiobutton_expecting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+
+            <FrameLayout
+                    android:id="@+id/fragmentProfileContentBaby_View_babyPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+                <ImageView
+                        android:src="@drawable/photo_ava_baby"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/fragmentProfileContentBaby_ImageView_ava"
+                        android:layout_gravity="center"
+                        android:layout_width="172dp"
+                        android:layout_height="172dp"/>
+
+                <FrameLayout
+                        android:id="@+id/fragmentProfileContentBaby_View_tapBabyPhoto"
+                        android:layout_gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/circle"
+                        android:padding="8dp">
+                    <TextView
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:text="@string/profile_baby_photo_baby"
+                            android:textColor="#00a388"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </FrameLayout>
+            </FrameLayout>
             <EditText
                     android:id="@+id/fragmentProfileContentBaby_EditText_name"
                     android:layout_width="match_parent"
@@ -36,7 +75,7 @@
                     android:layout_marginLeft="@dimen/padding_horizontal"
                     android:inputType="textPersonName"
                     android:drawableRight="@drawable/ic_fields_manicon"/>
-            <EditText
+            <!--EditText
                     android:id="@+id/fragmentProfileContentBaby_EditText_middleName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -45,7 +84,7 @@
                     android:layout_marginRight="@dimen/padding_horizontal"
                     android:layout_marginLeft="@dimen/padding_horizontal"
                     android:inputType="textPersonName"
-                    android:drawableRight="@drawable/ic_fields_manicon"/>
+                    android:drawableRight="@drawable/ic_fields_manicon"/-->
             <EditText
                     android:id="@+id/fragmentProfileContentBaby_EditText_lastName"
                     android:layout_width="match_parent"
@@ -56,16 +95,33 @@
                     android:layout_marginLeft="@dimen/padding_horizontal"
                     android:inputType="textPersonName"
                     android:drawableRight="@drawable/ic_fields_manicon"/>
-            <EditText
-                    android:id="@+id/fragmentProfileContentBaby_EditText_dateOfBirth"
+            <RelativeLayout
+                    android:id="@+id/fragmentProfileContentBaby_View_dateOfBirt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/profile_edittext_hint_date_of_birth"
-                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/et"
                     android:layout_marginRight="@dimen/padding_horizontal"
                     android:layout_marginLeft="@dimen/padding_horizontal"
-                    android:inputType="date"
-                    android:drawableRight="@drawable/ic_calendaricon"/>
+                    android:layout_marginBottom="8dp">
+                <TextView
+                        android:id="@+id/fragmentProfileContentBaby_TextView_dateOfBirt"
+                        android:gravity="center_vertical"
+                        android:text="@string/profile_edittext_hint_date_of_birth"
+                        android:textSize="18dp"
+                        android:textColor="#9a9a9a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:paddingLeft="@dimen/padding_horizontal"/>
+                <ImageView
+                        android:id="@+id/fragmentProfileContentBaby_ImageView_dateOfBirt"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_calendaricon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
             <EditText
                     android:visibility="gone"
                     android:id="@+id/fragmentProfileContentBaby_EditText_expectrdBirthDate"
@@ -77,15 +133,45 @@
                     android:layout_marginLeft="@dimen/padding_horizontal"
                     android:inputType="date"
                     android:drawableRight="@drawable/ic_calendaricon"/>
-            <Button
+            <!--Button
                     android:layout_marginRight="32dp"
                     android:layout_marginLeft="32dp"
                     android:drawableStart="@drawable/arrow_zsolt"
                     android:text="@string/profile_buton_save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp"/-->
+            <FrameLayout
+                    android:id="@+id/fragmentProfileContentBaby_Button_ok"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="35dp">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                    <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_zsolt"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginRight="8dp"/>
+                    <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/profile_buton_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#FFF"/>
+                </LinearLayout>
 
+            </FrameLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

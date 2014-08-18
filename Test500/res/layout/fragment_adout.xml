@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:text="fragment_adout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+    <ScrollView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/include_adout"/>
+
+    </ScrollView>
+
+</FrameLayout>

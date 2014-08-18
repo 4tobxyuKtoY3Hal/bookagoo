@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <`````````````````````````
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_vertical">
+                <ImageView
+                        android:id="@+id/fragmentAddContentVideo_ImageView_img"
+                        android:src="@drawable/ing_foto"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_height="360dp"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_vertical">
+                    <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+                        <FrameLayout
+                                android:layout_gravity="center"
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:background="@drawable/circle_add"
+                                android:padding="8dp">
+                            <TextView
+                                    android:text="@string/add_content_text_add"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                        </FrameLayout>
+                    </FrameLayout>
+                    <EditText
+                            android:id="@+id/fragmentAddContentVideo_ImageView_mess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/pl_txt"
+                            android:hint="@string/add_content_your_notes"
+                            android:alpha=".9"
+                            android:lines="3"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+
+                    android:paddingLeft="@dimen/padding_horizontal"
+                    android:paddingRight="@dimen/padding_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <include
+
+                        layout="@layout/include_add_content"/>
+            </LinearLayout>
+
+            <FrameLayout
+                    android:id="@+id/includeAddContent_Button_ok"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:minHeight="35dp">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                    <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_zsolt"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginRight="8dp"/>
+                    <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/start_buton_publish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#FFF"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -16,4 +16,6 @@
 
     <dimen name="corners_radius">10dp</dimen>
 
+    <dimen name="profile_tablet_width">540dp</dimen>
+
 </resources>

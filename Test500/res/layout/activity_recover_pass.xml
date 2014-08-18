@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal">
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_vertical"/>
+    <TextView
+            android:layout_marginTop="16dp"
+            android:text="@string/text_recover_pass"
+            style="@style/Widget.TextView.BgTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/padding_horizontal"
+            android:layout_marginLeft="@dimen/padding_horizontal"/>
+
+    <EditText
+            android:layout_marginTop="16dp"
+            android:id="@+id/activityRecoverPass_EditText_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/start_edittext_hint_email"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/padding_horizontal"
+            android:layout_marginLeft="@dimen/padding_horizontal"
+            android:inputType="textEmailAddress"
+            android:drawableRight="@drawable/ic_mail"/>
+
+
+    <FrameLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:layout_gravity="center"
+                android:id="@+id/activityRecoverPass_btView_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:minHeight="35dp">
+            <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_zsolt"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginRight="8dp"/>
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/button_recover_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#FFF"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </FrameLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_vertical"/>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tutorial_bg_4">
+    <android.support.v4.view.ViewPager
+            android:id="@+id/activityStartTutorial_ViewPager_pager"
+            android:layout_below="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    <FrameLayout
+            android:id="@+id/activityStartTutorial_skip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_white"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:minHeight="35dp">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            <TextView
+                    android:layout_gravity="center"
+                    android:text="@string/start_buton_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#5a5a5a"
+                    android:layout_marginRight="4dp"/>
+            <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_zsolt"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginRight="8dp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

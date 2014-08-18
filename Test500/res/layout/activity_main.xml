@@ -2,15 +2,25 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-    <FrameLayout
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ListView
+                android:visibility="gone"
+                android:id="@+id/activityMain_ListView_menu"
+                android:layout_width="48dp"
+                android:divider="#0000"
+                android:layout_height="match_parent"
+                android:background="#FFF"/>
+        <FrameLayout
                 android:id="@+id/activityMain_FrameLayout_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
-
+    </LinearLayout>
     <include
-                layout="@layout/shadow"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/shadow_height"/>
+            layout="@layout/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shadow_height"/>
 
 </RelativeLayout>

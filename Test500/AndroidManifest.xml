@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.itech.bookagoo"
-          android:versionCode="33"
-          android:versionName="1.0">
+          android:versionCode="52"
+          android:versionName="1.1.5">
 
     <uses-sdk
-            android:minSdkVersion="8"
-            android:targetSdkVersion="18"/>
-
+            android:minSdkVersion="10"
+            android:targetSdkVersion="19"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 
     <application
             android:name=".App"
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme">
+
+        <!--GOOGLE ANALYTICS-->
+        <service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver"
+                  android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <!--                 -->
+
         <activity
                 android:name=".MainActivity"
+                android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+                android:name=".StartTutorialActivity"
                 android:label="@string/app_name">
         </activity>
         <activity android:name=".StartActivity">
@@ -30,15 +44,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity"
+                  android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".CreateAccountActivity"/>
         <activity
                 android:name=".AddContentActivity"
+                android:windowSoftInputMode="stateHidden"
                 android:label="@string/title_add_content"/>
-        <activity
-                android:name=".TestActivity"/>
-
-        <service android:enabled="true" android:name=".service.ApiService" />
+        <activity android:name=".TestActivity"/>
+        <activity android:enabled="true" android:name=".RecoverPassActivity"
+                  android:windowSoftInputMode="stateHidden"/>
+        <service android:enabled="true" android:name=".service.ApiService"/>
 
     </application>
 

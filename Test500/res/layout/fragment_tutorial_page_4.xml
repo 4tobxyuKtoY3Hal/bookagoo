@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+        <TextView
+                style="@style/Widget.TextView.TutorialHeaderTextView"
+                android:text="@string/tutorial_handler_start_capturing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tutorial_img_9"
+                android:layout_width="208dp"
+                android:layout_height="194dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,7 +1,10 @@
 package com.itech.bookagoo;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +14,13 @@ import android.widget.RadioButton;
 import com.itech.bookagoo.service.ApiService;
 import com.itech.bookagoo.tool.Log;
 import com.itech.bookagoo.tool.Toast;
+import com.itech.bookagoo.tool.errors.ApiException;
+import com.itech.bookagoo.tool.errors.NetworkDisabledException;
 import com.itech.bookagoo.work.BookAgooApi;
 import com.itech.bookagoo.work.Profile;
+import org.json.JSONException;
+
+import java.net.URISyntaxException;
 
 /**
  * Created by Artem on 13.04.14.
@@ -25,10 +33,9 @@ public class ProfileContentGeneralFragment extends Fragment implements ProfileFr
     private RadioButton mRbtnOther;
     private EditText mEtxtName;
     private EditText mEtxtMail;
-    private  EditText mEtxtPass;
     private EditText mEtxtNewPass;
     private EditText mEtxtConfirmPass;
-    private Button mBtnOk;
+    private View mBtnOk;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,23 +48,97 @@ public class ProfileContentGeneralFragment extends Fragment implements ProfileFr
         mRbtnOther = (RadioButton) v.findViewById(R.id.fragmentProfileContentGeneral_RadioButton_other);
         mEtxtName = (EditText) v.findViewById(R.id.fragmentProfileContentGeneral_EditText_name);
         mEtxtMail = (EditText) v.findViewById(R.id.fragmentProfileContentGeneral_EditText_mail);
-        mEtxtPass = (EditText) v.findViewById(R.id.fragmentProfileContentGeneral_EditText_pass);
         mEtxtNewPass = (EditText) v.findViewById(R.id.fragmentProfileContentGeneral_EditText_newPass);
         mEtxtConfirmPass = (EditText) v.findViewById(R.id.fragmentProfileContentGeneral_EditText_confirmPass);
-        mBtnOk = (Button) v.findViewById(R.id.fragmentProfileContentGeneral_Button_ok);
+        mBtnOk = v.findViewById(R.id.fragmentProfileContentGeneral_Button_ok);
 
         mBtnOk.setOnClickListener(this);
 
+        mEtxtNewPass.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (mEtxtNewPass.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon_green);
+                        }
+                        mEtxtNewPass.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
 
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+        mEtxtConfirmPass.addTextChangedListener(
+                new TextWatcher() {
+                    public void afterTextChanged(Editable s) {
+                        Drawable drawable;
+                        if (mEtxtConfirmPass.getText().length() == 0) {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon);
+                        } else {
+                            drawable = getResources().getDrawable(R.drawable.ic_fields_staricon_green);
+                        }
+                        mEtxtConfirmPass.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                    }
+
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+                }
+        );
+        mEtxtName.addTextChangedListener(
+                        new TextWatcher() {
+                            public void afterTextChanged(Editable s) {
+                                Drawable drawable;
+                                if (mEtxtName.getText().length() == 0) {
+                                    drawable = getResources().getDrawable(R.drawable.ic_fields_manicon);
+                                } else {
+                                    drawable = getResources().getDrawable(R.drawable.ic_fields_manicon_green);
+                                }
+                                mEtxtName.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                            }
+
+                            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                            }
+
+                            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                            }
+                        }
+                );
+                mEtxtMail.addTextChangedListener(
+                                new TextWatcher() {
+                                    public void afterTextChanged(Editable s) {
+                                        Drawable drawable;
+                                        if (mEtxtMail.getText().length() == 0) {
+                                            drawable = getResources().getDrawable(R.drawable.ic_mail);
+                                        } else {
+                                            drawable = getResources().getDrawable(R.drawable.ic_mail_green);
+                                        }
+                                        mEtxtMail.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null);
+                                    }
+
+                                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                                    }
+
+                                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                    }
+                                }
+                        );
         return v;
 
     }
 
     @Override
-        public void onStart() {
-            super.onStart();
-            updateUi();
-        }
+    public void onStart() {
+        super.onStart();
+        updateUi();
+    }
 
 
     @Override
@@ -66,19 +147,19 @@ public class ProfileContentGeneralFragment extends Fragment implements ProfileFr
     }
 
     @Override
-    public void updateUi(){
+    public void updateUi() {
         Log.i(LOG_TAG, "updateUi");
 
         Profile profile = Profile.getInstance();
 
         String im = profile.getFamilyStatus();
 
-        if(im != null){
-            if(im.equals(BookAgooApi.FAMILY_STATUS.MAMMY)){
+        if (im != null) {
+            if (im.equals(BookAgooApi.FAMILY_STATUS.MAMMY)) {
                 mRbtnMommy.setChecked(true);
-            } else if(im.equals(BookAgooApi.FAMILY_STATUS.DADDY)){
+            } else if (im.equals(BookAgooApi.FAMILY_STATUS.DADDY)) {
                 mRbtnDaddy.setChecked(true);
-            } else if(im.equals(BookAgooApi.FAMILY_STATUS.OTHER)){
+            } else if (im.equals(BookAgooApi.FAMILY_STATUS.OTHER)) {
                 mRbtnOther.setChecked(true);
             }
         }
@@ -91,34 +172,50 @@ public class ProfileContentGeneralFragment extends Fragment implements ProfileFr
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.fragmentProfileContentGeneral_Button_ok:
                 String im = null;
-                if(mRbtnMommy.isChecked()){
+                if (mRbtnMommy.isChecked()) {
                     im = BookAgooApi.FAMILY_STATUS.MAMMY;
-                } else if (mRbtnDaddy.isChecked()){
+                } else if (mRbtnDaddy.isChecked()) {
                     im = BookAgooApi.FAMILY_STATUS.DADDY;
-                } else if (mRbtnOther.isChecked()){
+                } else if (mRbtnOther.isChecked()) {
                     im = BookAgooApi.FAMILY_STATUS.OTHER;
                 }
 
                 String newPass = mEtxtNewPass.getText().toString();
                 String confirmPass = mEtxtConfirmPass.getText().toString();
 
-                if(newPass.equals(confirmPass)){
-                    ApiService.queryPutGeneral(
-                            im,
-                            mEtxtName.getText().toString(),
-                            mEtxtMail.getText().toString(),
-                            mEtxtPass.getText().toString(),
-                            newPass
-                    );
+                if (newPass.equals(confirmPass)) {
+
+                    final String ims = im;
+                    final String name = mEtxtName.getText().toString();
+                    final String mail = mEtxtMail.getText().toString();
+
+                    new Thread(new Runnable() {
+                        public void run() {
+                            try {
+                                BookAgooApi.getInstance().putUserData(
+                                        Profile.getInstance().getUserId(),
+                                        ims, name, mail, null, null);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            } catch (NetworkDisabledException e) {
+                                e.printStackTrace();
+                            } catch (URISyntaxException e) {
+                                e.printStackTrace();
+                            } catch (ApiException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+
                 } else {
                     Toast.show(R.string.mess_input_error_pass);
                 }
 
 
-            break;
+                break;
 
         }
     }

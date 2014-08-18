@@ -7,7 +7,7 @@ import com.itech.bookagoo.work.BookAgooApi;
  */
 public class Build {
 
-    public static final boolean RELEASE = false;
+    public static final boolean RELEASE = true;
     public static final boolean SEND_REPORT = true;
 
     public static final String BUUK_AGOO_API_SERVER = RELEASE ?
@@ -15,7 +15,7 @@ public class Build {
             : BookAgooApi.SERVER.TEST;
 
     public static final String[] ARR_REPORT_EMAIL = RELEASE ?
-            new String[] {""}
+            new String[] {"art7384@gmail.com"}
             : new String[] {"art7384@gmail.com"};
 
 }

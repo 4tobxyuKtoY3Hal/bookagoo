@@ -65,13 +65,16 @@ public class ApiService extends IntentService {
             case COMMANDS.PUT_USER_DATA:
                 Log.i(LOG_TAG, "COMMAND -> PUT_USER_DATA");
 
-                BookAgooApi.getInstance().putUserData(
-                        Profile.getInstance().getUserId(),
-                        intent.getStringExtra(IM),
-                        intent.getStringExtra(FIRST_NAME),
-                        intent.getStringExtra(EMAIL),
-                        intent.getStringExtra(PASS),
-                        intent.getStringExtra(NEW_PASS));
+
+
+
+//                BookAgooApi.getInstance().putUserData(
+//                        Profile.getInstance().getUserId(),
+//                        intent.getStringExtra(IM),
+//                        intent.getStringExtra(FIRST_NAME),
+//                        intent.getStringExtra(EMAIL),
+//                        intent.getStringExtra(PASS),
+//                        intent.getStringExtra(NEW_PASS));
                 break;
             case COMMANDS.POST_WALL:
                 Log.i(LOG_TAG, "COMMAND -> POST_WALL");

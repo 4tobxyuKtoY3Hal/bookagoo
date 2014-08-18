@@ -9,7 +9,7 @@ import com.itech.bookagoo.work.Profile;
  * Created by Artem on 25.02.14.
  */
 
-public class StartActivity extends SherlockActivity {
+public class StartActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,17 @@ public class StartActivity extends SherlockActivity {
 
         getSupportActionBar().hide();
 
+//        startActivity(new Intent(this, TestActivity.class));
+//        finish();
+
+
         if(Profile.getInstance().getAuthToken() == null){
-            startActivity(new Intent(this, LoginActivity.class));
+            if(App.getInstance().isTablet()){
+                startActivity(new Intent(this, LoginActivity.class));
+            } else {
+                startActivity(new Intent(this, StartTutorialActivity.class));
+            }
+
         } else {
             startActivity(new Intent(this, MainActivity.class));
         }

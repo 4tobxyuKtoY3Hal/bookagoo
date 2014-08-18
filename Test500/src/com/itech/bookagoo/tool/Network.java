@@ -38,7 +38,7 @@ public class Network {
             Build.VERSION.RELEASE + " (" + android.os.Build.MODEL + ")";
     public static final String USER_AGENT = DEVICE_DESCRIPTION;
 
-    private static final ThreadPoolExecutor TIMEOUT_EXECUTOR =
+    public static final ThreadPoolExecutor TIMEOUT_EXECUTOR =
             new ThreadPoolExecutor(1, 1, 500, TimeUnit.MILLISECONDS,
                     new LinkedBlockingQueue<Runnable>());
 

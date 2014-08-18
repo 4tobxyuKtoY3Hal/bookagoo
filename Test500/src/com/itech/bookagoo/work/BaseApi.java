@@ -6,6 +6,7 @@ import com.itech.bookagoo.tool.errors.ApiException;
 import com.itech.bookagoo.tool.errors.NetworkDisabledException;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,7 +22,7 @@ import java.util.*;
  */
 public class BaseApi {
 
-    private static final String LOG_TAG = BaseApi.class.getName();
+    private static final String LOG_TAG = "BaseApi";
 
     protected synchronized JSONObject sendCommand(
             String command,
@@ -34,6 +35,28 @@ public class BaseApi {
         if (is == null) return null;
 
         return inputStreamToJSONObject(is);
+    }
+
+    protected synchronized void sendPutCommand(
+            String command,
+            METHOD method,
+            Map<String, ? extends Object> query,
+            Map<String, String> headers) throws JSONException, NetworkDisabledException,
+            URISyntaxException, ApiException {
+        InputStream is = sendCommandForStream(command, method, query, headers);
+    }
+
+    protected synchronized JSONArray sendCommandArr(
+            String command,
+            METHOD method,
+            Map<String, ? extends Object> query,
+            Map<String, String> headers) throws JSONException, NetworkDisabledException,
+            URISyntaxException, ApiException {
+
+        InputStream is = sendCommandForStream(command, method, query, headers);
+        if (is == null) return null;
+
+        return inputStreamToJSONArray(is);
     }
 
     private synchronized InputStream sendCommandForStream(
@@ -58,21 +81,22 @@ public class BaseApi {
             }
 
 
-
             String strQuery = queryListToString(query);
 
             HttpResponse response = null;
 
             if (method == METHOD.POST) {
                 response = Network.post(strUri, headers, strQuery);
-            } else if(method == METHOD.GET) {
+            } else if (method == METHOD.GET) {
                 if (strQuery != null && strQuery.length() > 0)
                     strUri += "?" + strQuery;
                 response = Network.get(strUri, headers);
-            } else if(method == METHOD.PUT){
-                //TODO дописать put запрос
-                response = Network.put();
-            } else if(method == METHOD.DELETE){
+            } else if (method == METHOD.PUT) {
+                if (strQuery != null && strQuery.length() > 0)
+                    strUri += "?" + strQuery;
+                response = Network.get(strUri, headers);
+                //response = Network.put(strUri, header);
+            } else if (method == METHOD.DELETE) {
                 //TODO дописать delete запрос
                 response = Network.delete();
             } else {
@@ -84,7 +108,6 @@ public class BaseApi {
             int statusCode = response.getStatusLine().getStatusCode();
 
 
-
             Log.i(LOG_TAG, ">>>>> END QUERTY <<<<<");
             Log.i(LOG_TAG, "// STATUS: " + statusCode);
             Log.i(LOG_TAG, "// MESS: " + response.getStatusLine().getReasonPhrase());
@@ -93,9 +116,9 @@ public class BaseApi {
             if (statusCode != 200 && statusCode != 201) {
 
                 entity = response.getEntity();
-                if(entity != null){
+                if (entity != null) {
                     is = entity.getContent();
-                    if(is != null){
+                    if (is != null) {
                         try {
                             JSONObject jsObj = inputStreamToJSONObject(is);
                             Log.e(LOG_TAG, "// CONTENT: " + jsObj.toString());
@@ -106,8 +129,8 @@ public class BaseApi {
                 }
 
 
-                           throw new ApiException(response.getStatusLine().getReasonPhrase(), statusCode);
-                       }
+                throw new ApiException(response.getStatusLine().getReasonPhrase(), statusCode);
+            }
 
             entity = response.getEntity();
 
@@ -123,7 +146,7 @@ public class BaseApi {
 
     }
 
-    private JSONObject inputStreamToJSONObject(InputStream is) throws JSONException {
+    protected JSONObject inputStreamToJSONObject(InputStream is) throws JSONException {
         String strIs = null;
         try {
             strIs = new java.util.Scanner(is).useDelimiter("\\A").next();
@@ -134,6 +157,18 @@ public class BaseApi {
         return new JSONObject(strIs);
     }
 
+    protected JSONArray inputStreamToJSONArray(InputStream is) throws JSONException {
+        String strIs = null;
+        try {
+            strIs = new java.util.Scanner(is).useDelimiter("\\A").next();
+        } catch (java.util.NoSuchElementException e) {
+
+        }
+
+        return new JSONArray(strIs);
+    }
+
+
     private String queryListToString(Map<String, ? extends Object> params) {
         if (params == null || params.size() == 0) return "";
         try {
@@ -142,6 +177,7 @@ public class BaseApi {
             for (String key : keys) {
                 if (key == null || key.length() == 0) continue;
                 Object valVar = params.get(key);
+                if (valVar == null) return "";
                 if (valVar instanceof Collection<?>) {
                     Collection<?> arr = (Collection<?>) valVar;
                     Iterator i = arr.iterator();

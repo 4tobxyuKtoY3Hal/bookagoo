@@ -25,7 +25,7 @@
                         android:layout_height="@dimen/padding_vertical"/>
                 <TextView
                         style="@style/Widget.TextView.BgHeader"
-                        android:text="Account status and storage used:"
+                        android:text="@string/profile_general_handler"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 <TextView
@@ -83,14 +83,41 @@
                             android:background="@color/header_svktly"/>
                 </LinearLayout>
 
-                <Button
+                <!--Button
                         android:layout_marginTop="16dp"
                         style="@style/BgButton.White"
                         android:drawableStart="@drawable/arrow_zsolt"
-                        android:text="Buy Pro account $4,99"
+                        android:text="@string/profile_general_buy_pro"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"/-->
+                <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bt_white"
+                        android:layout_marginTop="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:minHeight="35dp">
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+                        <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/arrow_zsolt"
+                                android:layout_width="16sp"
+                                android:layout_height="16sp"
+                                android:layout_marginRight="8dp"/>
+                        <TextView
+                                android:layout_gravity="center"
+                                android:text="@string/profile_general_buy_pro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="#000"/>
+                    </LinearLayout>
 
+                </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -101,6 +128,7 @@
                     android:paddingLeft="@dimen/padding_horizontal"
                     android:paddingTop="@dimen/padding_vertical">
                 <TextView
+                        android:layout_gravity="center"
                         style="@style/Widget.TextView.BgRadioButton"
                         android:text="@string/profile_general_im"
                         android:layout_width="wrap_content"
@@ -108,10 +136,12 @@
                         android:layout_marginRight="16dp"/>
 
                 <RadioGroup
+                        android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                     <RadioButton
+                            android:layout_gravity="center"
                             android:id="@+id/fragmentProfileContentGeneral_RadioButton_daddy"
                             android:text="@string/profile_general_radiobutton_daddy"
                             android:layout_width="wrap_content"
@@ -119,6 +149,7 @@
                             android:layout_marginRight="8dp"/>
 
                     <RadioButton
+                            android:layout_gravity="center"
                             android:id="@+id/fragmentProfileContentGeneral_RadioButton_mommy"
                             android:text="@string/profile_general_radiobutton_mommy"
                             android:layout_width="wrap_content"
@@ -126,6 +157,7 @@
                             android:layout_marginRight="8dp"/>
 
                     <RadioButton
+                            android:layout_gravity="center"
                             android:id="@+id/fragmentProfileContentGeneral_RadioButton_other"
                             android:text="@string/profile_general_radiobutton_other"
                             android:layout_width="wrap_content"
@@ -153,33 +185,40 @@
                     android:drawableRight="@drawable/ic_mail"
                     android:layout_marginRight="@dimen/padding_horizontal"
                     android:layout_marginLeft="@dimen/padding_horizontal"/>
-            <EditText
-                    android:id="@+id/fragmentProfileContentGeneral_EditText_pass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_pass"
-                    android:layout_marginBottom="16dp"
-                    android:inputType="textPassword"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"/>
-            <EditText
-                    android:id="@+id/fragmentProfileContentGeneral_EditText_newPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_pass"
-                    android:layout_marginBottom="16dp"
-                    android:inputType="textPassword"
-                    android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"/>
+
             <EditText
                     android:id="@+id/fragmentProfileContentGeneral_EditText_confirmPass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/start_edittext_hint_pass"
+                    android:hint="@string/profile_edittext_hint_pass"
                     android:layout_marginBottom="16dp"
                     android:inputType="textPassword"
                     android:layout_marginRight="@dimen/padding_horizontal"
-                    android:layout_marginLeft="@dimen/padding_horizontal"/>
+                    android:layout_marginLeft="@dimen/padding_horizontal"
+                    android:drawableRight="@drawable/ic_fields_staricon"/>
+
+
+            <EditText
+                    android:id="@+id/fragmentProfileContentGeneral_EditText_newPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_edittext_hint_new_pass"
+                    android:layout_marginBottom="16dp"
+                    android:inputType="textPassword"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"
+                    android:drawableRight="@drawable/ic_fields_staricon"/>
+
+            <EditText
+                    android:id="@+id/fragmentProfileContentGeneral_EditText_conPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_edittext_hint_con_pass"
+                    android:layout_marginBottom="16dp"
+                    android:inputType="textPassword"
+                    android:layout_marginRight="@dimen/padding_horizontal"
+                    android:layout_marginLeft="@dimen/padding_horizontal"
+                    android:drawableRight="@drawable/ic_fields_staricon"/>
 
             <LinearLayout
                     android:id="@+id/fragmentProfileContentGeneral_View_loginTwitter"
@@ -191,17 +230,24 @@
                     android:layout_marginRight="@dimen/padding_horizontal"
                     android:layout_marginLeft="@dimen/padding_horizontal">
                 <ImageView
-                        android:src="@drawable/ic_twitter"
+                        android:src="@drawable/ic_twitter_passiv"
                         android:layout_width="11dp"
                         android:layout_height="24dp"
                         android:layout_marginRight="12dp"/>
                 <TextView
                         android:gravity="center_vertical"
-                        android:text="@string/start_buton_login_twitter"
+                        android:text="@string/profile_buton_twitter_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textColor="@color/twitter_textview"
-                        android:layout_weight="1"/>
+                        android:textColor="@color/passiv"
+                        android:lines="1"
+                        android:singleLine="true"/>
+                <!--TextView
+                        android:gravity="center_vertical"
+                        android:text="@string/profile_buton_login"
+                        android:textColor="@color/passiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/-->
             </LinearLayout>
 
             <LinearLayout
@@ -214,21 +260,28 @@
                     android:layout_marginRight="@dimen/padding_horizontal"
                     android:layout_marginLeft="@dimen/padding_horizontal">
                 <ImageView
-                        android:src="@drawable/ic_facebook"
+                        android:src="@drawable/ic_facebook_passiv"
                         android:layout_width="11dp"
                         android:layout_height="24dp"
                         android:layout_marginRight="12dp"/>
                 <TextView
                         android:gravity="center_vertical"
-                        android:text="@string/start_buton_login_facebook"
+                        android:text="@string/profile_buton_facebook_account"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textColor="@color/facebook_textview"
-                        android:layout_weight="1"/>
+                        android:textColor="@color/passiv"
+                        android:lines="1"
+                        android:singleLine="true"/>
+                <!--TextView
+                        android:gravity="center_vertical"
+                        android:text="@string/profile_buton_login"
+                        android:textColor="@color/passiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/-->
 
             </LinearLayout>
 
-            <Button
+            <!--Button
                     android:id="@+id/fragmentProfileContentGeneral_Button_ok"
                     android:layout_marginRight="32dp"
                     android:layout_marginLeft="32dp"
@@ -236,7 +289,40 @@
                     android:text="@string/profile_buton_save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/-->
+
+            <FrameLayout
+                    android:id="@+id/fragmentProfileContentGeneral_Button_ok"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bt"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="35dp">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                    <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/arrow_zsolt"
+                            android:layout_width="16sp"
+                            android:layout_height="16sp"
+                            android:layout_marginRight="8dp"/>
+                    <TextView
+                            android:layout_gravity="center"
+                            android:text="@string/profile_buton_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#FFF"/>
+                </LinearLayout>
+
+            </FrameLayout>
 
             <View
                     android:layout_width="match_parent"

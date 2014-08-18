@@ -69,7 +69,6 @@
                             android:inputType="textPassword"
                             android:drawableRight="@drawable/ic_fields_staricon"/>
 
-
                 </LinearLayout>
                 <LinearLayout
                         android:orientation="vertical"
@@ -82,15 +81,20 @@
                             style="@style/Widget.TextView.BgTitleTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"/>
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginRight="@dimen/padding_horizontal"
+                            android:layout_marginLeft="@dimen/padding_horizontal"/>
 
                     <RadioGroup
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp">
+                            android:layout_marginBottom="8dp"
+                            android:paddingRight="@dimen/padding_horizontal"
+                            android:paddingLeft="@dimen/padding_horizontal">
 
                         <RadioButton
+                                android:id="@+id/activityCreateAccount_RadioButton_born"
                                 android:text="@string/start_radiobutton_born"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -107,17 +111,34 @@
                             style="@style/BgFieldGreen"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp">
 
-                        <EditText
-                                android:id="@+id/activityCreateAccount_EditText_dateOfBirt"
+                        <RelativeLayout
+                                android:id="@+id/activityCreateAccount_View_dateOfBirt"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/start_edittext_hint_date_of_birt"
-                                android:layout_marginBottom="8dp"
-                                style="@style/Widget.EditText.BgEditText.BgGreenEditText"
-                                android:inputType="date"
-                                android:drawableRight="@drawable/ic_calendaricon"/>
+                                android:background="@drawable/et_green"
+                                android:layout_marginBottom="8dp">
+                            <TextView
+                                    android:id="@+id/activityCreateAccount_TextView_dateOfBirt"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/profile_edittext_hint_date_of_birth"
+                                    android:textSize="18dp"
+                                    android:textColor="#9a9a9a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="24dp"
+                                    android:paddingLeft="@dimen/padding_horizontal"/>
+                            <ImageView
+                                    android:id="@+id/activityCreateAccount_ImageView_dateOfBirt"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/ic_calendaricon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_centerVertical="true"/>
+
+                        </RelativeLayout>
 
                         <EditText
                                 android:id="@+id/activityCreateAccount_EditText_nameaby"
@@ -142,15 +163,16 @@
                                 android:orientation="horizontal">
 
                             <RadioButton
+                                    android:id="@+id/activityCreateAccount_RadioButton_boy"
                                     android:button="@drawable/rb_boy"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
                                     android:layout_margin="8dp"/>
 
                             <RadioButton
                                     android:button="@drawable/rb_girl"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="66dp"
+                                    android:layout_height="48dp"
                                     android:layout_margin="8dp"/>
 
                         </RadioGroup>
@@ -165,23 +187,51 @@
                     android:layout_height="match_parent"
                     android:layout_margin="16dp">
                 <CheckBox
-                        android:id="@+id/activityCreateAccount_CheckBox_huinia"
+                        android:id="@+id/activityCreateAccount_CheckBox_ok"
+                        android:button="@drawable/chb"
                         android:layout_centerHorizontal="true"
                         android:gravity="center"
                         android:text="@string/text_start_checkbox"
                         android:layout_width="400dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/padding_horizontal"
-                        android:layout_marginRight="@dimen/padding_horizontal"/>
-                <Button
-                        android:layout_below="@+id/activityCreateAccount_CheckBox_huinia"
-                        android:layout_centerHorizontal="true"
-                        android:id="@+id/activityCreateAccount_Button_ok"
-                        android:text="@string/start_buton_save_continue"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_marginBottom="16dp"/>
+
+
+                <FrameLayout
+                        android:layout_below="@+id/activityCreateAccount_CheckBox_ok"
                         android:layout_marginTop="16dp"
-                        android:drawableStart="@drawable/arrow_zsolt"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                            android:layout_gravity="center"
+                            android:id="@+id/activityCreateAccount_btView_ok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bt"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:minHeight="35dp">
+                        <ImageView
+                                android:layout_gravity="center"
+                                android:src="@drawable/arrow_zsolt"
+                                android:layout_width="16sp"
+                                android:layout_height="16sp"
+                                android:layout_marginRight="8dp"
+                                android:layout_marginLeft="64dp"/>
+                        <TextView
+                                android:layout_gravity="center"
+                                android:text="@string/start_buton_save_continue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="#FFF"
+                                android:textStyle="bold"
+                                android:layout_marginRight="64dp"/>
+                    </LinearLayout>
+                </FrameLayout>
+
             </RelativeLayout>
             <View
                     android:layout_width="match_parent"
