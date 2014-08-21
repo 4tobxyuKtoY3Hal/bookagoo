@@ -9,7 +9,6 @@
     <TextView
             android:id="@+id/absMainActivity_TextView_title"
             style="@style/Widget.TextView.BgAbsTitleTextView"
-            android:text="@string/app_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     <ImageView

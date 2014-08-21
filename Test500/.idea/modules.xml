@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/assets/actionbarsherlock/ActionBarSherlock.iml" filepath="$PROJECT_DIR$/assets/actionbarsherlock/ActionBarSherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BookAgoo.iml" filepath="$PROJECT_DIR$/BookAgoo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JakeWharton-Android-ViewPagerIndicator-8cd549f/library/JakeWharton-ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/../JakeWharton-Android-ViewPagerIndicator-8cd549f/library/JakeWharton-ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/../SlidingMenu-master/library/SlidingMenu-master.iml" filepath="$PROJECT_DIR$/../SlidingMenu-master/library/SlidingMenu-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Test500.iml" filepath="$PROJECT_DIR$/Test500.iml" />
-      <module fileurl="file://$PROJECT_DIR$/assets/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/assets/actionbarsherlock/actionbarsherlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../gridlayout/gridlayout.iml" filepath="$PROJECT_DIR$/../gridlayout/gridlayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gridlayout/gridlayout1.iml" filepath="$PROJECT_DIR$/../gridlayout/gridlayout1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../JakeWharton-Android-ViewPagerIndicator-8cd549f/library/library.iml" filepath="$PROJECT_DIR$/../JakeWharton-Android-ViewPagerIndicator-8cd549f/library/library.iml" />
     </modules>
   </component>

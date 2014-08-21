@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BOOK aGoo</string>
+    <string name="app_name">Book Agoo</string>
     <string name="action_settings">Настройки </string>
 
     <string name="free_storage">Свободно: </string>
@@ -24,6 +24,8 @@
     <string name="navigation_drawer_close">Закрыть</string>
 
     <string name="add_content_tab_itle_media">Фото/Видео</string>
+    <string name="add_content_tab_itle_photo">Фото</string>
+    <string name="add_content_tab_itle_video">Видео</string>
     <string name="add_content_tab_itle_sound">Звук</string>
     <string name="add_content_tab_itle_text">Текст</string>
     <string name="add_content_select_tag_group">Выберите тег группу</string>
@@ -88,7 +90,7 @@
     <string name="profile_buton_twitter_account">Авторизовать Twitter аккаунт</string>
     <string name="profile_buton_facebook_account">Авторизовать Facebook аккаунт</string>
 
-    <string name="book_text">Ваша книга еще не опубликована!\n\ nПожалуйста войти в свой аккаунт BookAgoo через компьютер / ноутбук для редактирования и безопасно публиковать книги в Интернете.\n\nNjust начал бесплатную учетную запись? Оставить свой первый контент, чтобы начать BookAgoo путешествие!</string>
+    <string name="book_text">Ваша книга еще не опубликована!\n\nПожалуйста войти в свой аккаунт BookAgoo через компьютер / ноутбук для редактирования и безопасно публиковать книги в Интернете.\n\nNjust начал бесплатную учетную запись? Оставить свой первый контент, чтобы начать BookAgoo путешествие!</string>
 
     <string name="no_internet_connection">Нет подключения к Интернету</string>
     <string name="invalid_parameters">Неверные параметры</string>

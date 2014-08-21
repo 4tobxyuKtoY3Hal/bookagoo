@@ -19,19 +19,17 @@ public class AddContentVideoFragment extends AbstrTabAddContentFragment {
     private View mV = null;
     private File mFile = null;
     private EditText mEdTxt;
-    private ImageView mImg;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mV = inflater.inflate(R.layout.fragment_add_content_video, container, false);
 
         assert mV != null;
-        mImg = (ImageView) mV.findViewById(R.id.fragmentAddContentVideo_ImageView_img);
-        mEdTxt = (EditText) mV.findViewById(R.id.fragmentAddContentVideo_ImageView_mess);
-        mImg.setOnClickListener(this);
+        View viewImg = mV.findViewById(R.id.fragmentAddContentVideo_View_img);
+        mEdTxt = (EditText) mV.findViewById(R.id.fragmentAddContentVideo_EditText_mess);
+//        mImg.setOnClickListener(this);
 
-        mImg.setMinimumHeight(mImg.getWidth());
-
+        viewImg.setMinimumHeight(viewImg.getWidth());
 
         return mV;
     }

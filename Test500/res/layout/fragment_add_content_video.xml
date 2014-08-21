@@ -14,51 +14,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-            <`````````````````````````
+            <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fragmentAddContentVideo_View_img"
                     android:layout_marginBottom="@dimen/padding_vertical">
                 <ImageView
-                        android:id="@+id/fragmentAddContentVideo_ImageView_img"
                         android:src="@drawable/ing_foto"
                         android:layout_width="match_parent"
                         android:scaleType="centerCrop"
-                        android:layout_height="360dp"/>
+                        android:layout_height="match_parent"/>
                 <LinearLayout
                         android:orientation="vertical"
+                        android:layout_centerInParent="true"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_vertical">
-                    <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1">
-                        <FrameLayout
-                                android:layout_gravity="center"
-                                android:layout_width="140dp"
-                                android:layout_height="140dp"
-                                android:background="@drawable/circle_add"
-                                android:padding="8dp">
-                            <TextView
-                                    android:text="@string/add_content_text_add"
-                                    android:gravity="center"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"/>
+                        android:layout_height="match_parent">
 
-                        </FrameLayout>
+                    <FrameLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:background="@drawable/circle_add"
+                            android:padding="8dp">
+                        <TextView
+                                android:text="@string/add_content_text_add"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
                     </FrameLayout>
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"/>
+                </LinearLayout>
+                <RelativeLayout
+                        android:id="@+id/contenetMess"
+                        android:layout_alignParentBottom="true"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
                     <EditText
-                            android:id="@+id/fragmentAddContentVideo_ImageView_mess"
+                            android:id="@+id/fragmentAddContentVideo_EditText_mess"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/pl_txt"
                             android:hint="@string/add_content_your_notes"
                             android:alpha=".9"
                             android:lines="3"/>
-                </LinearLayout>
+                </RelativeLayout>
 
 
-            </FrameLayout>
+            </RelativeLayout>
 
             <LinearLayout
 
