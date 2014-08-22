@@ -118,6 +118,10 @@ public abstract class AbstrTabAddContentFragment extends Fragment implements Vie
 
     }
 
+    protected Handler getHandler(){
+        return mHandler;
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -143,9 +147,9 @@ public abstract class AbstrTabAddContentFragment extends Fragment implements Vie
             case R.id.includeAddContent_View_tagGroup:
                 setIsOpenTagGroup(!mIsOpenTagGroup);
                 break;
-            case R.id.includeAddContent_Button_ok:
-                new PostWallAsyncTask(mHandler).execute(getContData());
-                break;
+//            case R.id.button_ok:
+//                new PostWallAsyncTask(mHandler).execute(getContData());
+//                break;
         }
     }
 

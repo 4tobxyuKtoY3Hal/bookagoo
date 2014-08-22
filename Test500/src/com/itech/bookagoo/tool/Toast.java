@@ -13,6 +13,15 @@ public class Toast {
     public static void show(int stringId, int duration){
         Context cnx = App.getContext();
         String mess = cnx.getString(stringId);
+        show(cnx, mess, duration);
+    }
+    public static void show(String mess){
+        show(mess, android.widget.Toast.LENGTH_SHORT);
+    }
+    public static void show(String mess, int duration){
+        show(App.getContext(), mess, duration);
+    }
+    public static void show(Context cnx, String mess, int duration){
         android.widget.Toast.makeText(cnx, mess, duration).show();
     }
 }

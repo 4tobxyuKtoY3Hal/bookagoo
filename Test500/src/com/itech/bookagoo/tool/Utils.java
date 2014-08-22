@@ -1,5 +1,7 @@
 package com.itech.bookagoo.tool;
 
+import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import com.itech.bookagoo.App;
@@ -9,22 +11,24 @@ import com.itech.bookagoo.App;
  */
 public class Utils {
 
+    private static final String LOG_TAG = "Utils";
+
     public static int pxToDp(float px) {
-    	return Math.round(px / App.getContext().getResources().getDisplayMetrics().density);
+        return Math.round(px / App.getContext().getResources().getDisplayMetrics().density);
     }
 
     public static int dpToPx(float dp) {
-    	return Math.round(dp * App.getContext().getResources().getDisplayMetrics().density);
+        return Math.round(dp * App.getContext().getResources().getDisplayMetrics().density);
     }
 
-    public static long dateStringToLong(String str){
+    public static long dateStringToLong(String str) {
         long date = 0;
         // TODO
         return date;
     }
 
     public static int calculateInSampleSize(
-                BitmapFactory.Options options, int reqWidth, int reqHeight) {
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
         // Raw height and width of image
         final int height = options.outHeight;
         final int width = options.outWidth;

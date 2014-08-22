@@ -17,4 +17,6 @@
 
     <color name="passiv">#9a9a9a</color>
 
+    <color name="bg_text">#00a388</color>
+
 </resources>
