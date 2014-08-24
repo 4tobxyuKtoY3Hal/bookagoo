@@ -36,26 +36,19 @@ public abstract class AbstrTabAddContentFragment extends Fragment implements Vie
     private Handler mHandler = new Handler();
     ProgressDialog mProgressDialog = null;
 
-    private TextView txtTagGroup;
-    private ImageView imgTagGroup;
-    private View mRiad1;
-    private View mRiad2;
+    private View mIcoFacebook = null;
+    private View mIcoTwitter = null;
+    private TextView mTxtFacebook = null;
+    private TextView mTxtTwitter = null;
+    private View mSwitchFacebook = null;
+    private View mSwitchTwitter = null;
+    private boolean mIsFacebook = false;
+    private boolean mIsTwitter = false;
+
     private View mBtnOk;
     private EditText mEdDate;
     private EditText mEdLocation;
 
-
-    private View cbCouple2;
-    private View cbDating2;
-    private View cbHowParentsMet2;
-    private View cbDaddy2;
-    private View cbMammy2;
-    private View cbSmiling;
-    private View cbBathTime;
-    private View cbEngegement;
-    private View cbMemories;
-    private View cbHoldingHead;
-    private View cbMammy;
 
     private static final Drawable DRAWABLE_ON = App.getContext().getResources().getDrawable(R.drawable.bt_normal);
     private static final Drawable DRAWABLE_OFF = App.getContext().getResources().getDrawable(R.drawable.bt_blocked);
@@ -77,79 +70,58 @@ public abstract class AbstrTabAddContentFragment extends Fragment implements Vie
 
         View v = getView();
 
-        v.findViewById(R.id.includeAddContent_View_tagGroup).setOnClickListener(this);
+//        v.findViewById(R.id.includeAddContent_View_tagGroup).setOnClickListener(this);
 
         mEdDate = (EditText) v.findViewById(R.id.includeAddContent_EditText_date);
         mEdLocation = (EditText) v.findViewById(R.id.includeAddContent_EditText_location);
         mBtnOk = v.findViewById(R.id.includeAddContent_Button_ok);
         mBtnOk.setOnClickListener(this);
-        txtTagGroup = (TextView) v.findViewById(R.id.includeAddContent_TextView_tagGroup);
-        imgTagGroup = (ImageView) v.findViewById(R.id.includeAddContent_ImageView_tagGroup);
 
-        mRiad1 = v.findViewById(R.id.includeAddContent_LinearLayout_riad1);
-        mRiad2 = v.findViewById(R.id.includeAddContent_LinearLayout_riad2);
+        mIcoFacebook = v.findViewById(R.id.includeAddContent_View_icoFacebook);
+        mIcoTwitter = v.findViewById(R.id.includeAddContent_View_icoTwitter);
+        mTxtFacebook = (TextView) v.findViewById(R.id.includeAddContent_TextView_facebook);
+        mTxtTwitter = (TextView) v.findViewById(R.id.includeAddContent_TextView_twitter);
+        mSwitchFacebook = v.findViewById(R.id.includeAddContent_View_switchFacebook);
+        mSwitchTwitter = v.findViewById(R.id.includeAddContent_View_switchTwitter);
 
-        cbCouple2 = v.findViewById(R.id.includeAddContent_TextView_couple2);
-        cbDating2 = v.findViewById(R.id.includeAddContent_TextView_dating2);
-        cbHowParentsMet2 = v.findViewById(R.id.includeAddContent_TextView_howParentsMet2);
-        cbDaddy2 = v.findViewById(R.id.includeAddContent_TextView_daddy2);
-        cbMammy2 = v.findViewById(R.id.includeAddContent_TextView_mammy2);
-        cbSmiling = v.findViewById(R.id.includeAddContent_TextView_smiling);
-        cbBathTime = v.findViewById(R.id.includeAddContent_TextView_bathTime);
-        cbEngegement = v.findViewById(R.id.includeAddContent_TextView_engegement);
-        cbMemories = v.findViewById(R.id.includeAddContent_TextView_memories);
-        cbHoldingHead = v.findViewById(R.id.includeAddContent_TextView_holdingHead);
-        cbMammy = v.findViewById(R.id.includeAddContent_TextView_mammy);
-
-        cbCouple2.setOnClickListener(this);
-        cbDating2.setOnClickListener(this);
-        cbHowParentsMet2.setOnClickListener(this);
-        cbDaddy2.setOnClickListener(this);
-        cbMammy2.setOnClickListener(this);
-        cbSmiling.setOnClickListener(this);
-        cbBathTime.setOnClickListener(this);
-        cbEngegement.setOnClickListener(this);
-        cbMemories.setOnClickListener(this);
-        cbHoldingHead.setOnClickListener(this);
-        cbMammy.setOnClickListener(this);
-
+        v.findViewById(R.id.includeAddContent_contenerSwitchFacebook).setOnClickListener(this);
+        v.findViewById(R.id.includeAddContent_contenerSwitchTwitter).setOnClickListener(this);
 
         setIsOpenTagGroup(false);
 
     }
 
-    protected Handler getHandler(){
+    protected Handler getHandler() {
         return mHandler;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.includeAddContent_TextView_couple2:
-            case R.id.includeAddContent_TextView_dating2:
-            case R.id.includeAddContent_TextView_howParentsMet2:
-            case R.id.includeAddContent_TextView_daddy2:
-            case R.id.includeAddContent_TextView_mammy2:
-            case R.id.includeAddContent_TextView_smiling:
-            case R.id.includeAddContent_TextView_bathTime:
-            case R.id.includeAddContent_TextView_engegement:
-            case R.id.includeAddContent_TextView_memories:
-            case R.id.includeAddContent_TextView_holdingHead:
-            case R.id.includeAddContent_TextView_mammy:
-
-                if (v.getBackground().equals(DRAWABLE_OFF)) {
-                    v.setBackgroundDrawable(DRAWABLE_ON);
+            case R.id.includeAddContent_contenerSwitchTwitter:
+                mIsTwitter = !mIsTwitter;
+                if (mIsTwitter) {
+                    mIcoTwitter.setBackgroundResource(R.drawable.ic_twitter);
+                    mTxtTwitter.setTextColor(App.getContext().getResources().getColor(R.color.twitter_textview));
+                    mSwitchTwitter.setBackgroundResource(R.drawable.ico_switch_twitter);
                 } else {
-                    v.setBackgroundDrawable(DRAWABLE_OFF);
+                    mIcoTwitter.setBackgroundResource(R.drawable.ic_twitter_passiv);
+                    mTxtTwitter.setTextColor(0xff999999);
+                    mSwitchTwitter.setBackgroundResource(R.drawable.ico_switch);
                 }
-
                 break;
-            case R.id.includeAddContent_View_tagGroup:
-                setIsOpenTagGroup(!mIsOpenTagGroup);
+            case R.id.includeAddContent_contenerSwitchFacebook:
+                mIsFacebook = !mIsFacebook;
+                if (mIsFacebook) {
+                    mIcoFacebook.setBackgroundResource(R.drawable.ic_facebook);
+                    mTxtFacebook.setTextColor(App.getContext().getResources().getColor(R.color.facebook_textview));
+                    mSwitchFacebook.setBackgroundResource(R.drawable.ico_switch_facebook);
+                } else {
+                    mIcoFacebook.setBackgroundResource(R.drawable.ic_facebook_passiv);
+                    mTxtFacebook.setTextColor(0xff999999);
+                    mSwitchFacebook.setBackgroundResource(R.drawable.ico_switch);
+                }
                 break;
-//            case R.id.button_ok:
-//                new PostWallAsyncTask(mHandler).execute(getContData());
-//                break;
         }
     }
 
@@ -170,34 +142,34 @@ public abstract class AbstrTabAddContentFragment extends Fragment implements Vie
     private void setIsOpenTagGroup(boolean isOpen) {
 
         if (isOpen) {
-            mRiad1.setVisibility(View.VISIBLE);
-            mRiad2.setVisibility(View.VISIBLE);
-            txtTagGroup.setText(App.getContext().getString(R.string.add_content_before_me));
-            txtTagGroup.setTextColor(App.getContext().getResources().getColor(R.color.txt_active));
-            imgTagGroup.setImageResource(R.drawable.arrow_boyyom_on);
+//            mRiad1.setVisibility(View.VISIBLE);
+//            mRiad2.setVisibility(View.VISIBLE);
+//            txtTagGroup.setText(App.getContext().getString(R.string.add_content_before_me));
+//            txtTagGroup.setTextColor(App.getContext().getResources().getColor(R.color.txt_active));
+//            imgTagGroup.setImageResource(R.drawable.arrow_boyyom_on);
         } else {
-            mRiad1.setVisibility(View.GONE);
-            mRiad2.setVisibility(View.GONE);
-            txtTagGroup.setText(App.getContext().getString(R.string.add_content_select_tag_group));
-            txtTagGroup.setTextColor(App.getContext().getResources().getColor(R.color.txt_passive));
-            imgTagGroup.setImageResource(R.drawable.arrow_boyyom_off);
+//            mRiad1.setVisibility(View.GONE);
+//            mRiad2.setVisibility(View.GONE);
+//            txtTagGroup.setText(App.getContext().getString(R.string.add_content_select_tag_group));
+//            txtTagGroup.setTextColor(App.getContext().getResources().getColor(R.color.txt_passive));
+//            imgTagGroup.setImageResource(R.drawable.arrow_boyyom_off);
 
 
-            if (!cbCouple2.getBackground().equals(DRAWABLE_OFF)) {
-                cbCouple2.setBackgroundDrawable(DRAWABLE_OFF);
-            }
-            if (!cbDating2.getBackground().equals(DRAWABLE_OFF)) {
-                cbDating2.setBackgroundDrawable(DRAWABLE_OFF);
-            }
-            if (!cbHowParentsMet2.getBackground().equals(DRAWABLE_OFF)) {
-                cbHowParentsMet2.setBackgroundDrawable(DRAWABLE_OFF);
-            }
-            if (!cbDaddy2.getBackground().equals(DRAWABLE_OFF)) {
-                cbDaddy2.setBackgroundDrawable(DRAWABLE_OFF);
-            }
-            if (!cbMammy2.getBackground().equals(DRAWABLE_OFF)) {
-                cbMammy2.setBackgroundDrawable(DRAWABLE_OFF);
-            }
+//            if (!cbCouple2.getBackground().equals(DRAWABLE_OFF)) {
+//                cbCouple2.setBackgroundDrawable(DRAWABLE_OFF);
+//            }
+//            if (!cbDating2.getBackground().equals(DRAWABLE_OFF)) {
+//                cbDating2.setBackgroundDrawable(DRAWABLE_OFF);
+//            }
+//            if (!cbHowParentsMet2.getBackground().equals(DRAWABLE_OFF)) {
+//                cbHowParentsMet2.setBackgroundDrawable(DRAWABLE_OFF);
+//            }
+//            if (!cbDaddy2.getBackground().equals(DRAWABLE_OFF)) {
+//                cbDaddy2.setBackgroundDrawable(DRAWABLE_OFF);
+//            }
+//            if (!cbMammy2.getBackground().equals(DRAWABLE_OFF)) {
+//                cbMammy2.setBackgroundDrawable(DRAWABLE_OFF);
+//            }
 
         }
 

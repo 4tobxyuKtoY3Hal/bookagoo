@@ -26,6 +26,9 @@
     <string name="add_content_tab_itle_text">Text note</string>
     <string name="add_content_select_tag_group">Select a tag group</string>
     <string name="add_content_before_me">Before me</string>
+    <string name="add_content_share_twitter">Share on Twitter</string>
+    <string name="add_content_share_facebook">Share on Facebook</string>
+    <string name="add_content_suggested_tags">Suggested tags:</string>
 
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>

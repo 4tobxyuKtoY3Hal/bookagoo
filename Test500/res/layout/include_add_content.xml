@@ -7,92 +7,73 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <com.itech.bookagoo.view.Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-
-            app:textLeft="On"
-            app:textRight="Off"
-
-            android:id="@+id/btn_on_off"
-            />
-    <com.itech.bookagoo.view.Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-
-            app:isChecked="true"
-            app:textLeft="left"
-            app:textRight="right"
-            />
-
-
-    <com.itech.bookagoo.view.Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-
-            android:text="cheer"
-            app:textLeft="woohoo"
-            app:textRight="yeah"
-            />
-
-    <com.itech.bookagoo.view.Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-
-            android:text="default_checked"
-            app:isChecked="true"
-            app:textLeft="checked"
-            app:textRight="unchecked"
-
-            />
-
 
     <LinearLayout
+            android:id="@+id/includeAddContent_contenerSwitchTwitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             style="@style/BgFieldWhite"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:layout_marginBottom="8dp">
-        <ImageView
-                android:src="@drawable/ic_twitter"
+        <View
+                android:id="@+id/includeAddContent_View_icoTwitter"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_twitter_passiv"
                 android:layout_width="11dp"
-                android:layout_height="24dp"
+                android:layout_height="19dp"
                 android:layout_marginRight="12dp"/>
         <TextView
+                android:id="@+id/includeAddContent_TextView_twitter"
+                android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:text="@string/start_buton_login_twitter"
+                android:text="@string/add_content_share_twitter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/twitter_textview"
+                android:textColor="#999"
                 android:layout_weight="1"/>
+
+        <View
+                android:id="@+id/includeAddContent_View_switchTwitter"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ico_switch"
+                android:layout_width="55dp"
+                android:layout_height="35dp"/>
+
     </LinearLayout>
 
     <LinearLayout
+            android:id="@+id/includeAddContent_contenerSwitchFacebook"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             style="@style/BgFieldWhite"
             android:layout_marginBottom="16dp">
-        <ImageView
-                android:src="@drawable/ic_facebook"
+        <View
+                android:id="@+id/includeAddContent_View_icoFacebook"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_facebook_passiv"
                 android:layout_width="11dp"
                 android:layout_height="24dp"
                 android:layout_marginRight="12dp"/>
         <TextView
+                android:id="@+id/includeAddContent_TextView_facebook"
+                android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:text="Tap to add music or record a voice"
-                android:layout_width="match_parent"
+                android:text="@string/add_content_share_facebook"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:textColor="@color/facebook_textview"
+                android:textColor="#999"
                 android:layout_weight="1"/>
+        <View
+                android:id="@+id/includeAddContent_View_switchFacebook"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ico_switch"
+                android:layout_width="55dp"
+                android:layout_height="35dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -147,166 +128,52 @@
 
     </LinearLayout>
     <TextView
-            android:text="Suggested tags:"
+            android:text="@string/add_content_suggested_tags"
             style="@style/Widget.TextView.BgTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"/>
-
     <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/includeAddContent_contenerSuggested"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp">
-        <TextView
-                android:id="@+id/includeAddContent_TextView_mammy"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Mammy"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_holdingHead"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Holding head"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_memories"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Memories"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
+        <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:id="@+id/includeAddContent_TextView_engegement"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Engegement"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_bathTime"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Bath time"
-                android:layout_marginRight="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_smiling"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Smiling"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-    </LinearLayout>
-    <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/includeAddContent_View_tagGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             style="@style/BgFieldWhite"
             android:layout_marginBottom="16dp">
-
         <TextView
-                android:id="@+id/includeAddContent_TextView_tagGroup"
                 android:gravity="center_vertical"
-                android:text="@string/add_content_select_tag_group"
-                android:textColor="@color/txt_passive"
-                android:layout_width="match_parent"
-                android:layout_height="24sp"
+                android:text="@string/add_content_before_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="#666"
                 android:layout_weight="1"/>
-        <ImageView
-                android:id="@+id/includeAddContent_ImageView_tagGroup"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/arrow_boyyom_off"
-                android:layout_width="14dp"
-                android:layout_height="11dp"/>
-    </LinearLayout>
 
+        <ImageButton
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/arrow_boyyom_off"
+                android:layout_width="17dp"
+                android:layout_height="12dp"/>
+    </LinearLayout>
     <LinearLayout
             android:visibility="gone"
-            android:id="@+id/includeAddContent_LinearLayout_riad1"
-            android:orientation="horizontal"
+            android:id="@+id/includeAddContent_contenerBeforeMe"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp">
-        <TextView
-                android:id="@+id/includeAddContent_TextView_mammy2"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Mammy"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_daddy2"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Daddy"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_howParentsMet2"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="How parents met"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
-    </LinearLayout>
-    <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/includeAddContent_LinearLayout_riad2"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-                android:id="@+id/includeAddContent_TextView_dating2"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Dating"
-                android:layout_marginRight="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:id="@+id/includeAddContent_TextView_couple2"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:text="Couple"
-                android:layout_marginRight="4dp"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-        <TextView
-                android:visibility="invisible"
-                style="@style/Widget.TextView.BgAddContentRbTextView"
-                android:layout_marginLeft="4dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-
+        <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>
